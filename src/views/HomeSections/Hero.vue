@@ -1,6 +1,6 @@
 <template>
     <div class="hero">
-        
+
     </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
     data () {
         return {
-            bg_image: '../../assets/hero-bg.jpg'
+            bg_image: '../../assets/hero-bg.jpg',
         }
     }
 }
