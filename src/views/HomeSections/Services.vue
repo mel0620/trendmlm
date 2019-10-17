@@ -24,12 +24,12 @@ export default {
             lorem: 'lorem',
             services: [
                 {
-                    image: require('../../assets/brand.png'),
+                    image: require('../../assets/service-1.svg'),
                     name: 'Software Competence',
                     desc: 'We provide modular MLM systems that are mobile responsive and accessible through tablets and desktops for your convenience.'
                 },
                 {
-                    image: require('../../assets/logo.png'),
+                    image: require('../../assets/service-2.svg'),
                     name: 'Website UI',
                     desc: 'We ensure a natural user-friendly interface on your website for your user’s comfort.'
                 },
@@ -49,7 +49,6 @@ export default {
 
 <style lang="scss">
 .services {
-    background-color: #1c1c1c;
 
     img {
         width: 50px;
