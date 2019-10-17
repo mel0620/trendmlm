@@ -29,7 +29,6 @@
 export default {
     data () {
         return {
-            lorem: 'lorem',
             services: [
                 {
                     image: require('../../assets/service-1.svg'),
