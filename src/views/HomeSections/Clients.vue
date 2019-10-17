@@ -23,6 +23,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 import Swiper from "swiper"
 import "../../../node_modules/swiper/css/swiper.min.css"
 
@@ -30,33 +31,19 @@ export default {
     data () {
         return {
             clients: [
-                {
-                    image: require('../../assets/client-1.png')
-                },
-                {
-                    image: require('../../assets/client-2.png')
-                },
-                {
-                    image: require('../../assets/client-3.png')
-                },
-                {
-                    image: require('../../assets/client-4.png')
-                },
-                {
-                    image: require('../../assets/client-5.png')
-                },
-                {
-                    image: require('../../assets/client-4.png')
-                },
-                {
-                    image: require('../../assets/client-5.png')
-                },
+                { image: require('../../assets/client-1.png') },
+                { image: require('../../assets/client-2.png') },
+                { image: require('../../assets/client-3.png') },
+                { image: require('../../assets/client-4.png') },
+                { image: require('../../assets/client-5.png') },
+                { image: require('../../assets/client-4.png') },
+                { image: require('../../assets/client-5.png') },
             ]
         }
     },
     methods: {
         clientsSwiper() {
-            var swiper = new Swiper('.clients-swiper', {
+            const swiper = new Swiper('.clients-swiper', {
                 slidesPerView: 5,
                 slidesPerColumn: 1,
                 spaceBetween: 20,
@@ -64,10 +51,17 @@ export default {
                     delay: 2500,
                     disableOnInteraction: false,
                 },
+<<<<<<< HEAD
                 navigation: {
                     nextEl: '.slider-next',
                     prevEl: '.slider-prev',
                 }
+=======
+                // pagination: {
+                //     el: '.swiper-pagination',
+                //     clickable: true,
+                // },
+>>>>>>> bd4848ab90cee09f1e37a23eb8fe1ce28b5ff8a8
             });
         }
     },

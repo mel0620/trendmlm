@@ -30,6 +30,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 import Swiper from "swiper"
 import "../../../node_modules/swiper/css/swiper.min.css"
 
@@ -83,14 +84,12 @@ export default {
                     width: 100%;
                     height: 100%;
                     position: relative;
-                    margin-left: auto;
-                    margin-right: auto;
 
                     .swiper-wrapper {
                         padding-bottom: 2.5rem;
 
                         .swiper-slide {
-                            height: calc((100% - 30px) / 2);
+                            // height: calc((100% - 30px) / 2);
                         }
                     }
                 }

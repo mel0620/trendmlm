@@ -27,6 +27,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 import Swiper from "swiper";
 import "../../../node_modules/swiper/css/swiper.min.css";
 
@@ -46,7 +47,7 @@ export default {
     },
     methods: {
         techSwiper() {
-            var swiper = new Swiper('.tech-container', {
+            const swiper = new Swiper('.tech-container', {
                 slidesPerView: 7,
                 spaceBetween: 20
             });
