@@ -95,13 +95,15 @@ export default {
                 .plan-item__title {
                     font-family: $font-primary;
                     color: $secondary-color;
+                    font-size: 1rem;
                     font-weight: 700;
+                    text-transform: uppercase;
                 }
                 .plan-item__desc {
                     font-family: $font-secondary;
                     color: #888888;
                     line-height: 1.875rem;
-                    font-size: 0.875rem;
+                    font-size: 0.8125rem;
                     margin-top: 1rem;
                 }
             }
