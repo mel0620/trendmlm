@@ -48,10 +48,10 @@ export default {
                 slidesPerView: 5,
                 slidesPerColumn: 1,
                 spaceBetween: 30,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
+                // pagination: {
+                //     el: '.swiper-pagination',
+                //     clickable: true,
+                // },
             });
         }
     },
