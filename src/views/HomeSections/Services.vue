@@ -2,7 +2,6 @@
     <section class="services-wrapper">
         <div class="container">
             <div class="services">
-
                 <div class="services-offer">
                     <div class="services-offer__item" v-for="(item, i) in services" :key="i">
                         <div class="services-offer__item-icon" :style="`background-image: url(${item.image})`"></div>
