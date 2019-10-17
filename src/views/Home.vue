@@ -3,6 +3,7 @@
     <hero></hero>
     <services></services>
     <works></works>
+    <clients></clients>
     <plan></plan>
   </div>
 </template>
@@ -11,6 +12,7 @@
 import Hero from './HomeSections/Hero.vue'
 import Services from './HomeSections/Services.vue'
 import Works from './HomeSections/Works.vue'
+import Clients from './HomeSections/Clients.vue'
 import Plan from './HomeSections/Plan.vue'
 
 export default {
@@ -19,7 +21,9 @@ export default {
     Hero,
     Services,
     Works,
+    Clients,
     Plan
+
   }
 }
 </script>
