@@ -78,7 +78,7 @@ export default {
 
             &-brand {
                 img {
-                    filter: brightness(500);
+                    filter: brightness(0) invert(1);
                 }
             }
 
@@ -174,9 +174,9 @@ export default {
                     padding: 1.5rem;
 
                     &:hover {
-                        color: $primary-color;
+                        color: $secondary-color;
                         &::after {
-                            background-color: $primary-color;
+                            background-color: $secondary-color;
                         }
                     }
 

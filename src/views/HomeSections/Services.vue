@@ -99,7 +99,7 @@ export default {
                 color: #01719a;
             }
             .services-border {
-                background-color: #ff6f61;
+                background-color: $primary-color;
                 width: 30px;
                 height: 3px;
                 position: relative;
@@ -151,14 +151,14 @@ export default {
                         font-family: $font-primary;
                         font-size: 15px;
                         font-weight: 700;
-                        color: #ff6f61;
+                        color: $primary-color;
                         margin-bottom: 10px;
                     }
                     .services-offer__desc {
                         font-family: $font-secondary;
                         font-size: 13px;
                         font-weight: 400;
-                        color: #01719a;
+                        color: $secondary-color;
                         line-height: 1.5rem;
                     }
                 }
