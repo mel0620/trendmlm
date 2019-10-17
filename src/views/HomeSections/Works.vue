@@ -54,6 +54,10 @@ export default {
                 // centeredSlides: true,
                 // slidesPerColumn: 2,
                 spaceBetween: 30,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,

@@ -24,21 +24,13 @@ export default {
     data () {
         return {
             clients: [
-                {
-                    image: require('../../assets/client-1.png')
-                },
-                {
-                    image: require('../../assets/client-2.png')
-                },
-                {
-                    image: require('../../assets/client-3.png')
-                },
-                {
-                    image: require('../../assets/client-4.png')
-                },
-                {
-                    image: require('../../assets/client-5.png')
-                },
+                { image: require('../../assets/client-1.png') },
+                { image: require('../../assets/client-2.png') },
+                { image: require('../../assets/client-3.png') },
+                { image: require('../../assets/client-4.png') },
+                { image: require('../../assets/client-5.png') },
+                { image: require('../../assets/client-4.png') },
+                { image: require('../../assets/client-5.png') },
             ]
         }
     },
@@ -47,7 +39,11 @@ export default {
             var swiper = new Swiper('.clients-swiper', {
                 slidesPerView: 5,
                 slidesPerColumn: 1,
-                spaceBetween: 30,
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
                 // pagination: {
                 //     el: '.swiper-pagination',
                 //     clickable: true,
@@ -74,6 +70,7 @@ export default {
                     height: 100%;
                     overflow: hidden;
                     position: relative;
+                    padding: 10px 0px;
                     .swiper-wrapper {
                         .swiper-slide {
                             background-color: #fff;
@@ -81,6 +78,7 @@ export default {
                             border: solid 1px #ebeaea;
                             padding: 30px 0px;
                             text-align: center;
+                            box-shadow: 0 0 8px 2px rgba(#000, .05);
                             img
                             {
                                 margin: auto;
