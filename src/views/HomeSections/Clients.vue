@@ -51,17 +51,10 @@ export default {
                     delay: 2500,
                     disableOnInteraction: false,
                 },
-<<<<<<< HEAD
                 navigation: {
                     nextEl: '.slider-next',
                     prevEl: '.slider-prev',
                 }
-=======
-                // pagination: {
-                //     el: '.swiper-pagination',
-                //     clickable: true,
-                // },
->>>>>>> bd4848ab90cee09f1e37a23eb8fe1ce28b5ff8a8
             });
         }
     },
