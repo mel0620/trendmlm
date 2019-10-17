@@ -2,14 +2,14 @@
     <section class="services-wrapper">
         <div class="container">
             <div class="services">
-                <div class="services-header">
-                    <div class="services-header__1">
+                <div class="section-title">
+                    <div class="section-title__bg">
                         SERVICES
                     </div>
-                    <div class="services-header__2">
+                    <div class="section-title__sm">
                         We Provide Services for your Business Needs
                     </div>
-                    <div class="services-border"></div>
+                    <div class="section-title__border"></div>
                 </div>
                 <div class="services-offer">
                     <div class="services-offer__item" v-for="(item, i) in services" :key="i">
@@ -82,50 +82,6 @@ export default {
     background-color: #fff;
     padding: 100px 0px;
     .services {
-        .services-header {
-            margin-bottom: 50px;
-            text-align: center;
-            line-height: 2rem;
-            .services-header__1 {
-                font-family: $font-primary;
-                font-size: 18px;
-                font-weight: 700;
-                color: #ff6f61;
-            }
-            .services-header__2 {
-                font-family: $font-primary;
-                font-size: 13px;
-                font-weight: 400;
-                color: #01719a;
-            }
-            .services-border {
-                background-color: $primary-color;
-                width: 30px;
-                height: 3px;
-                position: relative;
-                margin: 15px auto;
-                &:before {
-                    content: '';
-                    background-color: #888888;
-                    width: 25px;
-                    height: 1px;
-                    position: absolute;
-                    left: -25px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-                &:after {
-                    content: '';
-                    background-color: #888888;
-                    width: 25px;
-                    height: 1px;
-                    position: absolute;
-                    left: 30px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-            }
-        }
         .services-offer {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -166,5 +122,4 @@ export default {
         }
     }
 }
-
 </style>
