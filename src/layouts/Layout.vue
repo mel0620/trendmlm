@@ -68,14 +68,14 @@ export default {
         right: 0;
         background-color: transparent;
         z-index: 99;
-        border-bottom: 1px solid rgba(#fff, .4);
-        
+        // border-bottom: 1px solid rgba(#fff, .4);
+
         &__nav {
             display: grid;
             grid-template-columns: auto 1fr auto;
             align-items: center;
             justify-content: center;
-            
+
             &-links {
                 padding: 2rem 1rem;
                 justify-self: center;
@@ -112,7 +112,7 @@ export default {
                         &::after {
                             content: '';
                             background-color: #fff;
-                            height: 2px;
+                            height: 1px;
                             position: absolute;
                             bottom: 0;
                             left: 0;
