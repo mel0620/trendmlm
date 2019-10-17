@@ -1,7 +1,166 @@
 <template>
-    <section>
-        <div class="container">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, exercitationem ducimus. Adipisci, ullam ipsum? Reprehenderit porro, in magni quam odio obcaecati fuga blanditiis vitae nihil nemo quibusdam id animi facilis possimus voluptatum molestiae voluptas numquam alias voluptatibus ipsum. Tempora amet, repudiandae ab libero sequi maiores architecto ea, officiis fugit fuga quidem sunt dolor laboriosam veniam. Eaque delectus ea ab quaerat eveniet? Aut nemo ducimus officia nisi, voluptatem aperiam pariatur. Odit beatae corrupti eius dolore facilis! Non expedita eveniet a. Voluptate, quas et est earum fuga libero? Deserunt laborum neque nam quisquam obcaecati ea nisi! Ea sed libero molestias nihil consequatur, maiores similique odit sapiente earum possimus officia at distinctio id amet iusto eos fugiat! Nisi perspiciatis quis ducimus nobis sit distinctio voluptatibus error ullam? Ullam, quae ipsum vero qui dignissimos reiciendis id debitis totam. Esse veritatis quos id nostrum labore aspernatur quasi sunt magnam perferendis sint. Dolores voluptatibus saepe sequi temporibus esse laboriosam odit dolorum adipisci? Suscipit earum velit nulla est reprehenderit quasi animi facilis accusamus! Ullam nam fuga quaerat ut architecto dignissimos reprehenderit id eaque eligendi nemo. Quos praesentium, ipsum dolor sapiente, laboriosam quo enim iure libero blanditiis voluptatem incidunt harum et doloribus debitis reiciendis veniam culpa iste nesciunt sunt optio accusantium rem alias? Fugiat temporibus similique voluptas dolor beatae reiciendis accusamus amet excepturi sequi, adipisci praesentium voluptate est! Minima, eaque suscipit eius doloribus architecto provident earum vel omnis at eveniet totam numquam nihil obcaecati ipsa quas nemo asperiores neque magni in modi. Sint explicabo atque eligendi facilis veniam mollitia enim ad, eum quod culpa ipsum a repellat minima sed officiis ex voluptate voluptates illum dolorum ipsa cum consequatur ea natus? Dolorem, maiores sunt voluptatum numquam vitae officia cumque dolores repellendus provident veniam quae debitis odio eos aliquam aspernatur illo repellat velit quidem eveniet molestiae, in deleniti iste. Dolore ratione fuga, eum beatae placeat adipisci quae delectus totam officia necessitatibus sit rerum blanditiis autem voluptas maxime repudiandae, sed eligendi esse dolor recusandae, ullam ad. Magnam porro rem nulla repellat, illum minima! Perspiciatis molestiae laboriosam eaque qui saepe architecto iste eum vel voluptatem corrupti. Fuga sequi sapiente quasi possimus, dolores amet accusantium vel animi voluptatem, neque eligendi officiis aperiam libero distinctio. Voluptas praesentium ea sit corporis nobis labore dolores, asperiores adipisci accusantium debitis quae ex odio itaque quia iusto illo provident nihil iure laboriosam saepe. Quod dolor, autem ut explicabo laudantium cupiditate vel tempore sapiente corrupti laboriosam molestias asperiores laborum nemo nihil, recusandae debitis error voluptate officia a at? Optio praesentium nihil voluptatum ipsa corrupti quia architecto deleniti? Exercitationem porro, amet vel dolorem reprehenderit reiciendis harum mollitia quas non incidunt voluptas culpa repellendus alias! Magnam reiciendis distinctio voluptatem maiores consectetur dolore, nesciunt officia laborum sunt saepe rem corporis atque libero a ipsa non eligendi sit. Quaerat illo aperiam non. Quibusdam quas suscipit magnam veritatis blanditiis consequuntur repellat culpa fugiat esse deserunt, nam ipsum, laudantium iusto, temporibus dignissimos quisquam. Ex eaque fugit ut tempora non voluptatibus, eum laboriosam cumque ab a debitis, laborum animi voluptate, sapiente velit tempore nihil ipsam explicabo sed! Accusamus in cumque suscipit architecto molestiae natus labore ut numquam ab ea temporibus, aliquid dolore nam enim, inventore eum sapiente vel repudiandae facilis ad placeat quod distinctio a! Eveniet consequatur id esse maiores mollitia est nam nulla enim hic molestias repudiandae corrupti earum maxime sequi rem, unde architecto illum, ipsum quo, temporibus officia. Numquam id mollitia harum fuga exercitationem modi, quas accusamus ipsa, facere repudiandae veritatis quaerat ducimus odit nihil iure soluta culpa minima voluptates, natus hic rem. Ducimus accusantium facere maxime tempore vel animi, quae ratione, nam vero soluta quidem eaque amet quas doloribus tempora quia officia illum aliquid nulla dolorem. Quibusdam dolor illo itaque necessitatibus culpa ipsum libero laboriosam magni placeat eveniet nobis, quisquam ducimus repellendus quia expedita, quasi, perspiciatis asperiores laudantium. Quaerat aperiam, illo doloremque aliquid, veniam necessitatibus saepe esse similique qui ipsa tempora ratione, accusamus praesentium libero odio! Illum, ipsa quasi alias sunt optio consequuntur officiis. Odio reprehenderit facere unde dolore, reiciendis sunt ea itaque! Quam tempore earum illum et quas ut facere nam, quis distinctio. Necessitatibus quis tenetur modi quisquam distinctio doloribus architecto consequatur, natus facilis consequuntur minima deserunt alias animi ipsam velit dolorum quo rerum corrupti? Recusandae velit iste facere pariatur amet non porro sunt eveniet praesentium temporibus labore ratione nostrum, aperiam modi perspiciatis aut voluptates! Fuga animi blanditiis, earum fugit est voluptate dolore ipsum error iusto quas nemo laudantium voluptates dignissimos ut dolorum velit inventore praesentium natus harum atque sint. Corrupti optio sapiente officiis aut non omnis dolor voluptatem natus suscipit nihil quia dolorem voluptas expedita nobis, quas earum numquam. Error accusantium labore similique placeat facilis praesentium, nisi accusamus eaque id soluta voluptates numquam rem! Ducimus, natus placeat minima ipsum fugiat et eius amet dolore quos officia soluta voluptatem repellat, qui molestias optio explicabo maiores quas nihil delectus eligendi repudiandae, odit eveniet. Iusto quod repudiandae, officiis quos accusamus officia id odio rem iste eos quo voluptatum voluptatem et necessitatibus nulla reiciendis sit laboriosam perspiciatis. Voluptatem, aliquam rem. Inventore quidem officia provident minus iusto hic dolorem fugit eum sint excepturi, eius illo ad libero, architecto voluptatum quam aliquam dignissimos debitis praesentium dolor consequuntur ex quos amet. Laboriosam, temporibus adipisci amet accusamus saepe nobis, quisquam vero maxime minima id, rem incidunt vitae quod illo accusantium harum nesciunt corrupti omnis? Repellat dolores eaque officia, explicabo deserunt incidunt provident magnam accusantium pariatur quis fugit quidem similique excepturi sit est facere ipsum, sunt cupiditate iure, commodi repellendus. Ab doloribus ipsam fuga blanditiis atque quia vitae nemo ducimus facilis velit quidem, earum tenetur consequatur accusamus sapiente culpa a nostrum facere dignissimos similique veritatis. Illo doloremque consequuntur laudantium in unde, a esse vel! Magni error pariatur ullam deserunt expedita! Rerum totam temporibus a? Voluptatem, doloremque molestiae. At, eius ea cum adipisci deleniti inventore quibusdam ducimus suscipit, quos nesciunt error doloremque odio optio molestiae facere dolor magnam repudiandae mollitia provident ab! Ea quae sint blanditiis esse facere est molestiae iusto dolorum quasi nisi beatae alias asperiores rem laboriosam veritatis, magnam, ratione, qui cum nobis. Commodi ab illo officia ipsa tenetur.
+    <section class="testimonials-wrapper">
+        <!-- <div class="testimonials" :style="`background-image: url(${bg_image})`" data-rellax-speed="-7"> -->
+        <div class="testimonials-bg" :style="`background-image: url(${bg_image})`">
+            <div class="container">
+                <div class="section-title">
+                    <div class="section-title__bg">
+                        TESTIMONIALS
+                    </div>
+                    <div class="section-title__sm">
+                        Client Reviews & Comments
+                    </div>
+                    <div class="line-bottom"></div>
+                </div>
+                <div class="testimonials">
+                    <div class="testimonial-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" v-for="(item, ind) in testimonials" :key="ind">
+                                <div class="card">
+                                    <div class="card__body">
+                                        <img class="img-fluid" width="50" src="../../assets/testimonials.svg" alt="">
+                                        <p>{{ item.text }}</p>
+                                    </div>
+                                    <div class="card__footer">
+                                        <div class="name">{{ item.clientName }}</div>
+                                        <div class="label">Client</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </template>
+
+<script>
+/* eslint-disable */
+import Rellax from "rellax"
+import Swiper from "swiper"
+import "../../../node_modules/swiper/css/swiper.min.css";
+
+export default {
+    data () {
+        return {
+            bg_image: require('../../assets/testimonial-bg.jpg'),
+            testimonials: [
+                {
+                    text: 'I can assure that Trend MLM is a skillful company that can provide the best MLM systems together with your demands.',
+                    clientName: 'Howard Doe'
+                },
+                {
+                    text: 'Easy to contact and their support team are very responsible in providing help and answers for your queries and consultations.',
+                    clientName: 'Analyn Belington'
+                },
+                {
+                    text: 'They value their clients very much and give the best services. They didn’t just provide you and MLM system but they foresee the future of your business.',
+                    clientName: 'Jessica Jones'
+                },
+                {
+                    text: 'I have found not only an MLM system provider but good consultants as well. They give the best advice for your company and they displayed professionalism.',
+                    clientName: 'Andy James'
+                },
+                {
+                    text: 'I have found not only an MLM system provider but good consultants as well. They give the best advice for your company and they displayed professionalism.',
+                    clientName: 'Rommel Cuneta'
+                },
+            ]
+        }
+    },
+    methods: {
+        myLlax() {
+            // const rellax = new Rellax('.testimonials');
+        },
+    },
+    mounted() {
+        const swiper = new Swiper('.testimonial-swiper', {
+            slidesPerView: 4,
+            spaceBetween: 16,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    }
+}
+</script>
+
+<style lang="scss">
+@import "../../scss/style.scss";
+
+.testimonials-wrapper {
+    overflow: hidden;
+
+    .testimonials-bg {
+        // height: 80vh;
+        padding: 80px 0px;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        .testimonials {
+            .testimonial-swiper {
+                position: relative;
+                overflow: hidden;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        height: 100%;
+                    }
+                }
+
+                .swiper-button-next {
+                    // background-image: url('../../assets/arrow-right.svg') !important;
+                }
+            }
+            .card {
+                background-color: #fff;
+                height: 100%;
+
+                &__body {
+                    padding: 1rem;
+
+                    p {
+                        position: relative;
+                        font-family: $font-secondary;
+                        font-size: 0.8125rem;
+                        color: #888888;
+                        line-height: 1.5rem;
+                        margin-top: 10px;
+                        min-height: 150px;
+
+                        &::before, &::after {
+                            content: '"',
+                        }
+                    }
+                }
+
+                &__footer {
+                    padding: 1rem;
+                    border-top: 1px solid #fee7e5;
+                    background-color: #fff9f8;
+                    font-family: $font-primary;
+
+                    .name {
+                        color: $secondary-color;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+
+                    .label {
+                        color: #888888;
+                        font-size: 13px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+</style>

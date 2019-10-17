@@ -35,6 +35,7 @@ export default {
     data () {
         return {
             techs: [
+                { icon: require('../../assets/tech/laravel1.svg') },
                 { icon: require('../../assets/tech/vue.svg') },
                 { icon: require('../../assets/tech/angular.svg') },
                 { icon: require('../../assets/tech/sass.svg') },
@@ -67,7 +68,7 @@ export default {
 
     .tech {
         display: grid;
-        grid-template-columns: 30% 70%;
+        grid-template-columns: 40% 60%;
         grid-gap: 1rem;
 
         &__label {
@@ -93,7 +94,6 @@ export default {
         } 
 
         .tech-container {
-            justify-self: flex-end;
             overflow: hidden;
             padding: 1rem;
 
