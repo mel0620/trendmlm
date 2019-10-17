@@ -4,7 +4,8 @@
     <services></services>
     <works></works>
     <plan></plan>
-  </div>
+    <technologies></technologies>
+  </div> 
 </template>
 
 <script>
@@ -12,6 +13,7 @@ import Hero from './HomeSections/Hero.vue'
 import Services from './HomeSections/Services.vue'
 import Works from './HomeSections/Works.vue'
 import Plan from './HomeSections/Plan.vue'
+import Technologies from './HomeSections/Technologies.vue'
 
 export default {
   name: 'home',
@@ -19,7 +21,8 @@ export default {
     Hero,
     Services,
     Works,
-    Plan
+    Plan,
+    Technologies
   }
 }
 </script>
