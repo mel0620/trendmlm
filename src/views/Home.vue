@@ -1,22 +1,23 @@
 <template>
   <div class="home-page">
     <hero></hero>
-    <!-- <services></services> -->
-    <Testimonials></Testimonials>
+    <!-- <Testimonials></Testimonials> -->
+    <services></services>
+    <works></works>
   </div>
 </template>
 
 <script>
 import Hero from './HomeSections/Hero.vue'
 import Services from './HomeSections/Services.vue'
-import Testimonials from './HomeSections/Testimonials.vue'
+import Works from './HomeSections/Works.vue'
 
 export default {
   name: 'home',
   components: {
     Hero,
     Services,
-    Testimonials
+    Works
   }
 }
 </script>

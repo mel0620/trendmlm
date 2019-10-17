@@ -2,6 +2,15 @@
     <section class="services-wrapper">
         <div class="container">
             <div class="services">
+                <div class="services-header">
+                    <div class="services-header__1">
+                        SERVICES
+                    </div>
+                    <div class="services-header__2">
+                        We Provide Services for your Business Needs
+                    </div>
+                    <div class="services-border"></div>
+                </div>
                 <div class="services-offer">
                     <div class="services-offer__item" v-for="(item, i) in services" :key="i">
                         <div class="services-offer__item-icon" :style="`background-image: url(${item.image})`"></div>
@@ -23,14 +32,34 @@ export default {
             lorem: 'lorem',
             services: [
                 {
-                    image: require('../../assets/brand.png'),
+                    image: require('../../assets/service-1.svg'),
                     name: 'Software Competence',
                     desc: 'We provide modular MLM systems that are mobile responsive and accessible through tablets and desktops for your convenience.'
                 },
                 {
-                    image: require('../../assets/logo.png'),
+                    image: require('../../assets/service-4.svg'),
                     name: 'Website UI',
                     desc: 'We ensure a natural user-friendly interface on your website for your user’s comfort.'
+                },
+                {
+                    image: require('../../assets/service-2.svg'),
+                    name: 'Security',
+                    desc: 'We make sure that your business is safe and secure; our system provides a powerful security for data and codes.'
+                },
+                {
+                    image: require('../../assets/service-5.svg'),
+                    name: 'ComPlan Commission Calculation',
+                    desc: 'Get ultimate flexibility with our compensation plan. Calculate commissions for your network the way you want to.'
+                },
+                {
+                    image: require('../../assets/service-3.svg'),
+                    name: 'All that Matters',
+                    desc: 'We provide consultations on project scopes to your business needs and what really matters most to you and your members.'
+                },
+                {
+                    image: require('../../assets/service-6.svg'),
+                    name: 'Payment Gateway',
+                    desc: 'We integrate all major payment gateways for your payment choices including credit/debit cards.'
                 },
             ]
         }
@@ -47,30 +76,94 @@ export default {
 </script>
 
 <style lang="scss">
-.services {
-    background-color: #1c1c1c;
 
-    img {
-        width: 50px;
-    }
-
-    .services-offer {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 2rem;
-
-        &__item {
+.services-wrapper {
+    background-color: #fff;
+    padding: 100px 0px;
+    .services {
+        .services-header {
+            margin-bottom: 50px;
+            text-align: center;
+            line-height: 2rem;
+            .services-header__1 {
+                font-family: 'Bw Seido Round DEMO';
+                font-size: 18px;
+                font-weight: 700;
+                color: #ff6f61;
+            }
+            .services-header__2 {
+                font-family: 'Bw Seido Round DEMO';
+                font-size: 13px;
+                font-weight: 400;
+                color: #01719a;
+            }
+            .services-border {
+                background-color: #ff6f61;
+                width: 30px;
+                height: 3px;
+                position: relative;
+                margin: 15px auto;
+                &:before {
+                    content: '';
+                    background-color: #888888;
+                    width: 25px;
+                    height: 1px;
+                    position: absolute;
+                    left: -25px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &:after {
+                    content: '';
+                    background-color: #888888;
+                    width: 25px;
+                    height: 1px;
+                    position: absolute;
+                    left: 30px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        .services-offer {
             display: grid;
-            grid-template-columns: 50px 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 3rem;
 
-            &-icon {
-                background-size: contain;
-                background-repeat: no-repeat;
-                padding: 1rem;
-                width: 50px;
-                height: 50px;
+            .services-offer__item {
+                display: grid;
+                grid-template-columns: 50px 1fr;
+                grid-gap: 30px;
+                align-items: center;
+
+                .services-offer__item-icon {
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    padding: 1rem;
+                    width: 50px;
+                    height: 50px;
+
+                }
+                .services-offer__item-info {
+
+                    .services-offer__name {
+                        font-family: 'Bw Seido Round DEMO';
+                        font-size: 15px;
+                        font-weight: 700;
+                        color: #ff6f61;
+                        margin-bottom: 10px;
+                    }
+                    .services-offer__desc {
+                        font-family: 'Montserrat';
+                        font-size: 13px;
+                        font-weight: 400;
+                        color: #01719a;
+                        line-height: 1.5rem;
+                    }
+                }
             }
         }
     }
 }
+
 </style>
