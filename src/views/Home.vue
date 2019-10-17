@@ -6,6 +6,7 @@
     <clients></clients>
     <plan></plan>
     <testimonials></testimonials>
+    <contact></contact>
     <technologies></technologies>
   </div>
 </template>
@@ -17,6 +18,7 @@ import Works from './HomeSections/Works.vue'
 import Clients from './HomeSections/Clients.vue'
 import Plan from './HomeSections/Plan.vue'
 import Testimonials from './HomeSections/Testimonials.vue'
+import Contact from './HomeSections/Contact.vue'
 import Technologies from './HomeSections/Technologies.vue'
 
 export default {
@@ -28,6 +30,7 @@ export default {
     Clients,
     Plan,
     Testimonials,
+    Contact,
     Technologies
   }
 }
