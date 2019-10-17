@@ -2,35 +2,18 @@
     <section class="works-wrapper">
         <div class="container">
             <div class="works">
-                <div class="works-header">
-                    <div class="works-header__1">
+                <div class="section-title section-title--variant1">
+                    <div class="section-title__bg">
                         WORKS
                     </div>
-                    <div class="works-header__2">
+                    <div class="section-title__sm">
                         Our Recent and Newest Project
                     </div>
-                    <div class="works-border"></div>
+                    <div class="section-title__border"></div>
                 </div>
-            </div>
-            <!-- Slider main container -->
-            <div class="swiper-container">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    ...
+                <div class="works-content">
+
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <!-- If we need scrollbar -->
-                <!-- <div class="swiper-scrollbar"></div> -->
             </div>
         </div>
     </section>
@@ -78,11 +61,56 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../../scss/style";
 
     .works-wrapper
     {
         background-color: #007eac;
         padding: 100px 0px;
+        .works-header {
+            margin-bottom: 50px;
+            text-align: center;
+            line-height: 2rem;
+            .works-header__1 {
+                font-family: $font-primary;
+                font-size: 18px;
+                font-weight: 700;
+                color: $primary-color;
+            }
+            .works-header__2 {
+                font-family: $font-primary;
+                font-size: 13px;
+                font-weight: 400;
+                color: #fff;
+            }
+            .works-border {
+                background-color: $primary-color;
+                width: 30px;
+                height: 3px;
+                position: relative;
+                margin: 15px auto;
+                &:before {
+                    content: '';
+                    background-color: #fff;
+                    width: 25px;
+                    height: 1px;
+                    position: absolute;
+                    left: -25px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &:after {
+                    content: '';
+                    background-color: #fff;
+                    width: 25px;
+                    height: 1px;
+                    position: absolute;
+                    left: 30px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
     }
 
 </style>
