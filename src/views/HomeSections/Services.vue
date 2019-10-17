@@ -76,6 +76,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../../scss/style";
 
 .services-wrapper {
     background-color: #fff;
@@ -86,13 +87,13 @@ export default {
             text-align: center;
             line-height: 2rem;
             .services-header__1 {
-                font-family: 'Bw Seido Round DEMO';
+                font-family: $font-primary;
                 font-size: 18px;
                 font-weight: 700;
                 color: #ff6f61;
             }
             .services-header__2 {
-                font-family: 'Bw Seido Round DEMO';
+                font-family: $font-primary;
                 font-size: 13px;
                 font-weight: 400;
                 color: #01719a;
@@ -147,14 +148,14 @@ export default {
                 .services-offer__item-info {
 
                     .services-offer__name {
-                        font-family: 'Bw Seido Round DEMO';
+                        font-family: $font-primary;
                         font-size: 15px;
                         font-weight: 700;
                         color: #ff6f61;
                         margin-bottom: 10px;
                     }
                     .services-offer__desc {
-                        font-family: 'Montserrat';
+                        font-family: $font-secondary;
                         font-size: 13px;
                         font-weight: 400;
                         color: #01719a;
