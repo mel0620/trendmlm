@@ -45,7 +45,7 @@
         right: 0;
         background-color: transparent;
         z-index: 99;
-        border-bottom: 1px solid rgba(#fff, .4);
+        // border-bottom: 1px solid rgba(#fff, .4);
 
         &__nav {
             display: grid;
@@ -89,7 +89,7 @@
                         &::after {
                             content: '';
                             background-color: #fff;
-                            height: 2px;
+                            height: 1px;
                             position: absolute;
                             bottom: 0;
                             left: 0;
