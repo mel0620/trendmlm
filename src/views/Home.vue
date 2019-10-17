@@ -1,9 +1,9 @@
 <template>
   <div class="home-page">
     <hero></hero>
-    <!-- <Testimonials></Testimonials> -->
     <services></services>
     <works></works>
+    <plan></plan>
   </div>
 </template>
 
@@ -11,13 +11,15 @@
 import Hero from './HomeSections/Hero.vue'
 import Services from './HomeSections/Services.vue'
 import Works from './HomeSections/Works.vue'
+import Plan from './HomeSections/Plan.vue'
 
 export default {
   name: 'home',
   components: {
     Hero,
     Services,
-    Works
+    Works,
+    Plan
   }
 }
 </script>
