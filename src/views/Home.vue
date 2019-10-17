@@ -1,8 +1,8 @@
 <template>
   <div class="home-page">
     <hero></hero>
-    <services></services>
-    <!-- <Testimonials></Testimonials> -->
+    <!-- <services></services> -->
+    <Testimonials></Testimonials>
   </div>
 </template>
 
