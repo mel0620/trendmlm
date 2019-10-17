@@ -12,14 +12,14 @@
 </template>
 
 <script>
-import Hero from './HomeSections/Hero.vue'
-import Services from './HomeSections/Services.vue'
-import Works from './HomeSections/Works.vue'
-import Clients from './HomeSections/Clients.vue'
-import Plan from './HomeSections/Plan.vue'
-import Testimonials from './HomeSections/Testimonials.vue'
-import Contact from './HomeSections/Contact.vue'
-import Technologies from './HomeSections/Technologies.vue'
+import Hero from './Hero.vue'
+import Services from './Services.vue'
+import Works from './Works.vue'
+import Clients from './Clients.vue'
+import Plan from './Plan.vue'
+import Testimonials from './Testimonials.vue'
+import Contact from './Contact.vue'
+import Technologies from './Technologies.vue'
 
 export default {
   name: 'home',

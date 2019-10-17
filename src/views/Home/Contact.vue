@@ -39,7 +39,7 @@
             .contact-content {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                grid-gap: 20px;
+                grid-gap: 10px;
 
                 input {
                     color: #fff;
@@ -51,14 +51,22 @@
                     font-family: $font-secondary;
                     font-weight: 300;
                     outline: none;
+                    transition: .3s all ease-in-out;
+
+                    &:focus {
+                        box-shadow: 0 0 0 1px #fff;
+                    }
                 }
+
                 .contact-content__message
                 {
                     grid-column: 1 / span 2;
                 }
+
                 ::placeholder {
                     color: #fff;
                 }
+
                 button {
                     outline: none;
                     background-color: #fff;
@@ -71,7 +79,6 @@
                     border:none;
                     border-radius: 2px;
                     cursor: pointer;
-                    // box-shadow: 0 5px 10px 5px rgba(#000, .12);
                 }
             }
         }
