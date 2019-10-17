@@ -5,6 +5,7 @@
     <works></works>
     <clients></clients>
     <plan></plan>
+    <technologies></technologies>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import Services from './HomeSections/Services.vue'
 import Works from './HomeSections/Works.vue'
 import Clients from './HomeSections/Clients.vue'
 import Plan from './HomeSections/Plan.vue'
+import Technologies from './HomeSections/Technologies.vue'
 
 export default {
   name: 'home',
@@ -22,8 +24,8 @@ export default {
     Services,
     Works,
     Clients,
-    Plan
-
+    Plan,
+    Technologies
   }
 }
 </script>

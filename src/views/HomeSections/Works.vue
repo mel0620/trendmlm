@@ -12,7 +12,7 @@
                     <div class="line-bottom line-bottom--white"></div>
                 </div>
                 <div class="works-content">
-                    <div class="works-swiper">
+                    <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide" v-for="(item, i) in works" :key="i">
                                 <img class="img-fluid" :src="item.image" alt="">
@@ -20,9 +20,9 @@
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
-                    <div class="works-button">
-                        <button>View More</button>
-                    </div>
+                </div>
+                <div class="works-button">
+                    <button>View More</button>
                 </div>
             </div>
         </div>
@@ -37,33 +37,23 @@ export default {
     data () {
         return {
             works: [
-                {
-                    image: require('../../assets/works-1.png')
-                },
-                {
-                    image: require('../../assets/works-2.png')
-                },
-                {
-                    image: require('../../assets/works-3.png')
-                },
-                {
-                    image: require('../../assets/works-4.png')
-                },
-                {
-                    image: require('../../assets/works-5.png')
-                },
-                {
-                    image: require('../../assets/works-6.png')
-                },
+                { image: require('../../assets/works-1.png') },
+                { image: require('../../assets/works-2.png') },
+                { image: require('../../assets/works-3.png') },
+                { image: require('../../assets/works-4.png') },
+                { image: require('../../assets/works-5.png') },
+                { image: require('../../assets/works-6.png') },
             ]
         }
     },
     methods: {
         worksSwiper() {
-            var swiper = new Swiper('.works-swiper', {
+            var swiper = new Swiper('.swiper-container', {
                 slidesPerView: 3,
-                slidesPerColumn: 1,
-                spaceBetween: 16,
+                slidesPerGroup: 3,
+                // centeredSlides: true,
+                // slidesPerColumn: 2,
+                spaceBetween: 30,
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
@@ -85,16 +75,18 @@ export default {
         padding: 100px 0px;
         .works {
             .works-content {
-                .works-swiper {
+                .swiper-container {
                     width: 100%;
                     height: 100%;
-                    overflow: hidden;
                     position: relative;
+                    margin-left: auto;
+                    margin-right: auto;
 
                     .swiper-wrapper {
+                        padding-bottom: 2.5rem;
 
                         .swiper-slide {
-
+                            height: calc((100% - 30px) / 2);
                         }
                     }
                 }
@@ -107,24 +99,26 @@ export default {
                 .swiper-pagination-bullet-active {
                     background-color: $primary-color;
                 }
+            }
+            .works-button {
+                text-align: center;
+                margin-top: 30px;
 
-                .works-button {
-                    text-align: center;
-                    margin-top: 30px;
-                    button
-                    {
-                        outline: none;
-                        background-color: $primary-color;
-                        color: #fff;
-                        font-family: $font-secondary;
-                        font-weight: 600;
-                        font-size: 15px;
-                        padding: 15px 0px;
-                        width: 250px;
-                        border:none;
-                        border-radius: 2px;
-                        cursor: pointer;
-                    }
+                button
+                {
+                    outline: none;
+                    background-color: $primary-color;
+                    color: #fff;
+                    font-family: $font-secondary;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    padding: 1rem 0px;
+                    min-width: 250px;
+                    border:none;
+                    border-radius: 2px;
+                    cursor: pointer;
+                    box-shadow: 0 5px 10px 5px rgba(#000, .12);
+
                 }
             }
         }
