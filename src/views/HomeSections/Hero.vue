@@ -1,5 +1,6 @@
 <template>
     <div class="hero">
+<<<<<<< HEAD
         <div class="container">
             <div class="hero-content">
                 <div class="hero-content__text">
@@ -16,6 +17,9 @@
                 </div>
             </div>
         </div>
+=======
+
+>>>>>>> 8d0fc58a677daba54781ca067ba82a4fe125f87e
     </div>
 </template>
 
@@ -23,7 +27,7 @@
 export default {
     data () {
         return {
-            bg_image: '../../assets/hero-bg.jpg'
+            bg_image: '../../assets/hero-bg.jpg',
         }
     }
 }
