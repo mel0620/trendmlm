@@ -22,6 +22,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 import Rellax from "rellax"
 
 export default {

@@ -30,6 +30,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 import Swiper from "swiper"
 import "../../../node_modules/swiper/css/swiper.min.css"
 

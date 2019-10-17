@@ -17,6 +17,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 import Swiper from "swiper"
 import "../../../node_modules/swiper/css/swiper.min.css"
 
@@ -36,7 +37,7 @@ export default {
     },
     methods: {
         clientsSwiper() {
-            var swiper = new Swiper('.clients-swiper', {
+            const swiper = new Swiper('.clients-swiper', {
                 slidesPerView: 5,
                 slidesPerColumn: 1,
                 spaceBetween: 20,
