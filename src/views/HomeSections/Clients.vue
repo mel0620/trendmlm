@@ -9,6 +9,12 @@
                                 <img :src="item.image" alt="">
                             </div>
                         </div>
+                        <div class="slider-next">
+						    <img src="../../assets/next.svg" alt="">
+                        </div>
+                        <div class="slider-prev">
+                            <img src="../../assets/prev.svg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -58,10 +64,10 @@ export default {
                     delay: 2500,
                     disableOnInteraction: false,
                 },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
+                navigation: {
+                    nextEl: '.slider-next',
+                    prevEl: '.slider-prev',
+                }
             });
         }
     },
@@ -98,6 +104,43 @@ export default {
                                 margin: auto;
                                 width: 120px;
                             }
+                        }
+                    }
+                    .slider-next
+                    {
+                        outline: 0;
+                        text-align: right;
+                        position: absolute;
+                        top: 45%;
+                        right: 0px;
+                        z-index: 1;
+                        cursor: pointer;
+                        transition:500ms ease;
+                        @media screen and (max-width: 768px)
+                        {
+                            display: block;
+                        }
+                        img
+                        {
+                            width: 25px;
+                        }
+                    }
+                    .slider-prev
+                    {
+                        outline: 0;
+                        position: absolute;
+                        top: 45%;
+                        left: 0px;
+                        z-index: 1;
+                        cursor: pointer;
+                        transition:500ms ease;
+                        @media screen and (max-width: 768px)
+                        {
+                            display: block;
+                        }
+                        img
+                        {
+                            width: 25px;
                         }
                     }
                 }
