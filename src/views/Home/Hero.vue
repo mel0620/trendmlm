@@ -47,6 +47,8 @@ export default {
 
 .hero-container {
     overflow: hidden;
+    position: relative;
+    z-index: 10;
     .hero {
         height: 100vh;
         position: relative;

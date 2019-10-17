@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "lax.js": "^1.2.5",
     "register-service-worker": "^1.6.2",
     "rellax": "^1.10.0",
     "scroll-out": "^2.2.7",

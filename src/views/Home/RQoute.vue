@@ -24,6 +24,7 @@
     background-color: $primary-color;
     width: 100%;
     padding: 2rem;
+    border-radius: 5px;
     
     .title {
         display: grid;
