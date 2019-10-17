@@ -1,6 +1,7 @@
 <template>
   <div class="home-page">
     <hero></hero>
+    <!-- <Testimonials></Testimonials> -->
     <services></services>
     <works></works>
   </div>
