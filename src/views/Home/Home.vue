@@ -1,6 +1,7 @@
 <template>
   <div class="home-page">
     <hero></hero>
+    <GetToKnow></GetToKnow>
     <services></services>
     <works></works>
     <clients></clients>
@@ -13,6 +14,7 @@
 
 <script>
 import Hero from './Hero.vue'
+import GetToKnow from './GetToKnow.vue'
 import Services from './Services.vue'
 import Works from './Works.vue'
 import Clients from './Clients.vue'
@@ -25,6 +27,7 @@ export default {
   name: 'home',
   components: {
     Hero,
+    GetToKnow,
     Services,
     Works,
     Clients,
