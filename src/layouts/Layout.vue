@@ -78,7 +78,7 @@ export default {
 
             &-brand {
                 img {
-                    filter: brightness(10);
+                    filter: brightness(500);
                 }
             }
 
