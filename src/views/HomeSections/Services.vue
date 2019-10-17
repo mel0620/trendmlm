@@ -104,7 +104,7 @@ export default {
 
                     .services-offer__name {
                         font-family: $font-primary;
-                        font-size: 15px;
+                        font-size: 1rem;
                         font-weight: 700;
                         color: $primary-color;
                         margin-bottom: 10px;
