@@ -109,6 +109,7 @@ export default {
             {
                 button
                 {
+                    outline: none;
                     color: #fff;
                     background-color: transparent;
                     font-family: 'Montserrat';
@@ -118,7 +119,7 @@ export default {
                     padding: 15px 0px;
                     width: 200px;
                     border-radius: 2px;
-
+                    cursor: pointer;
                 }
             }
         }
