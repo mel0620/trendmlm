@@ -1,6 +1,6 @@
 <template>
     <div class="page-layout">
-        <header class="header">
+        <header class="header header--sticky">
             <div class="container">
                 <nav class="header__nav">
                     <a class="header__nav-brand" href="javascript:">
@@ -34,12 +34,35 @@
     </div>
 </template>
 
+<script>
+import ScrollOut from "scroll-out"
+
+export default {
+    data () {
+        return {
+
+        }
+    },
+    methods: {
+        stickyHeader() {
+            ScrollOut({
+                targets: ".header--sticky",
+                offset: 400
+            });
+        }
+    },
+    mounted() {
+        this.stickyHeader();
+    }
+}
+</script>
+
 <style lang="scss">
 @import "../scss/style.scss";
 
 .page-layout {
     .header {
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         right: 0;
@@ -125,6 +148,10 @@
                 }
             }
         }
+    }
+
+    .header--sticky[data-scroll="in"] {
+        position: fixed;
     }
 }
 </style>
