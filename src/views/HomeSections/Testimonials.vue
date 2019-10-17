@@ -29,8 +29,12 @@
                             </div>
                         </div>
                         <!-- Add Arrows -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                        <div class="arrow-right">
+                            <img class="img-fluid" width="20" src="../../assets/arrow-right.svg" alt="">
+                        </div>
+                        <div class="arrow-left">
+                            <img class="img-fluid" width="20" src="../../assets/arrow-left.svg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -82,8 +86,8 @@ export default {
             slidesPerView: 4,
             spaceBetween: 16,
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.arrow-right',
+                prevEl: '.arrow-left',
             },
         });
     }
@@ -106,59 +110,96 @@ export default {
         background-attachment: fixed;
 
         .testimonials {
+            position: relative;
+
             .testimonial-swiper {
-                position: relative;
                 overflow: hidden;
+
                 .swiper-wrapper {
                     .swiper-slide {
                         height: 100%;
-                    }
-                }
 
-                .swiper-button-next {
-                    // background-image: url('../../assets/arrow-right.svg') !important;
-                }
-            }
-            .card {
-                background-color: #fff;
-                height: 100%;
+                        .card {
+                            background-color: #fff;
+                            height: 100%;
 
-                &__body {
-                    padding: 1rem;
+                            &__body {
+                                padding: 1rem;
 
-                    p {
-                        position: relative;
-                        font-family: $font-secondary;
-                        font-size: 0.8125rem;
-                        color: #888888;
-                        line-height: 1.5rem;
-                        margin-top: 10px;
-                        min-height: 150px;
+                                p {
+                                    position: relative;
+                                    font-family: $font-secondary;
+                                    font-size: 0.8125rem;
+                                    color: #888888;
+                                    line-height: 1.5rem;
+                                    margin-top: 10px;
+                                    min-height: 150px;
 
-                        &::before, &::after {
-                            content: '"',
+                                    &::before, &::after {
+                                        content: '"',
+                                    }
+                                }
+                            }
+
+                            &__footer {
+                                padding: 1rem;
+                                border-top: 1px solid #fee7e5;
+                                background-color: #fff9f8;
+                                font-family: $font-primary;
+
+                                .name {
+                                    color: $secondary-color;
+                                    font-size: 14px;
+                                    font-weight: 700;
+                                }
+
+                                .label {
+                                    color: #888888;
+                                    font-size: 13px;
+                                    margin-top: 5px;
+                                }
+                            }
                         }
                     }
                 }
+            }
 
-                &__footer {
-                    padding: 1rem;
-                    border-top: 1px solid #fee7e5;
-                    background-color: #fff9f8;
-                    font-family: $font-primary;
+            .arrow-right, .arrow-left {
+                padding: 8px;
+                border-radius: 100%;
+                background-color: #fff;
+                width: 45px;
+                height: 45px;
+                position: absolute;
+                box-shadow: 0 0 5px 3px rgba(#000, .12);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                outline: none;
+                cursor: pointer;
 
-                    .name {
-                        color: $secondary-color;
-                        font-size: 14px;
-                        font-weight: 700;
-                    }
-
-                    .label {
-                        color: #888888;
-                        font-size: 13px;
-                        margin-top: 5px;
-                    }
+                img {
+                    object-fit: contain;
                 }
+
+                &.swiper-button-disabled {
+                    opacity: .5;
+                    cursor: not-allowed;
+                }
+            }
+
+            .arrow-left {
+                left: -25px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 10;
+            }
+
+            .arrow-right {
+                right: -25px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 10;
             }
         }
     }

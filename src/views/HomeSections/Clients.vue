@@ -10,10 +10,10 @@
                             </div>
                         </div>
                         <div class="slider-next">
-						    <img src="../../assets/next.svg" alt="">
+						    <img class="img-fluid" width="25" src="../../assets/next.svg" alt="">
                         </div>
                         <div class="slider-prev">
-                            <img src="../../assets/prev.svg" alt="">
+                            <img class="img-fluid" width="25" src="../../assets/prev.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -72,12 +72,13 @@ export default {
         background-color: #fff9f8;
         .clients {
             .clients-content {
+                position: relative;
                 .clients-swiper {
                     width: 100%;
                     height: 100%;
                     overflow: hidden;
-                    position: relative;
                     padding: 10px 0px;
+
                     .swiper-wrapper {
                         .swiper-slide {
                             background-color: #fff;
@@ -93,42 +94,43 @@ export default {
                             }
                         }
                     }
-                    .slider-next
-                    {
-                        outline: 0;
-                        text-align: right;
+
+                    .slider-next, .slider-prev {
+                        padding: 8px;
+                        border-radius: 100%;
+                        // background-color: #fff;
+                        width: 45px;
+                        height: 45px;
                         position: absolute;
-                        top: 45%;
-                        right: 0px;
-                        z-index: 1;
+                        // box-shadow: 0 0 5px 3px rgba(#000, .12);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        outline: none;
                         cursor: pointer;
-                        transition:500ms ease;
-                        @media screen and (max-width: 768px)
-                        {
-                            display: block;
+
+                        img {
+                            object-fit: contain;
                         }
-                        img
-                        {
-                            width: 25px;
+
+                        &.swiper-button-disabled {
+                            opacity: .5;
+                            cursor: not-allowed;
                         }
                     }
-                    .slider-prev
-                    {
-                        outline: 0;
-                        position: absolute;
-                        top: 45%;
-                        left: 0px;
-                        z-index: 1;
-                        cursor: pointer;
-                        transition:500ms ease;
-                        @media screen and (max-width: 768px)
-                        {
-                            display: block;
-                        }
-                        img
-                        {
-                            width: 25px;
-                        }
+
+                    .slider-prev {
+                        left: -50px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        z-index: 10;
+                    }
+
+                    .slider-next {
+                        right: -50px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        z-index: 10;
                     }
                 }
             }
