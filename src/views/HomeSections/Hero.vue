@@ -11,7 +11,7 @@
                             We can help you make it to the top. Let’s all grow together.
                         </div>
                     </div>
-                    <div class="hero-content__border"></div>
+                    <div class="line-bottom line-bottom--pure-white"></div>
                     <div class="hero-content__button">
                         <button>INQUIRE NOW</button>
                     </div>

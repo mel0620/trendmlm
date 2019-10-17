@@ -1,3 +1,4 @@
+// FOR EVERY HOMEPAGE SECTION TITLE
 .section-title {
     margin-bottom: 50px;
     text-align: center;
@@ -16,34 +17,43 @@
         color: $secondary-color;
     }
 
-    &__border {
-        background-color: #888888;
-        width: 100px;
-        height: 2px;
-        position: relative;
-        margin: 15px auto;
-        position: relative;
-        display: flex;
-        align-items: center;
-
-        &::before {
-            content: ' ';
-            align-self: center;
-            margin: auto;
-            height: 4px;
-            width: 35px;
-            background-color: $primary-color;
-            margin-top: -.7px;
+    &.section-title--variant1 {
+        .section-title__sm {
+            color: #fff;
         }
     }
 }
 
-.section-title--variant1 {
-    .section-title__sm {
-        color: #fff;
+// BOTTOM LINES
+.line-bottom {
+    background-color: #888888;
+    width: 100px;
+    height: 2px;
+    position: relative;
+    margin: 15px auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+        content: ' ';
+        align-self: center;
+        margin: auto;
+        height: 4px;
+        width: 35px;
+        background-color: $primary-color;
+        margin-top: -.7px;
     }
 
-    .section-title__border {
+    &.line-bottom--white {
         background-color: #fff;
+    }
+
+    &.line-bottom--pure-white {
+        background-color: #fff;
+
+        &::before {
+            background-color: #fff;
+        }
     }
 }

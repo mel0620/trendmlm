@@ -9,7 +9,7 @@
                     <div class="section-title__sm">
                         We Provide Services for your Business Needs
                     </div>
-                    <div class="section-title__border"></div>
+                    <div class="line-bottom"></div>
                 </div>
                 <div class="services-offer">
                     <div class="services-offer__item" v-for="(item, i) in services" :key="i">

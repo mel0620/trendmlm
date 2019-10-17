@@ -9,7 +9,7 @@
                     <div class="section-title__sm">
                         Our Recent and Newest Project
                     </div>
-                    <div class="section-title__border"></div>
+                    <div class="line-bottom line-bottom--white"></div>
                 </div>
                 <div class="works-content">
                     <div class="works-swiper">

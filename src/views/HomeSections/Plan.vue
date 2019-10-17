@@ -9,7 +9,7 @@
                     <div class="section-title__sm">
                         Various Multi-Level Marketing Plans
                     </div>
-                    <div class="section-title__border"></div>
+                    <div class="line-bottom"></div>
                 </div>
             </div>
         </div>
