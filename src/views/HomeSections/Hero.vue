@@ -65,7 +65,7 @@ export default {
                 color: #fff;
                 font-family: $font-primary;
                 text-align: center;
-                // line-height: 4.0rem;
+                line-height: 3.0rem;
 
                 .hero-content__text-1 {
                     font-weight: 700;
@@ -82,7 +82,6 @@ export default {
                 width: 30px;
                 height: 3px;
                 position: relative;
-                margin: 20px 0px;
                 &:before {
                     content: '';
                     background-color: #fff;
@@ -107,6 +106,7 @@ export default {
 
             .hero-content__button
             {
+                margin-top: 20px;
                 button
                 {
                     outline: none;
