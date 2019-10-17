@@ -27,8 +27,55 @@
         </header>
         <router-view></router-view>
         <footer class="footer">
-            <div class="container">
-                <h1>Footer</h1>
+            <div class="footer__top">
+                <div class="container">
+                    <div class="info-wrapper">
+                        <div class="info-item" v-for="(item, i) in infos" :key="i">
+                            <div class="info-item__icon">
+                                <img width="50" class="img-fluid" :src="item.icon" alt="">
+                            </div>
+                            <div class="info-item__text">
+                                <div class="info-item__name">{{ item.name }}</div>
+                                <div class="info-item__details">{{ item.details }}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-nav-wrapper">
+                        <div class="bottom-nav">
+                            <div class="bottom-nav__brand">
+                                <img width="250" class="img-fluid" src="../assets/brand-bottom.png" alt="">
+                            </div>
+                            <div class="bottom-nav__links">
+                                <ul>
+                                    <li><a href="javascript:">HOME</a></li>
+                                    <li><a href="javascript:">About</a></li>
+                                    <li><a href="javascript:">Services</a></li>
+                                    <li><a href="javascript:">works</a></li>
+                                    <li><a href="javascript:">contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="bottom-nav__social">
+                                <a href="javascript:">
+                                    <span class="mdi mdi-facebook-box"></span>
+                                </a>
+                                <a href="javascript:">
+                                    <span class="mdi mdi-twitter-box"></span>
+                                </a>
+                                <a href="javascript:">
+                                    <span class="mdi mdi-google-plus-box"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="container">
+                    <div class="website-info">
+                        <div>Trend &copy; 2019 All Rights reserved.</div>
+                        <div>Powered By: DIGIMA WEB SOLUTIONS, Inc.</div>
+                    </div>
+                </div>
             </div>
         </footer>
     </div>
@@ -40,7 +87,23 @@ import ScrollOut from "scroll-out"
 export default {
     data () {
         return {
-
+            infos: [
+                {
+                    icon: require('../assets/contact-1.svg'),
+                    name: 'Contact us',
+                    details: 'Details Coming Soon!'
+                },
+                {
+                    icon: require('../assets/contact-2.svg'),
+                    name: 'Email us',
+                    details: 'Details Coming Soon!'
+                },
+                {
+                    icon: require('../assets/contact-3.svg'),
+                    name: 'located at',
+                    details: 'Details Coming Soon!'
+                },
+            ]
         }
     },
     methods: {
@@ -204,6 +267,104 @@ export default {
                     div:last-child {
                         font-weight: 900;
                     }
+                }
+            }
+        }
+    }
+
+    .footer {
+        &__top {
+            background-color: $secondary-color;
+           
+           .info-wrapper {
+                border-bottom: 1px solid rgba(#fff, .12);
+                padding: 50px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .info-item {
+                    display: grid;
+                    grid-template-columns: auto 1fr;
+                    grid-gap: 1rem;
+                    padding: 0 2rem;
+
+                    &__text {
+                        color: #fff;
+
+                        .info-item__name {
+                            font-family: $font-primary;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                        }
+
+                        .info-item__details {
+                            font-family: $font-secondary;
+                            font-size: 14px;
+                            opacity: .6;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+
+            .bottom-nav-wrapper {
+                .bottom-nav {
+                    padding: 50px 0;
+                    display: grid;
+                    grid-template-columns: auto 1fr auto;
+                    grid-gap: 1rem;
+                    align-items: center;
+
+                    &__links {
+                        justify-self: center;
+
+                        ul {
+                            list-style-type: none;
+                            display: flex;
+                            align-items: center;
+                            
+                            li {
+                                padding: 0 1rem;
+
+                                a {
+                                    text-decoration: none;
+                                    color: #fff;
+                                    font-family: $font-secondary;
+                                    text-transform: uppercase;
+                                    font-size: 0.8125rem;
+                                }
+                            }
+                        }
+                    }
+
+                    &__social {
+                        display: grid;
+                        grid-template-columns: auto auto auto;
+                        grid-gap: 5px;
+
+                        a {
+                            color: #fff;
+                            text-decoration: none;
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__bottom {
+            background-color: #004b66;
+
+            .website-info {
+                display: flex;
+                justify-content: space-between;
+                padding: 1.2rem 0;
+
+                > div {
+                    font-family: $font-secondary;
+                    color: #fff;
+                    font-size: 13px;
                 }
             }
         }
