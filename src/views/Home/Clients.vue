@@ -160,6 +160,9 @@ export default {
                 width: 100px !important;
             }
         }
+        // .slider-next, .slider-prev {
+        //     display: none !important;
+        // }
     }
 }
 

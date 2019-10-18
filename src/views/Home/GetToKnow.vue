@@ -24,42 +24,42 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- ANIMATING OBEJECTS -->
-        <img 
+        <img
             src="../../assets/qoute-objects/square-dots.svg" alt=""
-            class="square-dots lax" 
+            class="square-dots lax"
             width="100"
             data-lax-preset="rightToLeft spin"
         >
-        <img 
-            src="../../assets/qoute-objects/bubble-warp.svg" 
-            class="bubble-warp lax" 
-            width="200" 
+        <img
+            src="../../assets/qoute-objects/bubble-warp.svg"
+            class="bubble-warp lax"
+            width="200"
             data-lax-preset="speedy"
         >
-        <img 
-            src="../../assets/qoute-objects/bubble-warp.svg" 
-            class="bubble-warp2 lax" 
-            width="30" 
+        <img
+            src="../../assets/qoute-objects/bubble-warp.svg"
+            class="bubble-warp2 lax"
+            width="30"
             data-lax-preset="speedy spin"
         >
-        <img 
-            src="../../assets/qoute-objects/stripe-circ.svg" 
-            class="stripe-circ lax" 
-            width="200" 
+        <img
+            src="../../assets/qoute-objects/stripe-circ.svg"
+            class="stripe-circ lax"
+            width="200"
             data-lax-preset="lazy"
         >
-        <img 
-            src="../../assets/qoute-objects/circle-outline.svg" 
-            class="circle-outline1 lax" 
-            width="100" 
+        <img
+            src="../../assets/qoute-objects/circle-outline.svg"
+            class="circle-outline1 lax"
+            width="100"
             data-lax-preset="leftToRight"
         >
-        <img 
-            src="../../assets/qoute-objects/circle-outline.svg" 
-            class="circle-outline2 lax" 
-            width="100" 
+        <img
+            src="../../assets/qoute-objects/circle-outline.svg"
+            class="circle-outline2 lax"
+            width="100"
             data-lax-preset="lazy"
         >
     </section>
@@ -184,6 +184,12 @@ export default {
         opacity: .2;
         z-index: 1;
         filter: brightness(0) invert(1)
+    }
+}
+
+@include for-size(phone-only) {
+    .get-to-know-content {
+        grid-template-columns: 1fr !important;
     }
 }
 </style>

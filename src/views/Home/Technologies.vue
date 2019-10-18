@@ -51,6 +51,20 @@ export default {
             const swiper = new Swiper('.tech-container', {
                 slidesPerView: 7,
                 spaceBetween: 20
+                // breakpoints: {
+                //     1366: {
+                //         slidesPerView: 7,
+                //         spaceBetween: 20
+                //     },
+                //     768: {
+                //         slidesPerView: 5,
+                //         spaceBetween: 10
+                //     },
+                //     425: {
+                //         slidesPerView: 4,
+                //         spaceBetween: 10
+                //     }
+                // }
             });
         },
     },
@@ -120,4 +134,11 @@ export default {
         }
     }
 }
+
+@include for-size(phone-only) {
+    .tech {
+        grid-template-columns: 1fr !important;
+    }
+}
+
 </style>
