@@ -1,5 +1,5 @@
 <template>
-    <div class="hero-container">
+    <div class="hero-container" id="home">
         <div class="hero" :style="`background-image: url(${bg_image})`" data-rellax-speed="-7">
             <div class="container">
                 <div class="hero-content">

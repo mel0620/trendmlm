@@ -1,5 +1,5 @@
 <template>
-    <section class="get-to-know">
+    <section class="get-to-know" id="about">
         <div class="request-a-qoute" data-rellax-speed="4">
             <RQoute></RQoute>
         </div>

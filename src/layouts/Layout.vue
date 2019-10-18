@@ -6,12 +6,12 @@
                     <a class="header__nav-brand" href="javascript:">
                         <img class="img-fluid" width="200" src="@/assets/brand-colored.png" alt="trend mlm logo">
                     </a>
-                    <div class="header__nav-links" data-mob="hide">
-                        <a href="javascript:" class="header__nav-link active">Home</a>
-                        <a href="javascript:" class="header__nav-link">About</a>
-                        <a href="javascript:" class="header__nav-link">Services</a>
-                        <a href="javascript:" class="header__nav-link">Works</a>
-                        <a href="javascript:" class="header__nav-link">Contact</a>
+                    <div id="navlink" class="header__nav-links" data-mob="hide">
+                        <a href="#home" title="Home" class="header__nav-link">Home</a>
+                        <a href="#about" title="About" class="header__nav-link">About</a>
+                        <a href="#services" title="Services" class="header__nav-link">Services</a>
+                        <a href="#works" title="Works" class="header__nav-link">Works</a>
+                        <a href="#contact" title="Contact" class="header__nav-link">Contact</a>
                     </div>
                     <div class="header__nav-contact" data-mob="hide">
                         <div class="header__nav-contact-icon">
@@ -86,6 +86,7 @@
 
 <script>
 import ScrollOut from "scroll-out"
+import VanillaScrollspy from 'vanillajs-scrollspy'
 
 export default {
     data () {
@@ -119,6 +120,10 @@ export default {
     },
     mounted() {
         this.stickyHeader();
+
+        const navbar = document.querySelector('#navlink');
+        const scrollspy = new VanillaScrollspy(navbar, 1000, 'easeInOutQuint');
+        scrollspy.init();
     }
 }
 </script>
