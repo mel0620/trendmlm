@@ -121,4 +121,23 @@ export default {
         }
     }
 }
+
+@include for-size(phone-only) {
+    .services-offer {
+        grid-template-columns: 1fr !important;
+
+        .services-offer__item {
+            grid-template-columns: 1fr !important;
+
+            .services-offer__item-icon {
+                margin: auto;
+            }
+
+            .services-offer__item-info {
+                text-align: center;
+            }
+        }
+    }
+}
+
 </style>

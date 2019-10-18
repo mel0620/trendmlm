@@ -63,6 +63,20 @@ export default {
                     el: '.swiper-pagination',
                     clickable: true,
                 },
+                breakpoints: {
+                    1366: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    425: {
+                        slidesPerView: 1,
+                        spaceBetween: 10
+                    }
+                }
             });
         }
     },
@@ -75,56 +89,64 @@ export default {
 <style lang="scss">
 @import "../../scss/style";
 
-    .works-wrapper {
-        background-color: #007eac;
-        padding: 100px 0px;
-        .works {
-            .works-content {
-                .swiper-container {
-                    width: 100%;
-                    height: 100%;
-                    position: relative;
+.works-wrapper {
+    background-color: #007eac;
+    padding: 100px 0px;
+    .works {
+        .works-content {
+            .swiper-container {
+                width: 100%;
+                height: 100%;
+                position: relative;
 
-                    .swiper-wrapper {
-                        padding-bottom: 2.5rem;
+                .swiper-wrapper {
+                    padding-bottom: 2.5rem;
 
-                        .swiper-slide {
-                            // height: calc((100% - 30px) / 2);
-                        }
+                    .swiper-slide {
+                        // height: calc((100% - 30px) / 2);
                     }
                 }
-
-                .swiper-pagination-bullet {
-                    opacity: 1;
-                    background-color: #fff;
-                }
-
-                .swiper-pagination-bullet-active {
-                    background-color: $primary-color;
-                }
             }
-            .works-button {
-                text-align: center;
-                margin-top: 30px;
 
-                button
-                {
-                    outline: none;
-                    background-color: $primary-color;
-                    color: #fff;
-                    font-family: $font-secondary;
-                    font-weight: 600;
-                    font-size: 1rem;
-                    padding: 1rem 0px;
-                    min-width: 250px;
-                    border:none;
-                    border-radius: 2px;
-                    cursor: pointer;
-                    box-shadow: 0 5px 10px 5px rgba(#000, .12);
+            .swiper-pagination-bullet {
+                opacity: 1;
+                background-color: #fff;
+            }
 
-                }
+            .swiper-pagination-bullet-active {
+                background-color: $primary-color;
+            }
+        }
+        .works-button {
+            text-align: center;
+            margin-top: 30px;
+
+            button
+            {
+                outline: none;
+                background-color: $primary-color;
+                color: #fff;
+                font-family: $font-secondary;
+                font-weight: 600;
+                font-size: 1rem;
+                padding: 1rem 0px;
+                min-width: 250px;
+                border:none;
+                border-radius: 2px;
+                cursor: pointer;
+                box-shadow: 0 5px 10px 5px rgba(#000, .12);
+
             }
         }
     }
+}
+
+@include for-size(phone-only) {
+    .works-button {
+        button {
+            width: 100%;
+        }
+    }
+}
 
 </style>

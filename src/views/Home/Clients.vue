@@ -10,10 +10,10 @@
                             </div>
                         </div>
                         <div class="slider-next">
-                            <img class="img-fluid" width="25" src="../../assets/next.svg" alt="">
+                            <img class="img-fluid" width="15" src="../../assets/next.svg" alt="">
                         </div>
                         <div class="slider-prev">
-                            <img class="img-fluid" width="25" src="../../assets/prev.svg" alt="">
+                            <img class="img-fluid" width="15" src="../../assets/prev.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -44,8 +44,8 @@ export default {
     methods: {
         clientsSwiper() {
             const swiper = new Swiper('.clients-swiper', {
-                slidesPerView: 5,
                 slidesPerColumn: 1,
+                slidesPerView: 5,
                 spaceBetween: 20,
                 autoplay: {
                     delay: 2500,
@@ -54,6 +54,20 @@ export default {
                 navigation: {
                     nextEl: '.slider-next',
                     prevEl: '.slider-prev',
+                },
+                breakpoints: {
+                    1366: {
+                        slidesPerView: 5,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 10
+                    },
+                    425: {
+                        slidesPerView: 2,
+                        spaceBetween: 10
+                    }
                 }
             });
         }
@@ -69,7 +83,7 @@ export default {
 .clients-wrapper {
     padding: 100px 0px;
     background-color: #fff9f8;
-    
+
     .clients {
         .clients-content {
             position: relative;
@@ -136,4 +150,17 @@ export default {
         }
     }
 }
+
+@include for-size(phone-only) {
+    .clients-wrapper {
+        .swiper-slide {
+            padding: 20px 0px;
+
+            img {
+                width: 100px !important;
+            }
+        }
+    }
+}
+
 </style>
