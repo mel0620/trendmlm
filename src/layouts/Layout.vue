@@ -1,19 +1,19 @@
 <template>
     <div class="page-layout">
-        <header class="header header--sticky">
+        <header class="header header--sticky" data-mob="header">
             <div class="container">
-                <nav class="header__nav">
+                <nav class="header__nav" data-mob="navigation">
                     <a class="header__nav-brand" href="javascript:">
                         <img class="img-fluid" width="200" src="@/assets/brand-colored.png" alt="trend mlm logo">
                     </a>
-                    <div class="header__nav-links">
+                    <div class="header__nav-links" data-mob="hide">
                         <a href="javascript:" class="header__nav-link active">Home</a>
                         <a href="javascript:" class="header__nav-link">About</a>
                         <a href="javascript:" class="header__nav-link">Services</a>
                         <a href="javascript:" class="header__nav-link">Works</a>
                         <a href="javascript:" class="header__nav-link">Contact</a>
                     </div>
-                    <div class="header__nav-contact">
+                    <div class="header__nav-contact" data-mob="hide">
                         <div class="header__nav-contact-icon">
                             <img width="25" class="img-fluid" src="@/assets/call-center.svg" alt="">
                         </div>
@@ -22,6 +22,9 @@
                             <div>000 - 000</div>
                         </div>
                     </div>
+                    <span data-mob="nav-btn">
+                        <a href="javascript:" class="mdi mdi-text mdi-flip-h"></a>
+                    </span>
                 </nav>
             </div>
         </header>
@@ -369,5 +372,65 @@ export default {
             }
         }
     }
+}
+
+// MEDIA QUERIES
+
+@include for-size(desktop-up) {
+    [data-mob="nav-btn"] {
+        display: none;
+        a {
+            color: #fff;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@include for-size(phone-only) {
+
+    .header__nav {
+        padding: 14px 0;
+    }
+
+    [data-mob="navigation"] {
+        // padding: 1.5rem 0;
+        display: flex !important;
+        justify-content: space-between !important;
+
+        .header__nav {
+            &-brand {
+                img {
+                    object-fit: cover;
+                    object-position: 0 100%;
+                    width: 40px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+
+    [data-mob="hide"] {
+        display: none !important;
+    }
+
+    [data-mob="nav-btn"] {
+        a {
+            color: #fff;
+            font-size: 1.5rem;
+        }
+    }
+
+    .header--sticky[data-scroll="in"] {
+        .header__nav {
+            padding: 10px 0;
+        }
+
+        [data-mob="nav-btn"] {
+            a {
+                color: $primary-color;
+            }
+        }
+    }
+
 }
 </style>

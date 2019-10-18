@@ -24,6 +24,7 @@
                 </div>
             </div>
         </div>
+        
         <!-- ANIMATING OBEJECTS -->
         <img 
             src="../../assets/qoute-objects/square-dots.svg" alt=""
