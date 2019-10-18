@@ -1,5 +1,8 @@
 <template>
     <div class="page-layout">
+        <!-- <div class="intro">
+            <div class="intro-welcome">Welcome</div>
+        </div> -->
         <header class="header header--sticky" data-mob="header">
             <div class="container">
                 <nav class="header__nav" data-mob="navigation">
@@ -85,6 +88,7 @@
 </template>
 
 <script>
+// import {TweenMax, Power2, TimelineLite} from "gsap/TweenMax";
 import ScrollOut from "scroll-out"
 import VanillaScrollspy from 'vanillajs-scrollspy'
 
@@ -124,6 +128,12 @@ export default {
         const navbar = document.querySelector('#navlink');
         const scrollspy = new VanillaScrollspy(navbar, 1000, 'easeInOutQuint');
         scrollspy.init();
+
+        // const timeline = new TimelineLite()
+
+        // window.addEventListener("load", () => {
+        //     timeline.from(".intro", 3, {opacity: 0})
+        // });
     }
 }
 </script>
@@ -132,6 +142,26 @@ export default {
 @import "../scss/style.scss";
 
 .page-layout {
+    position: relative;
+
+    .intro {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        z-index: 9999;
+
+        .intro-welcome {
+            font-family: $font-primary;
+            font-size: 3rem;
+            text-align: center;
+            color: $primary-color;
+            position: relative;
+            z-index: 9999;
+        }
+    }
     .header {
         position: absolute;
         top: 0;
@@ -221,6 +251,15 @@ export default {
                     div:last-child {
                         font-weight: 900;
                     }
+                }
+            }
+
+            [data-mob="nav-btn"] {
+                display: none;
+
+                a {
+                    color: #fff;
+                    font-size: 1.5rem;
                 }
             }
         }
@@ -380,25 +419,12 @@ export default {
 }
 
 // MEDIA QUERIES
-
-@include for-size(desktop-up) {
-    [data-mob="nav-btn"] {
-        display: none;
-        a {
-            color: #fff;
-            font-size: 1.5rem;
-        }
-    }
-}
-
-@include for-size(phone-only) {
-
+@include for-size(tablet-down) {
     .header__nav {
         padding: 14px 0;
     }
 
     [data-mob="navigation"] {
-        // padding: 1.5rem 0;
         display: flex !important;
         justify-content: space-between !important;
 
@@ -419,10 +445,7 @@ export default {
     }
 
     [data-mob="nav-btn"] {
-        a {
-            color: #fff;
-            font-size: 1.5rem;
-        }
+        display: block !important;
     }
 
     .header--sticky[data-scroll="in"] {
@@ -436,6 +459,5 @@ export default {
             }
         }
     }
-
 }
 </style>

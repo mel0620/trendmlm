@@ -35,6 +35,9 @@ export default {
     Testimonials,
     Contact,
     Technologies
+  },
+  mounted() {
+
   }
 }
 </script>

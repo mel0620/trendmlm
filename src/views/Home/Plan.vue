@@ -119,4 +119,57 @@ export default {
         }
     }
 }
+
+@include for-size(phone-only) {
+    .plan-content {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 1rem !important;
+
+        .plan-item {
+            display: inline !important;
+            position: relative;
+            border: 1px solid rgba(#000, .12);
+            border-radius: 5px;
+            padding: 2rem;
+
+            &__texts {
+                position: relative;
+                z-index: 2;
+            }
+
+            &__illustration {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1;
+                overflow: hidden;
+                display: flex;
+                justify-content: flex-end;
+
+                img {
+                    align-self: flex-end;
+                    opacity: .5;
+                    width: 150px;
+                    height: 150px;
+                    object-fit: contain !important;
+                }
+            }
+        }
+    }
+}
+
+@include for-size(tablet-portrait-up) {
+    .plan-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@include for-size(desktop-up) {
+    .plan-content {
+        grid-template-columns: 1fr;
+    }
+}
+
 </style>
