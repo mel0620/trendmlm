@@ -9,10 +9,13 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "gsap": "^2.1.3",
+    "lax.js": "^1.2.5",
     "register-service-worker": "^1.6.2",
     "rellax": "^1.10.0",
     "scroll-out": "^2.2.7",
     "swiper": "^5.1.0",
+    "vanillajs-scrollspy": "^2.0.3",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"

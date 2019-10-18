@@ -1,19 +1,22 @@
 <template>
     <div class="page-layout">
-        <header class="header header--sticky">
+        <!-- <div class="intro">
+            <div class="intro-welcome">Welcome</div>
+        </div> -->
+        <header class="header header--sticky" data-mob="header">
             <div class="container">
-                <nav class="header__nav">
+                <nav class="header__nav" data-mob="navigation">
                     <a class="header__nav-brand" href="javascript:">
                         <img class="img-fluid" width="200" src="@/assets/brand-colored.png" alt="trend mlm logo">
                     </a>
-                    <div class="header__nav-links">
-                        <a href="javascript:" class="header__nav-link active">Home</a>
-                        <a href="javascript:" class="header__nav-link">About</a>
-                        <a href="javascript:" class="header__nav-link">Services</a>
-                        <a href="javascript:" class="header__nav-link">Works</a>
-                        <a href="javascript:" class="header__nav-link">Contact</a>
+                    <div id="navlink" class="header__nav-links" data-mob="hide">
+                        <a href="#home" title="Home" class="header__nav-link">Home</a>
+                        <a href="#about" title="About" class="header__nav-link">About</a>
+                        <a href="#services" title="Services" class="header__nav-link">Services</a>
+                        <a href="#works" title="Works" class="header__nav-link">Works</a>
+                        <a href="#contact" title="Contact" class="header__nav-link">Contact</a>
                     </div>
-                    <div class="header__nav-contact">
+                    <div class="header__nav-contact" data-mob="hide">
                         <div class="header__nav-contact-icon">
                             <img width="25" class="img-fluid" src="@/assets/call-center.svg" alt="">
                         </div>
@@ -22,6 +25,9 @@
                             <div>000 - 000</div>
                         </div>
                     </div>
+                    <span data-mob="nav-btn">
+                        <a href="javascript:" class="mdi mdi-text mdi-flip-h"></a>
+                    </span>
                 </nav>
             </div>
         </header>
@@ -82,7 +88,9 @@
 </template>
 
 <script>
+// import {TweenMax, Power2, TimelineLite} from "gsap/TweenMax";
 import ScrollOut from "scroll-out"
+import VanillaScrollspy from 'vanillajs-scrollspy'
 
 export default {
     data () {
@@ -116,6 +124,16 @@ export default {
     },
     mounted() {
         this.stickyHeader();
+
+        const navbar = document.querySelector('#navlink');
+        const scrollspy = new VanillaScrollspy(navbar, 1000, 'easeInOutQuint');
+        scrollspy.init();
+
+        // const timeline = new TimelineLite()
+
+        // window.addEventListener("load", () => {
+        //     timeline.from(".intro", 3, {opacity: 0})
+        // });
     }
 }
 </script>
@@ -124,6 +142,26 @@ export default {
 @import "../scss/style.scss";
 
 .page-layout {
+    position: relative;
+
+    .intro {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        z-index: 9999;
+
+        .intro-welcome {
+            font-family: $font-primary;
+            font-size: 3rem;
+            text-align: center;
+            color: $primary-color;
+            position: relative;
+            z-index: 9999;
+        }
+    }
     .header {
         position: absolute;
         top: 0;
@@ -213,6 +251,15 @@ export default {
                     div:last-child {
                         font-weight: 900;
                     }
+                }
+            }
+
+            [data-mob="nav-btn"] {
+                display: none;
+
+                a {
+                    color: #fff;
+                    font-size: 1.5rem;
                 }
             }
         }
@@ -366,6 +413,49 @@ export default {
                     color: #fff;
                     font-size: 13px;
                 }
+            }
+        }
+    }
+}
+
+// MEDIA QUERIES
+@include for-size(tablet-down) {
+    .header__nav {
+        padding: 14px 0;
+    }
+
+    [data-mob="navigation"] {
+        display: flex !important;
+        justify-content: space-between !important;
+
+        .header__nav {
+            &-brand {
+                img {
+                    object-fit: cover;
+                    object-position: 0 100%;
+                    width: 40px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+
+    [data-mob="hide"] {
+        display: none !important;
+    }
+
+    [data-mob="nav-btn"] {
+        display: block !important;
+    }
+
+    .header--sticky[data-scroll="in"] {
+        .header__nav {
+            padding: 10px 0;
+        }
+
+        [data-mob="nav-btn"] {
+            a {
+                color: $primary-color;
             }
         }
     }

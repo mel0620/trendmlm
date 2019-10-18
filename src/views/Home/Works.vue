@@ -1,5 +1,5 @@
 <template>
-    <section class="works-wrapper">
+    <section class="works-wrapper" id="works">
         <div class="container">
             <div class="works">
                 <div class="section-title section-title--variant1">
