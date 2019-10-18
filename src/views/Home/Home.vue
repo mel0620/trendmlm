@@ -13,15 +13,15 @@
 </template>
 
 <script>
-import Hero from './Hero.vue'
-import GetToKnow from './GetToKnow.vue'
-import Services from './Services.vue'
-import Works from './Works.vue'
-import Clients from './Clients.vue'
-import Plan from './Plan.vue'
-import Testimonials from './Testimonials.vue'
-import Contact from './Contact.vue'
-import Technologies from './Technologies.vue'
+const Hero = () => import(/*webpackChunkname: "hero" */ './Hero.vue');
+const GetToKnow = () => import(/*webpackChunkname: "gettoknow" */ './GetToKnow.vue');
+const Services = () => import(/*webpackChunkname: "services" */ './Services.vue');
+const Works = () => import(/*webpackChunkname: "works" */ './Works.vue');
+const Clients = () => import(/*webpackChunkname: "clients" */ './Clients.vue');
+const Plan = () => import(/*webpackChunkname: "plan" */ './Plan.vue');
+const Testimonials = () => import(/*webpackChunkname: "testimonial" */ './Testimonials.vue');
+const Contact = () => import(/*webpackChunkname: "contact" */ './Contact.vue');
+const Technologies = () => import(/*webpackChunkname: "tech" */ './Technologies.vue');
 
 export default {
   name: 'home',
