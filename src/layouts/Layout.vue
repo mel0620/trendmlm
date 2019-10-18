@@ -1,8 +1,5 @@
 <template>
     <div class="page-layout">
-        <!-- <div class="intro">
-            <div class="intro-welcome">Welcome</div>
-        </div> -->
         <header class="header header--sticky" data-mob="header">
             <div class="container">
                 <nav class="header__nav" data-mob="navigation">
@@ -115,25 +112,41 @@ export default {
         }
     },
     methods: {
-        stickyHeader() {
-            ScrollOut({
-                targets: ".header--sticky",
-                offset: 300
-            });
-        }
+        myScrollspy() {
+            const navbar = document.querySelector('#navlink');
+            const scrollspy = new VanillaScrollspy(navbar, 1000, 'easeInOutQuint');
+            scrollspy.init();
+        },
     },
     mounted() {
-        this.stickyHeader();
+        // window.addEventListener("load", () => {
+        //     this.loading = false;
+        //     console.log(this.loading);
+        //     setTimeout(() => { 
+        //         this.loading = false;
+        //     }, 3000);
+        // });
 
-        const navbar = document.querySelector('#navlink');
-        const scrollspy = new VanillaScrollspy(navbar, 1000, 'easeInOutQuint');
-        scrollspy.init();
+        this.myScrollspy();
+
+        ScrollOut({
+            targets: ".header--sticky",
+            offset: 300
+        });
+
+        window.onload = () => {
+            this.loading = false;
+            console.log(this.loading);
+        }
 
         // const timeline = new TimelineLite()
 
         // window.addEventListener("load", () => {
         //     timeline.from(".intro", 3, {opacity: 0})
         // });
+    },
+    created() {
+        
     }
 }
 </script>
