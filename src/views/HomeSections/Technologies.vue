@@ -75,7 +75,7 @@ export default {
             grid-template-columns: auto 1fr;
             grid-gap: 1rem;
             align-items: center;
-            
+
             &-texts {
                 div:first-child {
                     color: $secondary-color;
@@ -83,14 +83,14 @@ export default {
                     font-size: 1.2rem;
                     font-weight: 700;
                 }
-                
+
                 div:last-child {
                     color: #888888;
                     font-family: $font-secondary;
                     font-size: 0.875rem;
                 }
             }
-        } 
+        }
 
         .tech-container {
             justify-self: flex-end;
@@ -112,7 +112,7 @@ export default {
                     background-color: #fff;
 
                     img {
-                       object-fit: contain;
+                        object-fit: contain;
                         object-position: center;
                     }
                 }
