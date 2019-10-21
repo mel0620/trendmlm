@@ -82,6 +82,7 @@ export default {
 .services-wrapper {
     background-color: #fff;
     padding: 100px 0px;
+    
     .services {
         .services-offer {
             display: grid;
