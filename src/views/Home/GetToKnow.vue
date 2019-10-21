@@ -6,7 +6,7 @@
 		</div>
 	</div>
 	<div class="container">
-		<div class="section-title section-title--variant2 lax" data-lax-preset="blurIn">
+		<div class="section-title section-title--variant2 lax" data-lax-preset="fadeIn">
 			<div class="section-title__bg">
 				TREND MLM
 			</div>
@@ -17,10 +17,10 @@
 		</div>
 
 		<div class="get-to-know-content">
-			<div class="illustration lax" data-lax-preset="driftLeft">
+			<div class="illustration lax" data-lax-preset_large="driftLeft" data-lax-preset_small="fadeIn">
 				<img class="img-fluid" src="../../assets/devices.png" alt="">
 			</div>
-			<div class="texts lax" data-lax-preset="driftRight">
+			<div class="texts lax" data-lax-preset_large="driftRight" data-lax-preset_small="fadeIn">
 				<label for="">“We drifts your business towards success.”</label>
 				<p>Trend MLM is one of the leading Multi-level Marketing solutions software in the Philippines. We provide automated sales, review, easy and faster tracking of downlines, inventory, invoices and others. Overall, our MLM software maintains effective monitoring from top management down to the lowest member.</p>
 			</div>
@@ -31,37 +31,31 @@
 	<img
 		src="../../assets/qoute-objects/square-dots.svg" alt=""
 		class="square-dots lax"
-		width="100"
 		data-lax-preset="rightToLeft spin"
 	>
 	<img
 		src="../../assets/qoute-objects/bubble-warp.svg"
-		class="bubble-warp lax"
-		width="200"
+		class="bubble-warp-bg lax"
 		data-lax-preset="speedy"
 	>
-	<img 
+	<!-- <img 
 		src="../../assets/qoute-objects/bubble-warp.svg" 
-		class="bubble-warp2 lax" 
-		width="30" 
+		class="bubble-warp-sm lax"
 		data-lax-preset="speedy"
-	>
+	> -->
 	<img
 		src="../../assets/qoute-objects/stripe-circ.svg"
 		class="stripe-circ lax"
-		width="200"
 		data-lax-preset="lazy"
 	>
 	<img
 		src="../../assets/qoute-objects/circle-outline.svg"
 		class="circle-outline1 lax"
-		width="100"
 		data-lax-preset="leftToRight"
 	>
 	<img
 		src="../../assets/qoute-objects/circle-outline.svg"
 		class="circle-outline2 lax"
-		width="100"
 		data-lax-preset="lazy"
 	>
 </section>
@@ -82,33 +76,29 @@ export default {
 			
 		}
 	},
-	methods: {
-		contactLaxx() {
-			// window.onload = function() {
-			// 	lax.setup() // init
+	mounted() {
+		const rellax = new Rellax('.request-a-qoute');
+		// ITO YUNG NSA DOCS PERO BINAGO KO DAHIL SA LOADER KAILAN GUMANA AFTER MALOAD ANG PAGE
 
-			// 	const updateLax = () => {
-			// 		lax.update(window.scrollY)
-			// 		window.requestAnimationFrame(updateLax)
-			// 	}
+		// window.onload = function() {
+		// 	lax.setup() // init
+		// 	const updateLax = () => {
+		// 		lax.update(window.scrollY)
+		// 		window.requestAnimationFrame(updateLax)
+		// 	}
+		// 	window.requestAnimationFrame(updateLax)
+		// }
 
-			// 	window.requestAnimationFrame(updateLax)
-			// }
+		lax.setup({
+			breakpoints: { small: 0, large: 992 }
+		})
 
-			lax.setup() // init
-
-			const updateLax = () => {
-				lax.update(window.scrollY)
-				window.requestAnimationFrame(updateLax)
-			}
-
+		const updateLax = () => {
+			lax.update(window.scrollY)
 			window.requestAnimationFrame(updateLax)
 		}
-	},
-	mounted() {
-		this.contactLaxx();
 
-		const rellax = new Rellax('.request-a-qoute');
+		window.requestAnimationFrame(updateLax)
 	}
 }
 </script>
@@ -121,10 +111,6 @@ export default {
 	padding: 100px 0;
 	background-color: $secondary-color;
 	position: relative;
-
-	@include for-size(phone-only) {
-		display: none;
-	}
 
 	.request-a-qoute {
 		position: absolute;
@@ -162,6 +148,13 @@ export default {
 		}
 	}
 
+	@include for-size(phone-only) {
+		
+		.request-a-qoute {
+			display: none;
+		}
+	}
+
 	// OBJECTS
 	.square-dots {
 		position: absolute;
@@ -170,21 +163,28 @@ export default {
 		transform: rotate(45deg);
 		opacity: .4;
 		z-index: 1;
+		width: 6.5%;
 	}
-	.bubble-warp {
+
+	.bubble-warp-bg {
 		position: absolute;
 		bottom: -20px;
 		left: -10px;
 		opacity: .4;
 		z-index: 1;
+		width: 15%;
 	}
-	.bubble-warp2 {
+
+	.bubble-warp-sm {
 		position: absolute;
 		bottom: 100px;
 		right: 30%;
 		opacity: .4;
 		z-index: 1;
+		width: 2%;
+		transform: rotate(25deg);
 	}
+
 	.stripe-circ {
 		position: absolute;
 		bottom: 20px;
@@ -192,22 +192,27 @@ export default {
 		opacity: .2;
 		z-index: 1;
 		transform: rotate(-45deg);
+		width: 14%;
 	}
+
 	.circle-outline1 {
 		position: absolute;
 		top: 80px;
 		left: 10px;
 		opacity: .2;
 		z-index: 1;
-		filter: brightness(0) invert(1)
+		filter: brightness(0) invert(1);
+		width: 8%;
 	}
+
 	.circle-outline2 {
 		position: absolute;
 		bottom: 5%;
 		left: 10%;
 		opacity: .2;
 		z-index: 1;
-		filter: brightness(0) invert(1)
+		filter: brightness(0) invert(1);
+		width: 8%;
 	}
 }
 </style>

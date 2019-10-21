@@ -2,7 +2,7 @@
     <section class="plan-wrapper">
         <div class="container">
             <div class="plan">
-                <div class="section-title">
+                <div class="section-title lax" data-lax-preset="fadeIn">
                     <div class="section-title__bg">
                         MLM PLANS
                     </div>
@@ -12,7 +12,7 @@
                     <div class="line-bottom"></div>
                 </div>
                 <div class="plan-content">
-                    <div v-for="(item, i) in plans" :key="i" class="plan-item" :class="item.iconPos == 'left' ? 'plan-item--switch' : ''">
+                    <div data-lax-preset="linger" v-for="(item, i) in plans" :key="i" class="plan-item lax" :class="item.iconPos == 'left' ? 'plan-item--switch' : ''">
                         <div class="plan-item__texts">
                             <div class="plan-item__title">{{ item.title }}</div>
                             <div class="plan-item__desc">{{ item.desc }}</div>
@@ -27,6 +27,7 @@
     </section>
 </template>
 <script>
+import lax from 'lax.js'
 export default {
     data () {
         return {
@@ -68,7 +69,7 @@ export default {
                 },
             ]
         }
-    }
+    },
 }
 </script>
 

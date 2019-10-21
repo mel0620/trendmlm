@@ -2,7 +2,7 @@
     <section class="services-wrapper" id="services">
         <div class="container">
             <div class="services">
-                <div class="section-title">
+                <div class="section-title lax" data-lax-preset="fadeIn">
                     <div class="section-title__bg">
                         SERVICES
                     </div>
@@ -12,7 +12,7 @@
                     <div class="line-bottom"></div>
                 </div>
                 <div class="services-offer">
-                    <div class="services-offer__item" v-for="(item, i) in services" :key="i">
+                    <div class="services-offer__item lax" data-lax-preset="zoomIn" v-for="(item, i) in services" :key="i">
                         <div class="services-offer__item-icon">
                             <img class="img-fluid" width="50" :src="item.image" alt="">
                         </div>
@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import lax from 'lax.js'
 export default {
     data () {
         return {
@@ -65,14 +66,6 @@ export default {
             ]
         }
     },
-    methods: {
-        // getData() {
-
-        // }
-    },
-    mounted() {
-        // getData();
-    }
 }
 </script>
 
@@ -82,6 +75,7 @@ export default {
 .services-wrapper {
     background-color: #fff;
     padding: 100px 0px;
+    overflow: hidden;
 
     .services {
         .services-offer {
