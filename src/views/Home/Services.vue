@@ -12,7 +12,7 @@
                     <div class="line-bottom"></div>
                 </div>
                 <div class="services-offer">
-                    <div class="services-offer__item lax" data-lax-preset="zoomIn" v-for="(item, i) in services" :key="i">
+                    <div class="services-offer__item lax" data-lax-preset__large="zoomIn" data-lax-preset__small="linger" v-for="(item, i) in services" :key="i">
                         <div class="services-offer__item-icon">
                             <img class="img-fluid" width="50" :src="item.image" alt="">
                         </div>

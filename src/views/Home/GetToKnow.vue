@@ -149,7 +149,7 @@ export default {
 	}
 
 	@include for-size(phone-only) {
-		
+		overflow: hidden;
 		.request-a-qoute {
 			display: none;
 		}
