@@ -70,12 +70,29 @@ export default {
                     },
                     768: {
                         slidesPerView: 2,
-                        spaceBetween: 20
+                        spaceBetween: 20,
+                        slidesPerGroup: 2,
                     },
                     425: {
                         slidesPerView: 1,
-                        spaceBetween: 10
-                    }
+                        spaceBetween: 5,
+                        slidesPerGroup: 3,
+                    },
+                    414: {
+                        slidesPerView: 1,
+                        spaceBetween: 5,
+                        slidesPerGroup: 1,
+                    },
+                    375: {
+                        slidesPerView: 1,
+                        spaceBetween: 5,
+                        slidesPerGroup: 1,
+                    },
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 5,
+                        slidesPerGroup: 1,
+                    },
                 }
             });
         }

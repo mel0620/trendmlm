@@ -1,32 +1,28 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link>
-    </div> -->
-
-    <div>
-      <router-view />
-    </div>
+	<div>
+	  <router-view />
+	</div>
   </div>
 </template>
 
 <script>
-import Loader from "./components/Loader.vue"
+import Loader from "./components/Loader.vue";
 
 export default {
   name: "app",
   components: {
-    Loader
+	Loader
   },
   data: () => ({
-    loading: true
+	loading: true
   }),
   mounted() {
-    setTimeout(() => {
-        this.loading = false
-    }, 3000)
+	setTimeout(() => {
+	  this.loading = false;
+	}, 3000);
   }
-}
+};
 </script>
 
 <style lang="scss">

@@ -49,7 +49,7 @@ import Swiper from "swiper"
 import "../../../node_modules/swiper/css/swiper.min.css";
 
 export default {
-    data () {
+    data() {
         return {
             bg_image: require('../../assets/testimonial-bg.jpg'),
             testimonials: [
@@ -101,7 +101,19 @@ export default {
                 425: {
                     slidesPerView: 1,
                     spaceBetween: 5
-                }
+                },
+                414: {
+                    slidesPerView: 1,
+                    spaceBetween: 5
+                },
+                375: {
+                    slidesPerView: 1,
+                    spaceBetween: 5
+                },
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 5
+                },
             }
         });
     }
@@ -149,7 +161,8 @@ export default {
                                     margin-top: 10px;
                                     min-height: 150px;
 
-                                    &::before, &::after {
+                                    &::before,
+                                    &::after {
                                         content: '"',
                                     }
                                 }
@@ -178,7 +191,8 @@ export default {
                 }
             }
 
-            .arrow-right, .arrow-left {
+            .arrow-right,
+            .arrow-left {
                 padding: 8px;
                 border-radius: 100%;
                 background-color: #fff;
@@ -214,6 +228,16 @@ export default {
                 top: 50%;
                 transform: translateY(-50%);
                 z-index: 10;
+            }
+
+            @include for-size(tablet-down) {
+                .arrow-left {
+                    left: -10px;
+                }
+
+                .arrow-right {
+                    right: -10px;
+                }
             }
         }
     }

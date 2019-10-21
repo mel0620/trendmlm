@@ -1,6 +1,9 @@
 <template>
   <div class="home-page">
     <hero></hero>
+    <div data-visibility="hide">
+      <RQoute></RQoute>
+    </div>
     <GetToKnow></GetToKnow>
     <services></services>
     <works></works>
@@ -15,6 +18,7 @@
 <script>
 const Hero          = () => import(/*webpackChunkname: "hero" */ './Hero.vue');
 const GetToKnow     = () => import(/*webpackChunkname: "gettoknow" */ './GetToKnow.vue');
+const RQoute        = () => import(/*webpackChunkname: "rqoute" */ './RQoute.vue');
 const Services      = () => import(/*webpackChunkname: "services" */ './Services.vue');
 const Works         = () => import(/*webpackChunkname: "works" */ './Works.vue');
 const Clients       = () => import(/*webpackChunkname: "clients" */ './Clients.vue');
@@ -27,6 +31,7 @@ export default {
   name: 'home',
   components: {
     Hero,
+    RQoute,
     GetToKnow,
     Services,
     Works,
@@ -41,3 +46,15 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+@import "../../scss/style.scss";
+
+[data-visibility="hide"] {
+  display: none;
+
+  @include for-size(phone-only) {
+    display: block;
+  }
+}
+</style>

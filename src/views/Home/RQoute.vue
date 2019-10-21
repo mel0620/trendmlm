@@ -1,19 +1,17 @@
 <template>
-    <div class="container">
-        <div class="request-qoute">
-            <div class="title">
-                <div class="title-icon">
-                    <img class="img-fluid" width="50" src="../../assets/bubble.svg" alt="">
-                </div>
-                <div class="title-text">REQUEST A QOUTE</div>
+    <div class="request-qoute">
+        <div class="title">
+            <div class="title-icon">
+                <img class="img-fluid" width="50" src="../../assets/bubble.svg" alt="">
             </div>
-            <div class="form-group">
-                <input class="form-input" placeholder="Full Name Here *" type="text">
-                <input class="form-input" placeholder="Email Address Here *" type="text">
-                <input class="form-input" placeholder="Contact Number *" type="text">
-                <input class="form-input form-input-span-2" placeholder="Message Here *" type="text">
-                <button class="form-btn">Request Now</button>
-            </div>
+            <div class="title-text">REQUEST A QOUTE</div>
+        </div>
+        <div class="form-group">
+            <input class="form-input" placeholder="Full Name Here *" type="text">
+            <input class="form-input" placeholder="Email Address Here *" type="text">
+            <input class="form-input" placeholder="Contact Number *" type="text">
+            <input class="form-input form-input-span-2" placeholder="Message Here *" type="text">
+            <button class="form-btn">Request Now</button>
         </div>
     </div>
 </template>
@@ -25,6 +23,10 @@
     width: 100%;
     padding: 2rem;
     border-radius: 5px;
+
+    @include for-size(phone-only) {
+        border-radius: 0;
+    }
     
     .title {
         display: grid;
@@ -85,6 +87,18 @@
             border:none;
             border-radius: 2px;
             cursor: pointer;
+        }
+
+        @include for-size(phone-only) {
+            grid-template-columns: 1fr;
+
+            input {
+                grid-column: span 2;
+            }
+
+            .form-btn {
+                grid-column: span 2;
+            }
         }
     }
 }

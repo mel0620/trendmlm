@@ -80,21 +80,19 @@
                 border-radius: 2px;
                 cursor: pointer;
             }
+
+            @include for-size(phone-only) {
+                grid-template-columns: 1fr;
+
+                .contact-content__message {
+                    grid-column: 1 / span 1;
+                }
+
+                button {
+                    width: 100%;
+                }
+            }
         }
     }
 }
-
-@include for-size(phone-only) {
-    .contact-content {
-        grid-template-columns: 1fr !important;
-    }
-    .contact-content__message
-    {
-        grid-column: 1 / span 1 !important;
-    }
-    button {
-        width: 100%;
-    }
-}
-
 </style>

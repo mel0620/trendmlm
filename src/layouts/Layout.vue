@@ -151,7 +151,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../scss/style.scss";
 
 .page-layout {
@@ -175,6 +175,7 @@ export default {
             z-index: 9999;
         }
     }
+
     .header {
         position: absolute;
         top: 0;
@@ -278,6 +279,50 @@ export default {
         }
     }
 
+    @include for-size(tablet-down) {
+        .header {
+            .header__nav {
+                padding: 14px 0;
+            }
+
+            [data-mob="navigation"] {
+                display: flex;
+                justify-content: space-between;
+
+                .header__nav {
+                    &-brand {
+                        img {
+                            object-fit: cover;
+                            object-position: 0 100%;
+                            width: 40px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+
+            [data-mob="hide"] {
+                display: none;
+            }
+
+            [data-mob="nav-btn"] {
+                display: block;
+            }
+        }
+
+        .header--sticky[data-scroll="in"] {
+            .header__nav {
+                padding: 10px 0;
+            }
+    
+            [data-mob="nav-btn"] {
+                a {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
     .header--sticky[data-scroll="in"] {
         position: fixed;
         background-color: #fff;
@@ -342,6 +387,7 @@ export default {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                flex-wrap: wrap;
 
                 .info-item {
                     display: grid;
@@ -411,6 +457,34 @@ export default {
                     }
                 }
             }
+
+            @include for-size(tablet-down) { 
+                .info-wrapper {
+                    justify-content: center;
+
+                    .info-item {
+                        margin: 1rem auto;
+                        text-align: center;
+                    }
+                }
+
+                .bottom-nav-wrapper {
+                    .bottom-nav {
+                        text-align: center;
+                        grid-template-columns: 1fr;
+                        justify-content: center;
+
+                        &__links {
+                            display: none;
+                        }
+
+                        &__social {
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
         }
 
         &__bottom {
@@ -418,6 +492,7 @@ export default {
 
             .website-info {
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: space-between;
                 padding: 1.2rem 0;
 
@@ -427,94 +502,6 @@ export default {
                     font-size: 13px;
                 }
             }
-        }
-    }
-}
-
-// MEDIA QUERIES
-@include for-size(tablet-down) {
-    .header__nav {
-        padding: 14px 0;
-    }
-
-    [data-mob="navigation"] {
-        display: flex !important;
-        justify-content: space-between !important;
-
-        .header__nav {
-            &-brand {
-                img {
-                    object-fit: cover;
-                    object-position: 0 100%;
-                    width: 40px;
-                    height: 30px;
-                }
-            }
-        }
-    }
-
-    [data-mob="hide"] {
-        display: none !important;
-    }
-
-    [data-mob="nav-btn"] {
-        display: block !important;
-    }
-
-    .header--sticky[data-scroll="in"] {
-        .header__nav {
-            padding: 10px 0;
-        }
-
-        [data-mob="nav-btn"] {
-            a {
-                color: $primary-color;
-            }
-        }
-    }
-}
-
-@include for-size(tablet-down) {
-    .bottom-nav {
-        grid-template-columns: 1fr!important;
-        &__brand {
-            text-align: center;
-        }
-        &__links {
-            display: none;
-        }
-        &__social {
-            display: flex !important;
-            margin:auto;
-        }
-    }
-    .info-item {
-        grid-template-columns: 1fr !important;
-    }
-}
-
-@include for-size(phone-only) {
-    .bottom-nav {
-        grid-template-columns: 1fr!important;
-        &__brand {
-            text-align: center;
-        }
-        &__links {
-            display: none;
-        }
-        &__social {
-            display: flex !important;
-            margin:auto;
-        }
-    }
-    .info-wrapper {
-        flex-direction: column;
-        align-items: flex-start !important;
-        .info-item {
-            margin-bottom: 1.5rem;
-        }
-        .info-item:last-child {
-            margin-bottom: 0px;
         }
     }
 }
