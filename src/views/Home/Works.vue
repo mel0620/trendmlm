@@ -108,7 +108,8 @@ export default {
 
 .works-wrapper {
     background-color: #007eac;
-    padding: 100px 0px;
+    padding: 100px 0px !important;
+
     .works {
         .works-content {
             .swiper-container {
@@ -118,10 +119,6 @@ export default {
 
                 .swiper-wrapper {
                     padding-bottom: 2.5rem;
-
-                    .swiper-slide {
-                        // height: calc((100% - 30px) / 2);
-                    }
                 }
             }
 
@@ -154,14 +151,12 @@ export default {
                 box-shadow: 0 5px 10px 5px rgba(#000, .12);
 
             }
-        }
-    }
-}
 
-@include for-size(phone-only) {
-    .works-button {
-        button {
-            width: 100%;
+            @include for-size(phone-only) {
+                button {
+                    width: 100%;
+                }
+            }
         }
     }
 }

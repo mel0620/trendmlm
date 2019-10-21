@@ -90,7 +90,7 @@ export default {
 @import "../../scss/style.scss";
 
 .technologies-wrapper {
-    padding: 25px 0;
+    padding: 25px 0 !important;
 
     .tech {
         display: grid;

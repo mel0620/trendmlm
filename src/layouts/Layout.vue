@@ -270,10 +270,13 @@ export default {
 
             [data-mob="nav-btn"] {
                 display: none;
+                border-radius: 100%;
 
                 a {
+                    border-radius: 100%;
                     color: #fff;
                     font-size: 1.5rem;
+                    outline: none;
                 }
             }
         }

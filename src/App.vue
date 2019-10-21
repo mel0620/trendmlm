@@ -23,7 +23,7 @@ export default {
   mounted() {
 	window.addEventListener("load", () => {
 	    this.loading = false;
-	    console.log(this.loading);
+		// console.log(this.loading);
 	});
 	// setTimeout(() => {
 	//   this.loading = false;

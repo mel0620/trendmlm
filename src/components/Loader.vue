@@ -74,6 +74,7 @@
 			stroke-dashoffset: 1000;
 			animation: dash 5s linear alternate infinite;
 		}
+		
 		.st2 {
 			stroke-dasharray: 1000;
 			stroke-dashoffset: 1000;
