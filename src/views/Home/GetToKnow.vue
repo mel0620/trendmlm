@@ -42,7 +42,7 @@
             src="../../assets/qoute-objects/bubble-warp.svg" 
             class="bubble-warp2 lax" 
             width="30" 
-            data-lax-preset="speedy spin"
+            data-lax-preset="speedy"
         >
         <img 
             src="../../assets/qoute-objects/stripe-circ.svg" 
@@ -97,7 +97,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../../scss/style.scss";
 
 .get-to-know {
