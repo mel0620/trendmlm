@@ -79,11 +79,22 @@ export default {
 	},
 	data () {
 		return {
-
+			
 		}
 	},
-	mounted() {
-		window.onload = function() {
+	methods: {
+		contactLaxx() {
+			// window.onload = function() {
+			// 	lax.setup() // init
+
+			// 	const updateLax = () => {
+			// 		lax.update(window.scrollY)
+			// 		window.requestAnimationFrame(updateLax)
+			// 	}
+
+			// 	window.requestAnimationFrame(updateLax)
+			// }
+
 			lax.setup() // init
 
 			const updateLax = () => {
@@ -93,6 +104,9 @@ export default {
 
 			window.requestAnimationFrame(updateLax)
 		}
+	},
+	mounted() {
+		this.contactLaxx();
 
 		const rellax = new Rellax('.request-a-qoute');
 	}

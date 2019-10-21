@@ -14,10 +14,10 @@
                 <!-- Swiper -->
                 <div class="tech-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" v-for="(item, i) in techs" :key="i">
-                            <div class="tech-icon">
+                        <div class="swiper-slide" v-for="(item, i) in techs" :key="i" :style="`background-image: url('${item.icon}')`">
+                            <!-- <div class="tech-icon">
                                 <img class="img-fluid" :src="item.icon" alt="">
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -50,21 +50,33 @@ export default {
         techSwiper() {
             const swiper = new Swiper('.tech-container', {
                 slidesPerView: 7,
-                spaceBetween: 20
-                // breakpoints: {
-                //     1366: {
-                //         slidesPerView: 7,
-                //         spaceBetween: 20
-                //     },
-                //     768: {
-                //         slidesPerView: 5,
-                //         spaceBetween: 10
-                //     },
-                //     425: {
-                //         slidesPerView: 4,
-                //         spaceBetween: 10
-                //     }
-                // }
+                spaceBetween: 20,
+                breakpoints: {
+                    1366: {
+                        slidesPerView: 7,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 5,
+                        spaceBetween: 10
+                    },
+                    425: {
+                        slidesPerView: 2,
+                        spaceBetween: 10
+                    },
+                    414: {
+                        slidesPerView: 2,
+                        spaceBetween: 5
+                    },
+                    375: {
+                        slidesPerView: 2,
+                        spaceBetween: 5
+                    },
+                    320: {
+                        slidesPerView: 2,
+                        spaceBetween: 5
+                    },
+                }
             });
         },
     },
@@ -112,18 +124,20 @@ export default {
             padding: 1rem;
 
             .swiper-slide {
-                width: max-content !important;
                 box-shadow: 0 0 8px 2px rgba(#000, .05);
                 border-radius: 5px;
+                background-size: 50px;
+                background-repeat: no-repeat;
+                background-position: center;
+                min-height: 80px;
 
                 .tech-icon {
                     border-radius: 5px;
                     padding: 1rem;
-                    height: 60px;
-                    width: 60px;
                     display: flex;
                     align-items: center;
                     background-color: #fff;
+                    text-align: center;
 
                     img {
                         object-fit: contain;
@@ -133,12 +147,11 @@ export default {
             }
         }
     }
-}
 
-@include for-size(phone-only) {
-    .tech {
-        grid-template-columns: 1fr !important;
+    @include for-size(phone-only) {
+        .tech {
+            grid-template-columns: 1fr;
+        }
     }
 }
-
 </style>

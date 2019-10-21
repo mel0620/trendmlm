@@ -49,6 +49,7 @@ export default {
     overflow: hidden;
     position: relative;
     z-index: 10;
+
     .hero {
         height: 100vh;
         position: relative;
@@ -74,9 +75,11 @@ export default {
                     font-weight: 700;
                     font-size: 30px;
                 }
+
                 .hero-content__text-2 {
                     font-weight: 300;
-                    font-size: 15px;
+                    font-size: 1rem;
+                    line-height: 2rem;
                 }
             }
 
@@ -85,6 +88,7 @@ export default {
                 width: 30px;
                 height: 3px;
                 position: relative;
+                
                 &:before {
                     content: '';
                     background-color: #fff;
@@ -95,6 +99,7 @@ export default {
                     top: 50%;
                     transform: translateY(-50%);
                 }
+
                 &:after {
                     content: '';
                     background-color: #fff;
@@ -110,6 +115,7 @@ export default {
             .hero-content__button
             {
                 margin-top: 20px;
+                
                 button
                 {
                     outline: none;

@@ -13,7 +13,9 @@
                 </div>
                 <div class="services-offer">
                     <div class="services-offer__item" v-for="(item, i) in services" :key="i">
-                        <div class="services-offer__item-icon" :style="`background-image: url(${item.image})`"></div>
+                        <div class="services-offer__item-icon">
+                            <img class="img-fluid" width="50" :src="item.image" alt="">
+                        </div>
                         <div class="services-offer__item-info">
                             <div class="services-offer__name">{{ item.name }}</div>
                             <div class="services-offer__desc">{{ item.desc }}</div>
@@ -88,20 +90,11 @@ export default {
 
             .services-offer__item {
                 display: grid;
-                grid-template-columns: 50px 1fr;
+                grid-template-columns: auto 1fr;
                 grid-gap: 30px;
                 align-items: center;
 
-                .services-offer__item-icon {
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    padding: 1rem;
-                    width: 50px;
-                    height: 50px;
-
-                }
-                .services-offer__item-info {
-
+                &-info {
                     .services-offer__name {
                         font-family: $font-primary;
                         font-size: 1rem;
@@ -118,26 +111,16 @@ export default {
                     }
                 }
             }
-        }
-    }
-}
 
-@include for-size(phone-only) {
-    .services-offer {
-        grid-template-columns: 1fr !important;
+            @include for-size(phone-only) { 
+                grid-template-columns: 1fr;
 
-        .services-offer__item {
-            grid-template-columns: 1fr !important;
-
-            .services-offer__item-icon {
-                margin: auto;
-            }
-
-            .services-offer__item-info {
-                text-align: center;
+                .services-offer__item {
+                    grid-template-columns: 1fr;
+                    text-align: center;
+                }
             }
         }
     }
 }
-
 </style>
