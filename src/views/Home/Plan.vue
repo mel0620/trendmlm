@@ -30,41 +30,41 @@
 export default {
     data () {
         return {
-            plans: [ 
+            plans: [
                 {
                     icon: require('../../assets/plan/binary.svg'),
                     iconPos: 'right',
                     title: 'Binary Plan',
                     desc: 'A plan structure that consists of two legs in the front line, the left, and the right leg. It requires each member to recruit or sponsor two other members to join the plan that can potentially lead to a fast expansion of the network.'
-                    
+
                 },
                 {
                     icon: require('../../assets/plan/unilevel.svg'),
                     iconPos: 'left',
                     title: 'UNI-LEVEL SYSTEM MLM PLAN',
                     desc: 'It allows only one line of distribution. Every recruit you sponsor will fall on your first level of downlines and each member can recruit as many as they can in their own network downline.'
-                    
+
                 },
                 {
                     icon: require('../../assets/plan/passup.svg'),
                     iconPos: 'right',
                     title: 'PASS-UP MLM PLAN',
                     desc: 'Sponsors earned on the 3rd direct member of the network downline. If this 3rd member also recruits 3 new members, the sponsor will have a commission percentage on the amount of the availed plan of the first two recruit members while the sponsor’s 3rd member will earn on his 3rd direct member.'
-                    
+
                 },
                 {
                     icon: require('../../assets/plan/stairstep.svg'),
                     iconPos: 'left',
                     title: 'STAIR-STEP BREAKWAY MLM PLAN',
                     desc: 'Stairstep or “ladder concept” is allowing the distributors to separate from their upline when they reached a certain level. This allows them to run independently and may earn higher commission.'
-                    
+
                 },
                 {
                     icon: require('../../assets/plan/custom.svg'),
                     iconPos: 'right',
                     title: 'CUSTOM MLM PLAN',
                     desc: 'Trend MLM consider suggestions based on the demands of the client.'
-                    
+
                 },
             ]
         }

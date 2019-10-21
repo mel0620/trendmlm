@@ -122,7 +122,7 @@ export default {
         // window.addEventListener("load", () => {
         //     this.loading = false;
         //     console.log(this.loading);
-        //     setTimeout(() => { 
+        //     setTimeout(() => {
         //         this.loading = false;
         //     }, 3000);
         // });
@@ -146,7 +146,7 @@ export default {
         // });
     },
     created() {
-        
+
     }
 }
 </script>
@@ -335,7 +335,7 @@ export default {
     .footer {
         &__top {
             background-color: $secondary-color;
-           
+
            .info-wrapper {
                 border-bottom: 1px solid rgba(#fff, .12);
                 padding: 50px 0;
@@ -360,7 +360,7 @@ export default {
 
                         .info-item__details {
                             font-family: $font-secondary;
-                            font-size: 14px;
+                            font-size: 13px;
                             opacity: .6;
                             margin-top: 10px;
                         }
@@ -383,7 +383,7 @@ export default {
                             list-style-type: none;
                             display: flex;
                             align-items: center;
-                            
+
                             li {
                                 padding: 0 1rem;
 
@@ -470,6 +470,51 @@ export default {
             a {
                 color: $primary-color;
             }
+        }
+    }
+}
+
+@include for-size(tablet-down) {
+    .bottom-nav {
+        grid-template-columns: 1fr!important;
+        &__brand {
+            text-align: center;
+        }
+        &__links {
+            display: none;
+        }
+        &__social {
+            display: flex !important;
+            margin:auto;
+        }
+    }
+    .info-item {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@include for-size(phone-only) {
+    .bottom-nav {
+        grid-template-columns: 1fr!important;
+        &__brand {
+            text-align: center;
+        }
+        &__links {
+            display: none;
+        }
+        &__social {
+            display: flex !important;
+            margin:auto;
+        }
+    }
+    .info-wrapper {
+        flex-direction: column;
+        align-items: flex-start !important;
+        .info-item {
+            margin-bottom: 1.5rem;
+        }
+        .info-item:last-child {
+            margin-bottom: 0px;
         }
     }
 }

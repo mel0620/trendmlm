@@ -31,56 +31,70 @@
 <style lang="scss">
 @import "../../scss/style.scss";
 
-    .contact-wrapper {
-        background-color: $secondary-color;
-        padding: 100px 0px;
-        .contact {
+.contact-wrapper {
+    background-color: $secondary-color;
+    padding: 100px 0px;
+    .contact {
 
-            .contact-content {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-gap: 10px;
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
 
-                input {
-                    color: #fff;
-                    background-color: $secondary-color;
-                    border: solid 1px #fff;
-                    width: 100%;
-                    padding: 15px;
-                    border-radius: 2px;
-                    font-family: $font-secondary;
-                    font-weight: 300;
-                    outline: none;
-                    transition: .3s all ease-in-out;
+            input {
+                color: #fff;
+                background-color: $secondary-color;
+                border: solid 1px #fff;
+                width: 100%;
+                padding: 15px;
+                border-radius: 2px;
+                font-family: $font-secondary;
+                font-weight: 300;
+                outline: none;
+                transition: .3s all ease-in-out;
 
-                    &:focus {
-                        box-shadow: 0 0 0 1px #fff;
-                    }
+                &:focus {
+                    box-shadow: 0 0 0 1px #fff;
                 }
+            }
 
-                .contact-content__message
-                {
-                    grid-column: 1 / span 2;
-                }
+            .contact-content__message
+            {
+                grid-column: 1 / span 2;
+            }
 
-                ::placeholder {
-                    color: #fff;
-                }
+            ::placeholder {
+                color: #fff;
+            }
 
-                button {
-                    outline: none;
-                    background-color: #fff;
-                    color: $secondary-color;
-                    font-family: $font-secondary;
-                    font-weight: 600;
-                    font-size: 1rem;
-                    padding: 1rem 0px;
-                    min-width: 250px;
-                    border:none;
-                    border-radius: 2px;
-                    cursor: pointer;
-                }
+            button {
+                outline: none;
+                background-color: #fff;
+                color: $secondary-color;
+                font-family: $font-secondary;
+                font-weight: 600;
+                font-size: 1rem;
+                padding: 1rem 0px;
+                min-width: 250px;
+                border:none;
+                border-radius: 2px;
+                cursor: pointer;
             }
         }
     }
+}
+
+@include for-size(phone-only) {
+    .contact-content {
+        grid-template-columns: 1fr !important;
+    }
+    .contact-content__message
+    {
+        grid-column: 1 / span 1 !important;
+    }
+    button {
+        width: 100%;
+    }
+}
+
 </style>

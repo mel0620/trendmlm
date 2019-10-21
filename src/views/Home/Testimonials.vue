@@ -70,7 +70,7 @@ export default {
                     clientName: 'Andy James'
                 },
                 {
-                    text: 'I have found not only an MLM system provider but good consultants as well. They give the best advice for your company and they displayed professionalism.',
+                    text: 'I have found not only an MLM system provider but good consultants as well. They give the best advice for your company and they displayed professionalism and hardwork in giving you the best services they can offer.',
                     clientName: 'Rommel Cuneta'
                 },
             ]
@@ -89,6 +89,20 @@ export default {
                 nextEl: '.arrow-right',
                 prevEl: '.arrow-left',
             },
+            breakpoints: {
+                1366: {
+                    slidesPerView: 4,
+                    spaceBetween: 16
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                },
+                425: {
+                    slidesPerView: 1,
+                    spaceBetween: 5
+                }
+            }
         });
     }
 }
