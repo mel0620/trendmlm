@@ -26,7 +26,7 @@
         <img
             src="../../assets/animated-objects/stripe-circ.svg" alt=""
             class="stripe-circle lax"
-            data-lax-preset="lazy"
+            data-lax-preset="linger-10"
             style="transform: rotate(45deg)"
 	    >
         <img
