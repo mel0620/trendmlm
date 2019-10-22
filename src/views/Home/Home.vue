@@ -16,7 +16,6 @@
 </template>
 
 <script>
-import lax from "lax.js"
 import Hero from "./Hero.vue";
 import GetToKnow from "./GetToKnow.vue";
 import RQoute from "./RQoute.vue";
