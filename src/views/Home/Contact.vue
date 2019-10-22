@@ -21,10 +21,64 @@
                 </div>
             </div>
         </div>
+
+        <!-- ANIMATING OBJECTS -->
+        <img
+		src="../../assets/animated-objects/stripe-circ.svg" alt=""
+		class="stripe-circ lax"
+		data-lax-preset="lazy"
+	    >
+        <img
+		src="../../assets/animated-objects/multiple-circle.svg" alt=""
+		class="multiple-circ lax"
+		data-lax-preset="lazy"
+	    >
+        <img
+		src="../../assets/animated-objects/same-circle-sizes.svg" alt=""
+		class="same-circ lax"
+		data-lax-preset="lazy"
+	    >
+        <img
+		src="../../assets/animated-objects/circle-outline.svg"
+		class="circle-outline2 lax"
+		data-lax-preset="lazy"
+	    >
+        <img
+		src="../../assets/animated-objects/different-circle-sizes.svg"
+		class="different-circ lax"
+		data-lax-preset="lazy"
+	    >
+        <img
+		src="../../assets/animated-objects/single-circle.svg"
+		class="single-circ lax"
+		data-lax-preset="lazy"
+	    >
     </section>
 </template>
 
 <script>
+import lax from 'lax.js'
+
+export default {
+	data () {
+		return {
+
+		}
+	},
+	mounted() {
+
+		lax.setup({
+			breakpoints: { small: 0, large: 992 }
+		})
+
+		const updateLax = () => {
+			lax.update(window.scrollY)
+			window.requestAnimationFrame(updateLax)
+		}
+
+		window.requestAnimationFrame(updateLax)
+	}
+}
 
 </script>
 
@@ -34,6 +88,8 @@
 .contact-wrapper {
     background-color: $secondary-color;
     padding: 100px 0px;
+    position: relative;
+    overflow: hidden;
     .contact {
 
         .contact-content {
@@ -93,6 +149,61 @@
                 }
             }
         }
+    }
+
+    .stripe-circ {
+		position: absolute;
+        top: -45px;
+        left: -50px;
+        opacity: .2;
+        z-index: 1;
+        -webkit-transform: rotate(-215deg);
+        transform: rotate(-215deg)!important;
+        width: 14%;
+	}
+    .multiple-circ {
+		position: absolute;
+        top: -20px;
+        left: 200px;
+        opacity: .2;
+        z-index: 1;
+        width: 6%;
+	}
+    .same-circ {
+		position: absolute;
+        bottom: 68px;
+        left: -40px;
+        opacity: .2;
+        z-index: 1;
+        width: 10%;
+	}
+    .circle-outline2{
+        position: absolute;
+        bottom: 30%;
+        right: 40%;
+        opacity: .2;
+        z-index: 1;
+        -webkit-filter: brightness(0) invert(1);
+        filter: brightness(0) invert(1);
+        width: 4%;
+    }
+    .different-circ
+    {
+        position: absolute;
+        top: -125px;
+        right: -38px;
+        opacity: .2;
+        z-index: 1;
+        width: 12%;
+    }
+    .single-circ
+    {
+        position: absolute;
+        bottom: 25%;
+        right: 3%;
+        opacity: .2;
+        z-index: 1;
+        width: 4%;
     }
 }
 </style>
