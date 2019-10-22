@@ -39,7 +39,7 @@
 		data-lax-preset="speedy"
 	>
 	<!-- <img
-		src="../../assets/animated-objects/bubble-warp.svg"
+		src="../../assets/qoute-objects/bubble-warp.svg"
 		class="bubble-warp-sm lax"
 		data-lax-preset="speedy"
 	> -->
