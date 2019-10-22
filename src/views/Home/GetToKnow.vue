@@ -29,32 +29,32 @@
 
 	<!-- ANIMATING OBEJECTS -->
 	<img
-		src="../../assets/qoute-objects/square-dots.svg" alt=""
+		src="../../assets/animated-objects/square-dots.svg" alt=""
 		class="square-dots lax"
 		data-lax-preset="rightToLeft spin"
 	>
 	<img
-		src="../../assets/qoute-objects/bubble-warp.svg"
+		src="../../assets/animated-objects/bubble-warp.svg"
 		class="bubble-warp-bg lax"
 		data-lax-preset="speedy"
 	>
-	<!-- <img 
-		src="../../assets/qoute-objects/bubble-warp.svg" 
+	<!-- <img
+		src="../../assets/animated-objects/bubble-warp.svg"
 		class="bubble-warp-sm lax"
 		data-lax-preset="speedy"
 	> -->
 	<img
-		src="../../assets/qoute-objects/stripe-circ.svg"
+		src="../../assets/animated-objects/stripe-circ.svg"
 		class="stripe-circ lax"
 		data-lax-preset="lazy"
 	>
 	<img
-		src="../../assets/qoute-objects/circle-outline.svg"
+		src="../../assets/animated-objects/circle-outline.svg"
 		class="circle-outline1 lax"
 		data-lax-preset="leftToRight"
 	>
 	<img
-		src="../../assets/qoute-objects/circle-outline.svg"
+		src="../../assets/animated-objects/circle-outline.svg"
 		class="circle-outline2 lax"
 		data-lax-preset="lazy"
 	>
@@ -73,7 +73,7 @@ export default {
 	},
 	data () {
 		return {
-			
+
 		}
 	},
 	mounted() {
