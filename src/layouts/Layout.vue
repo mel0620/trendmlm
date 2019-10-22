@@ -136,9 +136,9 @@ export default {
                     y: -3
                 }, "-=.2")
                 .to('.nav-line', .3, { backgroundColor: "#ff6e60" }, "-=.2")
-                .to('.header', .2, { backgroundColor: '#fff' }, "-=.2")
+                .to('.header', .2, { backgroundColor: 'rgba(255,255,255, .8)' })
                 .to('.logo', .2, { filter: 'brightness(1)' })
-                .to('.header', .2, { minHeight: '100%' })
+                .to('.header', .2, { minHeight: '100%', ease: Back.easeOut.config(1.7) })
 
             burger.addEventListener("click", () => {
 				this.toggleTween(tl)
@@ -296,7 +296,7 @@ export default {
                 }
 
                 .line-1 { width: 25px; }
-                .line-2 { width: 22px; }
+                .line-2 { width: 21px; }
                 .line-3 { width: 15px; }
 
                 a {
@@ -311,7 +311,7 @@ export default {
 
     .header--sticky[data-scroll="in"] {
         position: fixed;
-        background-color: #fff !important;
+        background-color: rgba(#fff, .8) !important;
         border-bottom: 1px solid rgba(#000, .12);
 
         .header__nav {

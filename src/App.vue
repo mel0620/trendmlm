@@ -22,11 +22,10 @@ export default {
   }),
   mounted() {
 	window.addEventListener("load", () => {
-		this.loading = false;
+		setTimeout(() => {
+		  this.loading = false;
+		}, 5000);
 	});
-	// setTimeout(() => {
-	//   this.loading = false;
-	// }, 5000);
   },
 };
 </script>
