@@ -108,7 +108,6 @@ export default {
 @import "../../scss/style.scss";
 
 .get-to-know {
-	// height: 100vh;
 	padding: 100px 0 !important;
 	background-color: $secondary-color;
 	position: relative;

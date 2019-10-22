@@ -24,34 +24,35 @@
 
         <!-- ANIMATING OBJECTS -->
         <img
-		src="../../assets/animated-objects/stripe-circ.svg" alt=""
-		class="stripe-circ lax"
-		data-lax-preset="lazy"
+            src="../../assets/animated-objects/stripe-circ.svg" alt=""
+            class="stripe-circ lax"
+            data-lax-preset="linger"
+            style="transform: rotate(45deg)"
 	    >
         <img
-		src="../../assets/animated-objects/multiple-circle.svg" alt=""
-		class="multiple-circ lax"
-		data-lax-preset="lazy"
+            src="../../assets/animated-objects/multiple-circle.svg" alt=""
+            class="multiple-circ lax"
+            data-lax-preset="lazy"
 	    >
         <img
-		src="../../assets/animated-objects/same-circle-sizes.svg" alt=""
-		class="same-circ lax"
-		data-lax-preset="lazy"
+            src="../../assets/animated-objects/same-circle-sizes.svg" alt=""
+            class="same-circ lax"
+            data-lax-preset="linger"
 	    >
         <img
-		src="../../assets/animated-objects/circle-outline.svg"
-		class="circle-outline2 lax"
-		data-lax-preset="lazy"
+            src="../../assets/animated-objects/circle-outline.svg"
+            class="circle-outline2 lax"
+            data-lax-preset="linger"
 	    >
         <img
-		src="../../assets/animated-objects/different-circle-sizes.svg"
-		class="different-circ lax"
-		data-lax-preset="lazy"
+            src="../../assets/animated-objects/different-circle-sizes.svg"
+            class="different-circ lax"
+            data-lax-preset="linger"
 	    >
         <img
-		src="../../assets/animated-objects/single-circle.svg"
-		class="single-circ lax"
-		data-lax-preset="lazy"
+            src="../../assets/animated-objects/single-circle.svg"
+            class="single-circ lax"
+            data-lax-preset="linger"
 	    >
     </section>
 </template>
@@ -67,27 +68,27 @@ export default {
 	},
 	mounted() {
 
-		lax.setup({
-			breakpoints: { small: 0, large: 992 }
-		})
+		// lax.setup({
+		// 	breakpoints: { small: 0, large: 992 }
+		// })
 
-		const updateLax = () => {
-			lax.update(window.scrollY)
-			window.requestAnimationFrame(updateLax)
-		}
+		// const updateLax = () => {
+		// 	lax.update(window.scrollY)
+		// 	window.requestAnimationFrame(updateLax)
+		// }
 
-		window.requestAnimationFrame(updateLax)
+		// window.requestAnimationFrame(updateLax)
 	}
 }
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../scss/style.scss";
 
 .contact-wrapper {
     background-color: $secondary-color;
-    padding: 100px 0px;
+    padding: 100px 0px !important;
     position: relative;
     overflow: hidden;
     .contact {
@@ -158,7 +159,6 @@ export default {
         opacity: .2;
         z-index: 1;
         -webkit-transform: rotate(-215deg);
-        transform: rotate(-215deg)!important;
         width: 14%;
 	}
     .multiple-circ {

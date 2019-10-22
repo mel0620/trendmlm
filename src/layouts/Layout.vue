@@ -137,7 +137,9 @@ export default {
             }).to('.line-3', .2, {
                 rotation: 45,
                 y: -3
-            }, "-=.2")
+            }, "-=.2").to('.header', .3, {
+                height: '100%',
+            }, "-=.3")
 
             burger.addEventListener("click", () => {
 				this.toggleTween(tl)
@@ -312,6 +314,60 @@ export default {
         }
     }
 
+    .header--sticky[data-scroll="in"] {
+        position: fixed;
+        background-color: rgba(#fff, .9);
+        border-bottom: 1px solid rgba(#000, .12);
+
+        .header__nav {
+            .header__nav-brand {
+                img {
+                    filter: brightness(100%);
+                }
+            }
+
+            .header__nav-links {
+                padding: 1.5rem;
+                .header__nav-link {
+                    color: #1c1c1c;
+                    padding: 1.5rem;
+
+                    &:hover {
+                        color: $secondary-color;
+                        &::after {
+                            background-color: $secondary-color;
+                        }
+                    }
+
+                    &.active {
+                        color: $primary-color;
+                        &::after {
+                            background-color: $primary-color;
+                        }
+                    }
+                }
+            }
+
+            .header__nav-contact {
+                &-icon {
+                    img {
+                        filter: invert(0);
+                    }
+                }
+                &-text {
+                    > div {
+                        font-weight: 600;
+                        color: #1c1c1c;
+                    }
+
+                    div:last-child {
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+    }
+
     @include for-size(tablet-down) {
         .header {
             height: 54px;
@@ -381,60 +437,6 @@ export default {
                 }
                 a {
                     color: $primary-color;
-                }
-            }
-        }
-    }
-
-    .header--sticky[data-scroll="in"] {
-        position: fixed;
-        background-color: #fff;
-        border-bottom: 1px solid rgba(#000, .12);
-
-        .header__nav {
-            .header__nav-brand {
-                img {
-                    filter: brightness(100%);
-                }
-            }
-
-            .header__nav-links {
-                padding: 1.5rem;
-                .header__nav-link {
-                    color: #1c1c1c;
-                    padding: 1.5rem;
-
-                    &:hover {
-                        color: $secondary-color;
-                        &::after {
-                            background-color: $secondary-color;
-                        }
-                    }
-
-                    &.active {
-                        color: $primary-color;
-                        &::after {
-                            background-color: $primary-color;
-                        }
-                    }
-                }
-            }
-
-            .header__nav-contact {
-                &-icon {
-                    img {
-                        filter: invert(0);
-                    }
-                }
-                &-text {
-                    > div {
-                        font-weight: 600;
-                        color: #1c1c1c;
-                    }
-
-                    div:last-child {
-                        font-weight: 900;
-                    }
                 }
             }
         }

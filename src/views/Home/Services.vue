@@ -2,7 +2,7 @@
     <section class="services-wrapper" id="services">
         <div class="container">
             <div class="services">
-                <div class="section-title lax" data-lax-preset="zoomIn">
+                <div class="section-title lax" data-lax-preset_small="zoomIn" data-lax-preset_large="zoomIn">
                     <div class="section-title__bg">
                         SERVICES
                     </div>
@@ -12,7 +12,7 @@
                     <div class="line-bottom"></div>
                 </div>
                 <div class="services-offer">
-                    <div class="services-offer__item lax" data-lax-preset="zoomIn" v-for="(item, i) in services" :key="i">
+                    <div class="services-offer__item lax" data-lax-preset_small="zoomIn" data-lax-preset_large="zoomIn" v-for="(item, i) in services" :key="i">
                         <div class="services-offer__item-icon">
                             <img class="img-fluid" width="50" :src="item.image" alt="">
                         </div>
