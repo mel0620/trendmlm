@@ -36,7 +36,7 @@
 	<img
 		src="../../assets/qoute-objects/bubble-warp.svg"
 		class="bubble-warp-bg lax"
-		data-lax-preset="speedy"
+		data-lax-preset="spin"
 	>
 	<!-- <img 
 		src="../../assets/qoute-objects/bubble-warp.svg" 
@@ -46,7 +46,7 @@
 	<img
 		src="../../assets/qoute-objects/stripe-circ.svg"
 		class="stripe-circ lax"
-		data-lax-preset="lazy"
+		data-lax-preset="lazy linger"
 	>
 	<img
 		src="../../assets/qoute-objects/circle-outline.svg"
@@ -103,12 +103,12 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../scss/style.scss";
 
 .get-to-know {
 	// height: 100vh;
-	padding: 100px 0;
+	padding: 100px 0 !important;
 	background-color: $secondary-color;
 	position: relative;
 
@@ -191,7 +191,7 @@ export default {
 		right: 0;
 		opacity: .2;
 		z-index: 1;
-		transform: rotate(-45deg);
+		// transform: rotate(-45deg);
 		width: 14%;
 	}
 

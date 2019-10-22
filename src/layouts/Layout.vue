@@ -134,20 +134,12 @@ export default {
             offset: 300
         });
 
-        window.onload = () => {
-            this.loading = false;
-            console.log(this.loading);
-        }
-
         // const timeline = new TimelineLite()
 
         // window.addEventListener("load", () => {
         //     timeline.from(".intro", 3, {opacity: 0})
         // });
     },
-    created() {
-
-    }
 }
 </script>
 

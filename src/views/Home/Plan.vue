@@ -70,15 +70,27 @@ export default {
             ]
         }
     },
+    mounted () {
+        // lax.setup({
+		// 	breakpoints: { small: 0, large: 992 }
+		// })
+
+		// const updateLax = () => {
+		// 	lax.update(window.scrollY)
+		// 	window.requestAnimationFrame(updateLax)
+		// }
+
+		// window.requestAnimationFrame(updateLax)
+    }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../scss/style.scss";
 
 .plan-wrapper {
     background-color: #fff;
-    padding: 100px 0px;
+    padding: 100px 0px !important;
 
     .plan-content {
         display: grid;

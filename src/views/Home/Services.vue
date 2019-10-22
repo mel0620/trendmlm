@@ -12,7 +12,7 @@
                     <div class="line-bottom"></div>
                 </div>
                 <div class="services-offer">
-                    <div class="services-offer__item lax" data-lax-preset__large="zoomIn" data-lax-preset__small="linger" v-for="(item, i) in services" :key="i">
+                    <div class="services-offer__item lax" data-lax-preset_small="linger" data-lax-preset_large="fadeIn" v-for="(item, i) in services" :key="i">
                         <div class="services-offer__item-icon">
                             <img class="img-fluid" width="50" :src="item.image" alt="">
                         </div>
@@ -66,15 +66,27 @@ export default {
             ]
         }
     },
+    mounted() {
+        // lax.setup({
+		// 	breakpoints: { small: 0, large: 992 }
+		// })
+
+		// const updateLax = () => {
+		// 	lax.update(window.scrollY)
+		// 	window.requestAnimationFrame(updateLax)
+		// }
+
+		// window.requestAnimationFrame(updateLax)
+    }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../scss/style";
 
 .services-wrapper {
     background-color: #fff;
-    padding: 100px 0px;
+    padding: 100px 0px !important;
     overflow: hidden;
 
     .services {
