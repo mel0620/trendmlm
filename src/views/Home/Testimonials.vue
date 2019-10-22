@@ -159,7 +159,7 @@ export default {
                                     color: #888888;
                                     line-height: 1.5rem;
                                     margin-top: 10px;
-                                    min-height: 150px;
+                                    min-height: 170px;
 
                                     &::before,
                                     &::after {

@@ -6,7 +6,7 @@
 		</div>
 	</div>
 	<div class="container">
-		<div class="section-title section-title--variant2 lax" data-lax-preset="fadeIn">
+		<div class="section-title section-title--variant2 lax" data-lax-optimize data-lax-preset="fadeIn">
 			<div class="section-title__bg">
 				TREND MLM
 			</div>
@@ -17,10 +17,10 @@
 		</div>
 
 		<div class="get-to-know-content">
-			<div class="illustration lax" data-lax-preset_large="driftLeft" data-lax-preset_small="fadeIn">
+			<div class="illustration lax" data-lax-optimize data-lax-preset_large="driftLeft" data-lax-preset_small="fadeIn">
 				<img class="img-fluid" src="../../assets/devices.png" alt="">
 			</div>
-			<div class="texts lax" data-lax-preset_large="driftRight" data-lax-preset_small="fadeIn">
+			<div class="texts lax" data-lax-optimize data-lax-preset_large="driftRight" data-lax-preset_small="fadeIn">
 				<label for="">“We drifts your business towards success.”</label>
 				<p>Trend MLM is one of the leading Multi-level Marketing solutions software in the Philippines. We provide automated sales, review, easy and faster tracking of downlines, inventory, invoices and others. Overall, our MLM software maintains effective monitoring from top management down to the lowest member.</p>
 			</div>
@@ -46,7 +46,8 @@
 	<img
 		src="../../assets/animated-objects/stripe-circ.svg"
 		class="stripe-circ lax"
-		data-lax-preset="lazy linger"
+		data-lax-preset="lazy"
+		style="transform: rotate(-45deg)"
 	>
 	<img
 		src="../../assets/animated-objects/circle-outline.svg"
@@ -56,7 +57,7 @@
 	<img
 		src="../../assets/animated-objects/circle-outline.svg"
 		class="circle-outline2 lax"
-		data-lax-preset="lazy"
+		data-lax-preset="linger"
 	>
 </section>
 </template>

@@ -4,9 +4,10 @@
             <div class="container">
                 <nav class="header__nav" data-mob="navigation">
                     <a class="header__nav-brand" href="javascript:">
-                        <img class="img-fluid" width="200" src="@/assets/brand-colored.png" alt="trend mlm logo">
+                        <img class="img-fluid" width="200" src="@/assets/brand-colored.png" alt="trendmlm logo">
                     </a>
-                    <div id="navlink" class="header__nav-links" data-mob="hide">
+                    <!-- <div id="navlink" class="header__nav-links" data-mob="hide"> -->
+                    <div id="navlink" class="header__nav-links">
                         <a href="#home" title="Home" class="header__nav-link">Home</a>
                         <a href="#about" title="About" class="header__nav-link">About</a>
                         <a href="#services" title="Services" class="header__nav-link">Services</a>
@@ -22,8 +23,11 @@
                             <div>000 - 000</div>
                         </div>
                     </div>
-                    <span data-mob="nav-btn">
-                        <a href="javascript:" class="mdi mdi-text mdi-flip-h"></a>
+                    <span data-mob="nav-btn" class="burger-cta" id="burger-cta">
+                        <span class="line-1"></span>
+                        <span class="line-2"></span>
+                        <span class="line-3"></span>
+                        <!-- <a href="javascript:" class="mdi mdi-text mdi-flip-h"></a> -->
                     </span>
                 </nav>
             </div>
@@ -49,12 +53,12 @@
                                 <img width="250" class="img-fluid" src="../assets/brand-bottom.png" alt="">
                             </div>
                             <div class="bottom-nav__links">
-                                <ul>
-                                    <li><a href="javascript:">HOME</a></li>
-                                    <li><a href="javascript:">About</a></li>
-                                    <li><a href="javascript:">Services</a></li>
-                                    <li><a href="javascript:">works</a></li>
-                                    <li><a href="javascript:">contact</a></li>
+                                <ul id="navlink">
+                                    <li><a href="#home">HOME</a></li>
+                                    <li><a href="#about">About</a></li>
+                                    <li><a href="#services">Services</a></li>
+                                    <li><a href="#works">works</a></li>
+                                    <li><a href="#contact">contact</a></li>
                                 </ul>
                             </div>
                             <div class="bottom-nav__social">
@@ -85,7 +89,7 @@
 </template>
 
 <script>
-// import {TweenMax, Power2, TimelineLite} from "gsap/TweenMax";
+import {TweenMax, Power2, TimelineLite} from "gsap/TweenMax";
 import ScrollOut from "scroll-out"
 import VanillaScrollspy from 'vanillajs-scrollspy'
 
@@ -117,16 +121,34 @@ export default {
             const scrollspy = new VanillaScrollspy(navbar, 1000, 'easeInOutQuint');
             scrollspy.init();
         },
+        onNavmobile() {
+            const burger = document.querySelector('#burger-cta');
+            const tl = new TimelineLite({paused: true, reversed: true});
+
+            tl.to('.line-2', .2, {
+				opacity: 0,
+			}).to('.line-3', .2, {
+                width: 25
+            }).to('.line-2', .2, {
+                height: 0
+            }).to('.line-1', .2, {
+                rotation: -45,
+                y: 3
+            }).to('.line-3', .2, {
+                rotation: 45,
+                y: -3
+            }, "-=.2")
+
+            burger.addEventListener("click", () => {
+				this.toggleTween(tl)
+			})
+        },
+        toggleTween(tween) {
+			tween.reversed() ? tween.play() : tween.reverse();
+		},
     },
     mounted() {
-        // window.addEventListener("load", () => {
-        //     this.loading = false;
-        //     console.log(this.loading);
-        //     setTimeout(() => {
-        //         this.loading = false;
-        //     }, 3000);
-        // });
-
+        this.onNavmobile();
         this.myScrollspy();
 
         ScrollOut({
@@ -192,6 +214,7 @@ export default {
             &-links {
                 padding: 2rem 1rem;
                 justify-self: center;
+                transition: .3s all ease-in-out;
 
                 .header__nav-link {
                     text-decoration: none;
@@ -263,6 +286,21 @@ export default {
             [data-mob="nav-btn"] {
                 display: none;
                 border-radius: 100%;
+                grid-column-start: 3;
+
+                [class^="line-"] {
+                    height: 3px;
+                    width: 25px;
+                    background-color: #fff;
+                    border-radius: 1rem;
+                    margin: 3px 0;
+                    display: block;
+                    margin-left: auto;
+                }
+
+                .line-3 {
+                    width: 18px;
+                }
 
                 a {
                     border-radius: 100%;
@@ -276,22 +314,46 @@ export default {
 
     @include for-size(tablet-down) {
         .header {
+            height: 54px;
+            overflow: hidden;
+
             .header__nav {
                 padding: 14px 0;
             }
 
             [data-mob="navigation"] {
-                display: flex;
-                justify-content: space-between;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
 
                 .header__nav {
+                    overflow: hidden;
+
                     &-brand {
+                        grid-column-start: 1;
+
                         img {
                             object-fit: cover;
                             object-position: 0 100%;
                             width: 40px;
                             height: 30px;
                         }
+                    }
+
+                    &-links {
+                        display: grid;
+                        grid-row-start: 2;
+                        grid-column: span 3;
+                        text-align: center;
+                        padding: 5px !important;
+                        overflow: hidden;
+                        
+                        .header__nav-link {
+                            padding: 1rem !important;
+                        }
+                    }
+
+                    .burger-cta {
+                        grid-column-start: 3;
                     }
                 }
             }
@@ -306,11 +368,17 @@ export default {
         }
 
         .header--sticky[data-scroll="in"] {
+            height: 54px;
+            overflow: hidden;
+
             .header__nav {
                 padding: 10px 0;
             }
     
             [data-mob="nav-btn"] {
+                [class^="line-"] {
+                    background-color: $primary-color;
+                }
                 a {
                     color: $primary-color;
                 }
