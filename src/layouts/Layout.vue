@@ -138,7 +138,7 @@ export default {
                 .to('.nav-line', .3, { backgroundColor: "#ff6e60" }, "-=.2")
                 .to('.header', .2, { backgroundColor: '#fff' }, "-=.2")
                 .to('.logo', .2, { filter: 'brightness(1)' })
-                // .from('.header', .2, { height: 54 }, "-=.4")
+                .to('.header', .2, { minHeight: '100%' })
 
             burger.addEventListener("click", () => {
 				this.toggleTween(tl)
@@ -368,6 +368,7 @@ export default {
             --header-bg: transparent;
             background-color: var(--header-bg);
             overflow: hidden;
+            height: 54px;
 
             .header__nav {
                 padding: 10px 0;
