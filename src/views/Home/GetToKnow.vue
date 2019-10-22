@@ -6,7 +6,7 @@
 		</div>
 	</div>
 	<div class="container">
-		<div class="section-title section-title--variant2 lax" data-lax-optimize data-lax-preset="fadeIn">
+		<div class="section-title section-title--variant2" data-scroll>
 			<div class="section-title__bg">
 				TREND MLM
 			</div>
@@ -17,10 +17,10 @@
 		</div>
 
 		<div class="get-to-know-content">
-			<div class="illustration lax" data-lax-optimize data-lax-preset_large="driftLeft" data-lax-preset_small="fadeIn">
+			<div class="illustration" data-scroll>
 				<img class="img-fluid" src="../../assets/devices.png" alt="">
 			</div>
-			<div class="texts lax" data-lax-optimize data-lax-preset_large="driftRight" data-lax-preset_small="fadeIn">
+			<div class="texts" data-scroll>
 				<label for="">“We drifts your business towards success.”</label>
 				<p>Trend MLM is one of the leading Multi-level Marketing solutions software in the Philippines. We provide automated sales, review, easy and faster tracking of downlines, inventory, invoices and others. Overall, our MLM software maintains effective monitoring from top management down to the lowest member.</p>
 			</div>
@@ -36,6 +36,7 @@
 	<img
 		src="../../assets/animated-objects/bubble-warp.svg"
 		class="bubble-warp-bg lax"
+		data-rellax-speed="1"
 		data-lax-preset="spin"
 	>
 	<!-- <img
@@ -45,9 +46,9 @@
 	> -->
 	<img
 		src="../../assets/animated-objects/stripe-circ.svg"
-		class="stripe-circ lax"
-		data-lax-preset="lazy"
+		class="stripe-circ"
 		style="transform: rotate(-45deg)"
+		data-rellax-speed="-3"
 	>
 	<img
 		src="../../assets/animated-objects/circle-outline.svg"
@@ -58,17 +59,20 @@
 		src="../../assets/animated-objects/circle-outline.svg"
 		class="circle-outline2 lax"
 		data-lax-preset="linger"
+		data-rellax-speed="5"
 	>
 </section>
 </template>
 
 <script>
 /* eslint-disable */
+import ScrollOut from "scroll-out"
 import Rellax from "rellax"
 import lax from 'lax.js'
 import RQoute from "./RQoute";
 
 export default {
+	name: 'about',
 	components: {
 		RQoute
 	},
@@ -79,8 +83,15 @@ export default {
 	},
 	mounted() {
 		const rellax = new Rellax('.request-a-qoute');
-		// ITO YUNG NSA DOCS PERO BINAGO KO DAHIL SA LOADER KAILAN GUMANA AFTER MALOAD ANG PAGE
+		const bubble = new Rellax('.bubble-warp-bg');
+		const circleOutline2 = new Rellax('.circle-outline2');
+		const stripeCircle = new Rellax('.stripe-circ');
 
+		this.so = ScrollOut({
+            scope: this.$el
+        });
+
+		// ITO YUNG NSA DOCS PERO BINAGO KO DAHIL SA LOADER KAILAN GUMANA AFTER MALOAD ANG PAGE
 		// window.onload = function() {
 		// 	lax.setup() // init
 		// 	const updateLax = () => {
@@ -100,7 +111,10 @@ export default {
 		}
 
 		window.requestAnimationFrame(updateLax)
-	}
+	},
+	destroyed() {
+        this.so.teardown();
+    },
 }
 </script>
 
@@ -111,6 +125,26 @@ export default {
 	padding: 100px 0 !important;
 	background-color: $secondary-color;
 	position: relative;
+
+    .section-title[data-scroll="in"] {
+        transform: scale(1);
+    }
+
+    .section-title[data-scroll="out"] {
+        transform: scale(.8);
+    }
+
+    [data-scroll] {
+        transition: 1s all ease-in-out;
+    }
+
+    [data-scroll="in"] {
+        opacity: 1;
+    }
+
+    [data-scroll="out"] {
+        opacity: 0;
+    }
 
 	.request-a-qoute {
 		position: absolute;
@@ -187,7 +221,7 @@ export default {
 
 	.stripe-circ {
 		position: absolute;
-		bottom: 20px;
+		bottom: 250px;
 		right: 0;
 		opacity: .2;
 		z-index: 1;
@@ -212,7 +246,7 @@ export default {
 		opacity: .2;
 		z-index: 1;
 		filter: brightness(0) invert(1);
-		width: 8%;
+		width: 7%;
 	}
 }
 </style>

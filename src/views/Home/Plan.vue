@@ -2,7 +2,7 @@
     <section class="plan-wrapper">
         <div class="container">
             <div class="plan">
-                <div class="section-title lax" data-lax-preset="fadeIn">
+                <div class="section-title" data-scroll>
                     <div class="section-title__bg">
                         MLM PLANS
                     </div>
@@ -12,7 +12,7 @@
                     <div class="line-bottom"></div>
                 </div>
                 <div class="plan-content">
-                    <div data-lax-preset="linger" v-for="(item, i) in plans" :key="i" class="plan-item lax" :class="item.iconPos == 'left' ? 'plan-item--switch' : ''">
+                    <div data-scroll v-for="(item, i) in plans" :key="i" class="plan-item" :class="item.iconPos == 'left' ? 'plan-item--switch' : ''">
                         <div class="plan-item__texts">
                             <div class="plan-item__title">{{ item.title }}</div>
                             <div class="plan-item__desc">{{ item.desc }}</div>
@@ -27,8 +27,9 @@
     </section>
 </template>
 <script>
-import lax from 'lax.js'
+import ScrollOut from "scroll-out"
 export default {
+    name: 'plan',
     data () {
         return {
             plans: [
@@ -70,17 +71,13 @@ export default {
             ]
         }
     },
-    mounted () {
-        // lax.setup({
-		// 	breakpoints: { small: 0, large: 992 }
-		// })
-
-		// const updateLax = () => {
-		// 	lax.update(window.scrollY)
-		// 	window.requestAnimationFrame(updateLax)
-		// }
-
-		// window.requestAnimationFrame(updateLax)
+    mounted() {
+        this.so = ScrollOut({
+            scope: this.$el
+        });
+    },
+    destroyed() {
+        this.so.teardown();
     }
 }
 </script>
@@ -91,6 +88,28 @@ export default {
 .plan-wrapper {
     background-color: #fff;
     padding: 100px 0px !important;
+
+    .section-title[data-scroll="in"] {
+        transform: scale(1);
+    }
+
+    .section-title[data-scroll="out"] {
+        transform: scale(.8);
+    }
+
+    [data-scroll] {
+        transition: 1s all ease-in-out;
+    }
+
+    [data-scroll="in"] {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    [data-scroll="out"] {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
 
     .plan-content {
         display: grid;

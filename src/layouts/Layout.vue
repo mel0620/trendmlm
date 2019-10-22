@@ -4,7 +4,7 @@
             <div class="container">
                 <nav class="header__nav" data-mob="navigation">
                     <a class="header__nav-brand" href="javascript:">
-                        <img class="img-fluid" width="200" src="@/assets/brand-colored.png" alt="trendmlm logo">
+                        <img class="img-fluid logo" width="200" src="@/assets/brand-colored.png" alt="trendmlm logo">
                     </a>
                     <!-- <div id="navlink" class="header__nav-links" data-mob="hide"> -->
                     <div id="navlink" class="header__nav-links">
@@ -24,9 +24,9 @@
                         </div>
                     </div>
                     <span data-mob="nav-btn" class="burger-cta" id="burger-cta">
-                        <span class="line-1"></span>
-                        <span class="line-2"></span>
-                        <span class="line-3"></span>
+                        <span class="line-1 nav-line"></span>
+                        <span class="line-2 nav-line"></span>
+                        <span class="line-3 nav-line"></span>
                         <!-- <a href="javascript:" class="mdi mdi-text mdi-flip-h"></a> -->
                     </span>
                 </nav>
@@ -125,21 +125,20 @@ export default {
             const burger = document.querySelector('#burger-cta');
             const tl = new TimelineLite({paused: true, reversed: true});
 
-            tl.to('.line-2', .2, {
-				opacity: 0,
-			}).to('.line-3', .2, {
-                width: 25
-            }).to('.line-2', .2, {
-                height: 0
-            }).to('.line-1', .2, {
-                rotation: -45,
-                y: 3
-            }).to('.line-3', .2, {
-                rotation: 45,
-                y: -3
-            }, "-=.2").to('.header', .3, {
-                height: '100%',
-            }, "-=.3")
+            tl.to('.line-2', .2, { opacity: 0, })
+                .to('.line-3', .2, { width: 25 })
+                .to('.line-2', .2, { height: 0 })
+                .to('.line-1', .2, {
+                    rotation: -45,
+                    y: 3
+                }).to('.line-3', .2, {
+                    rotation: 45,
+                    y: -3
+                }, "-=.2")
+                .to('.nav-line', .3, { backgroundColor: "#ff6e60" }, "-=.2")
+                .to('.header', .2, { backgroundColor: '#fff' }, "-=.2")
+                .to('.logo', .2, { filter: 'brightness(1)' })
+                // .from('.header', .2, { height: 54 }, "-=.4")
 
             burger.addEventListener("click", () => {
 				this.toggleTween(tl)
@@ -153,17 +152,15 @@ export default {
         this.onNavmobile();
         this.myScrollspy();
 
-        ScrollOut({
+        this.so = ScrollOut({
             targets: ".header--sticky",
-            offset: 300
+            offset: 300,
+            scope: this.$el
         });
-
-        // const timeline = new TimelineLite()
-
-        // window.addEventListener("load", () => {
-        //     timeline.from(".intro", 3, {opacity: 0})
-        // });
     },
+    destroyed() {
+        this.so.teardown();
+    }
 }
 </script>
 
@@ -216,7 +213,6 @@ export default {
             &-links {
                 padding: 2rem 1rem;
                 justify-self: center;
-                transition: .3s all ease-in-out;
 
                 .header__nav-link {
                     text-decoration: none;
@@ -292,7 +288,6 @@ export default {
 
                 [class^="line-"] {
                     height: 3px;
-                    width: 25px;
                     background-color: #fff;
                     border-radius: 1rem;
                     margin: 3px 0;
@@ -300,9 +295,9 @@ export default {
                     margin-left: auto;
                 }
 
-                .line-3 {
-                    width: 18px;
-                }
+                .line-1 { width: 25px; }
+                .line-2 { width: 22px; }
+                .line-3 { width: 15px; }
 
                 a {
                     border-radius: 100%;
@@ -316,13 +311,13 @@ export default {
 
     .header--sticky[data-scroll="in"] {
         position: fixed;
-        background-color: rgba(#fff, .9);
+        background-color: #fff !important;
         border-bottom: 1px solid rgba(#000, .12);
 
         .header__nav {
             .header__nav-brand {
                 img {
-                    filter: brightness(100%);
+                    filter: brightness(100%) !important;
                 }
             }
 
@@ -370,11 +365,32 @@ export default {
 
     @include for-size(tablet-down) {
         .header {
-            height: 54px;
+            --header-bg: transparent;
+            background-color: var(--header-bg);
             overflow: hidden;
 
             .header__nav {
-                padding: 14px 0;
+                padding: 10px 0;
+
+                &-links {
+                    .header__nav-link {
+                        color: #1c1c1c;
+
+                        &:hover {
+                            color: $secondary-color;
+                            &::after {
+                                background-color: $secondary-color;
+                            }
+                        }
+
+                        &.active {
+                            color: $primary-color;
+                            &::after {
+                                background-color: $primary-color;
+                            }
+                        }
+                    }
+                }
             }
 
             [data-mob="navigation"] {
@@ -402,6 +418,7 @@ export default {
                         text-align: center;
                         padding: 5px !important;
                         overflow: hidden;
+                        width: 100%;
                         
                         .header__nav-link {
                             padding: 1rem !important;
@@ -410,6 +427,10 @@ export default {
 
                     .burger-cta {
                         grid-column-start: 3;
+
+                        .nav-line {
+                            background-color: #fff !important;
+                        }
                     }
                 }
             }
@@ -424,16 +445,11 @@ export default {
         }
 
         .header--sticky[data-scroll="in"] {
-            height: 54px;
             overflow: hidden;
-
-            .header__nav {
-                padding: 10px 0;
-            }
     
             [data-mob="nav-btn"] {
                 [class^="line-"] {
-                    background-color: $primary-color;
+                    background-color: $primary-color !important;
                 }
                 a {
                     color: $primary-color;

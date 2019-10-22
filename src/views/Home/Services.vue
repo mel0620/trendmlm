@@ -2,7 +2,7 @@
     <section class="services-wrapper" id="services">
         <div class="container">
             <div class="services">
-                <div class="section-title lax" data-lax-preset_small="zoomIn" data-lax-preset_large="zoomIn">
+                <div class="section-title" data-scroll>
                     <div class="section-title__bg">
                         SERVICES
                     </div>
@@ -12,7 +12,7 @@
                     <div class="line-bottom"></div>
                 </div>
                 <div class="services-offer">
-                    <div class="services-offer__item lax" data-lax-preset_small="zoomIn" data-lax-preset_large="zoomIn" v-for="(item, i) in services" :key="i">
+                    <div class="services-offer__item" data-scroll v-for="(item, i) in services" :key="i">
                         <div class="services-offer__item-icon">
                             <img class="img-fluid" width="50" :src="item.image" alt="">
                         </div>
@@ -28,8 +28,10 @@
 </template>
 
 <script>
-import lax from 'lax.js'
+import ScrollOut from "scroll-out"
+
 export default {
+    name: 'services',
     data () {
         return {
             services: [
@@ -67,16 +69,12 @@ export default {
         }
     },
     mounted() {
-        // lax.setup({
-		// 	breakpoints: { small: 0, large: 992 }
-		// })
-
-		// const updateLax = () => {
-		// 	lax.update(window.scrollY)
-		// 	window.requestAnimationFrame(updateLax)
-		// }
-
-		// window.requestAnimationFrame(updateLax)
+        this.so = ScrollOut({
+            scope: this.$el
+        });
+    },
+    destroyed() {
+        this.so.teardown();
     }
 }
 </script>
@@ -88,6 +86,28 @@ export default {
     background-color: #fff;
     padding: 100px 0px !important;
     overflow: hidden;
+
+    .section-title[data-scroll="in"] {
+        transform: scale(1);
+    }
+
+    .section-title[data-scroll="out"] {
+        transform: scale(.8);
+    }
+
+    [data-scroll] {
+        transition: 1s all ease-in-out;
+    }
+
+    [data-scroll="in"] {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    [data-scroll="out"] {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
 
     .services {
         .services-offer {

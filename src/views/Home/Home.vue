@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import lax from "lax.js"
 import Hero from "./Hero.vue";
 import GetToKnow from "./GetToKnow.vue";
 import RQoute from "./RQoute.vue";
@@ -41,9 +42,16 @@ export default {
     Contact,
     Technologies
   },
-  mounted() {
+  created () {
+    // setup lax
+    // lax.setup({
+		// 	breakpoints: { small: 0, large: 992 }
+		// })
 
-  }
+    // document.addEventListener('scroll', function(x) {
+    //   lax.update(window.scrollY)
+    // }, false)
+  },
 }
 </script>
 

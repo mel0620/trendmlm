@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import lax from "lax.js"
 import Loader from "./components/Loader.vue";
 
 export default {
@@ -28,14 +27,6 @@ export default {
 	// setTimeout(() => {
 	//   this.loading = false;
 	// }, 5000);
-  },
-  created () {
-	// setup lax
-  	lax.setup()
-
-	document.addEventListener('scroll', function(x) {
-      lax.update(window.scrollY)
-    }, false)
   },
 };
 </script>

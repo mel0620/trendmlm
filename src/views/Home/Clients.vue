@@ -2,7 +2,7 @@
 	<section class="clients-wrapper">
 		<div class="container">
 			<div class="clients">
-				<div class="clients-content">
+				<div class="clients-content" data-scroll>
 					<div class="clients-swiper">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide" v-for="(item, i) in clients" :key="i">
@@ -24,6 +24,7 @@
 
 <script>
 	/* eslint-disable */
+	import ScrollOut from "scroll-out"
 	import Swiper from "swiper";
 	import "../../../node_modules/swiper/css/swiper.min.css";
 
@@ -86,6 +87,12 @@
 		},
 		mounted() {
 			this.clientsSwiper();
+			this.so = ScrollOut({
+				scope: this.$el
+			});
+		},
+		destroyed() {
+			this.so.teardown();
 		}
 	};
 </script>
@@ -95,6 +102,20 @@
 .clients-wrapper {
 	padding: 100px 0px;
 	background-color: #fff9f8;
+
+	[data-scroll] {
+        transition: 1s all ease-in-out;
+    }
+
+    [data-scroll="in"] {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    [data-scroll="out"] {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
 
 	.clients {
 		.clients-content {

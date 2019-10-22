@@ -2,7 +2,7 @@
     <section class="contact-wrapper" id="contact">
         <div class="container">
             <div class="contact">
-                <div class="section-title section-title--variant1">
+                <div class="section-title section-title--variant1" data-scroll>
                     <div class="section-title__bg">
                         REACH US
                     </div>
@@ -12,7 +12,7 @@
                     <div class="line-bottom line-bottom--white"></div>
                 </div>
 
-                <div class="contact-content">
+                <div class="contact-content" data-scroll>
                     <input type="text" placeholder="Full Name Here*">
                     <input type="text" placeholder="Last Name Here*">
                     <input type="text" placeholder="Email Address Here*">
@@ -25,8 +25,8 @@
         <!-- ANIMATING OBJECTS -->
         <img
             src="../../assets/animated-objects/stripe-circ.svg" alt=""
-            class="stripe-circ lax"
-            data-lax-preset="linger"
+            class="stripe-circle lax"
+            data-lax-preset="lazy"
             style="transform: rotate(45deg)"
 	    >
         <img
@@ -58,8 +58,7 @@
 </template>
 
 <script>
-import lax from 'lax.js'
-
+import ScrollOut from "scroll-out"
 export default {
 	data () {
 		return {
@@ -67,18 +66,13 @@ export default {
 		}
 	},
 	mounted() {
-
-		// lax.setup({
-		// 	breakpoints: { small: 0, large: 992 }
-		// })
-
-		// const updateLax = () => {
-		// 	lax.update(window.scrollY)
-		// 	window.requestAnimationFrame(updateLax)
-		// }
-
-		// window.requestAnimationFrame(updateLax)
-	}
+        this.so = ScrollOut({
+            scope: this.$el
+        });
+	},
+    destroyed() {
+        this.so.teardown();
+    }
 }
 
 </script>
@@ -91,8 +85,30 @@ export default {
     padding: 100px 0px !important;
     position: relative;
     overflow: hidden;
-    .contact {
 
+    .section-title[data-scroll="in"] {
+        transform: scale(1);
+    }
+
+    .section-title[data-scroll="out"] {
+        transform: scale(.8);
+    }
+
+    [data-scroll] {
+        transition: 1s all ease-in-out;
+    }
+
+    [data-scroll="in"] {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    [data-scroll="out"] {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    .contact {
         .contact-content {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -152,13 +168,12 @@ export default {
         }
     }
 
-    .stripe-circ {
+    .stripe-circle {
 		position: absolute;
-        top: -45px;
-        left: -50px;
+        top: -80px;
+        left: 0px;
         opacity: .2;
         z-index: 1;
-        -webkit-transform: rotate(-215deg);
         width: 14%;
 	}
     .multiple-circ {
@@ -172,7 +187,7 @@ export default {
     .same-circ {
 		position: absolute;
         bottom: 68px;
-        left: -40px;
+        left: 8px;
         opacity: .2;
         z-index: 1;
         width: 10%;

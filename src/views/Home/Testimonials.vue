@@ -3,7 +3,7 @@
         <!-- <div class="testimonials" :style="`background-image: url(${bg_image})`" data-rellax-speed="-7"> -->
         <div class="testimonials-bg" :style="`background-image: url(${bg_image})`">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" data-scroll>
                     <div class="section-title__bg">
                         TESTIMONIALS
                     </div>
@@ -12,7 +12,7 @@
                     </div>
                     <div class="line-bottom"></div>
                 </div>
-                <div class="testimonials">
+                <div class="testimonials" data-scroll>
                     <div class="testimonial-swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide" v-for="(item, ind) in testimonials" :key="ind">
@@ -44,6 +44,7 @@
 
 <script>
 /* eslint-disable */
+import ScrollOut from "scroll-out"
 import Rellax from "rellax"
 import Swiper from "swiper"
 import "../../../node_modules/swiper/css/swiper.min.css";
@@ -116,6 +117,12 @@ export default {
                 },
             }
         });
+        this.so = ScrollOut({
+            scope: this.$el
+        });
+    },
+    destroyed() {
+        this.so.teardown();
     }
 }
 </script>
@@ -125,6 +132,28 @@ export default {
 
 .testimonials-wrapper {
     overflow: hidden;
+
+    .section-title[data-scroll="in"] {
+        transform: scale(1);
+    }
+
+    .section-title[data-scroll="out"] {
+        transform: scale(.8);
+    }
+
+    [data-scroll] {
+        transition: 1s all ease-in-out;
+    }
+
+    [data-scroll="in"] {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    [data-scroll="out"] {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
 
     .testimonials-bg {
         // height: 80vh;

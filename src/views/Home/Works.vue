@@ -2,7 +2,7 @@
     <section class="works-wrapper" id="works">
         <div class="container">
             <div class="works">
-                <div class="section-title section-title--variant1">
+                <div class="section-title section-title--variant1" data-scroll>
                     <div class="section-title__bg">
                         WORKS
                     </div>
@@ -11,7 +11,7 @@
                     </div>
                     <div class="line-bottom line-bottom--white"></div>
                 </div>
-                <div class="works-content">
+                <div class="works-content" data-scroll>
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide" v-for="(item, i) in works" :key="i">
@@ -21,7 +21,7 @@
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
-                <div class="works-button">
+                <div class="works-button" data-scroll>
                     <button>View More</button>
                 </div>
             </div>
@@ -31,6 +31,7 @@
 
 <script>
 /* eslint-disable */
+import ScrollOut from "scroll-out"
 import Swiper from "swiper"
 import "../../../node_modules/swiper/css/swiper.min.css"
 
@@ -99,6 +100,12 @@ export default {
     },
     mounted() {
         this.worksSwiper();
+        this.so = ScrollOut({
+            scope: this.$el
+        });
+    },
+    destroyed() {
+        this.so.teardown();
     }
 }
 </script>
@@ -109,6 +116,28 @@ export default {
 .works-wrapper {
     background-color: #007eac;
     padding: 100px 0px !important;
+
+    .section-title[data-scroll="in"] {
+        transform: scale(1);
+    }
+
+    .section-title[data-scroll="out"] {
+        transform: scale(.8);
+    }
+
+    [data-scroll] {
+        transition: 1s all ease-in-out;
+    }
+
+    [data-scroll="in"] {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    [data-scroll="out"] {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
 
     .works {
         .works-content {
