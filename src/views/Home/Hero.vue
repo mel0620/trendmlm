@@ -49,8 +49,8 @@ export default {
 
         const timeline = new TimelineLite()
 
-        timeline.to(".hero-content__text-1", 2, {scale: 1, opacity: 1, ease: Power4.easeOut})
-                .to(".hero-content__text-2", 1, {scale: 1, opacity: 1}, "-=1")
+        timeline.to(".hero-content__text-1", 2, {y: 0, opacity: 1, ease: Power4.easeOut})
+                .to(".hero-content__text-2", 1, {y: 0, opacity: 1}, "-=1")
                 .from(".line-bottom", 2, {width: 0, ease: Elastic.easeOut.config(1, 0.3)}, "-=.2")
                 .to(".btn", .2, {opacity: 1}, "-=1")
                 .to(".hero-content", .2, {scale: 1.1})
@@ -112,7 +112,7 @@ export default {
                 .hero-content__text-1 {
                     font-weight: 700;
                     font-size: 30px;
-                    transform: scale(5);
+                    transform: translateY(-50px);
                     opacity: 0;
                 }
 
@@ -120,7 +120,7 @@ export default {
                     font-weight: 300;
                     font-size: 1rem;
                     line-height: 2rem;
-                    transform: scale(5);
+                    transform: translateY(50px);
                     opacity: 0;
                 }
             }
