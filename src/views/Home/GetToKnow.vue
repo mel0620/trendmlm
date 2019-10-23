@@ -88,7 +88,8 @@ export default {
 		const stripeCircle = new Rellax('.stripe-circ');
 
 		this.so = ScrollOut({
-            scope: this.$el
+            scope: this.$el,
+			once: true
         });
 
 		// ITO YUNG NSA DOCS PERO BINAGO KO DAHIL SA LOADER KAILAN GUMANA AFTER MALOAD ANG PAGE

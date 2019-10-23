@@ -101,7 +101,8 @@ export default {
     mounted() {
         this.worksSwiper();
         this.so = ScrollOut({
-            scope: this.$el
+            scope: this.$el,
+            once: true
         });
     },
     destroyed() {

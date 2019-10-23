@@ -48,45 +48,47 @@
 		justify-content: center;
 
 		svg {
-			width: 500px;
-
-			.st0 {
-				fill: none;
-				stroke: #FFFFFF;
-				stroke-miterlimit: 10;
-			}
+			width: 300px;
 
 			.st1 {
 				fill: none;
-				stroke: #FF6E60;
+				stroke: $primary-color;
 				stroke-width: 2;
 			}
 
 			.st2 {
 				fill: none;
-				stroke: #01719A;
+				stroke: $secondary-color;
 				stroke-width: 2;
 			}
 		}
 
 		.st1 {
+			transition: .3s all ease-in-out;
+			color: $primary-color;
 			stroke-dasharray: 1000;
 			stroke-dashoffset: 1000;
 			animation: dash 5s linear alternate infinite;
+			fill: currentColor
 		}
 		
 		.st2 {
+			transition: .3s all ease-in-out;
+			color: $secondary-color;
 			stroke-dasharray: 1000;
 			stroke-dashoffset: 1000;
 			animation: dash 5s linear alternate infinite;
+			fill: currentColor;
 		}
 
 		@keyframes dash {
 			from {
 				stroke-dashoffset: 1000;
+				fill: none;
 			}
 			to {
 				stroke-dashoffset: 0;
+				fill: currentColor;
 			}
 		}
 	}

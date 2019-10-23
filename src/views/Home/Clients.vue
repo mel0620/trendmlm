@@ -88,7 +88,8 @@
 		mounted() {
 			this.clientsSwiper();
 			this.so = ScrollOut({
-				scope: this.$el
+				scope: this.$el,
+				once: true
 			});
 		},
 		destroyed() {

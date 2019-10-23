@@ -26,6 +26,11 @@ export default {
         this.loading = false;
       }, 5000);
     });
+    // setTimeout(() => {
+    //   window.addEventListener("load", () => {
+    //       this.loading = false;
+    //   });
+    // }, 3000);
   }
 };
 </script>
