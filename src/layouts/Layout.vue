@@ -4,7 +4,7 @@
             <div class="container">
                 <nav class="header__nav" data-mob="navigation">
                     <a class="header__nav-brand" href="javascript:">
-                        <img class="img-fluid logo" width="200" src="@/assets/brand-colored.png" alt="trendmlm logo">
+                        <img class="img-fluid logo" src="@/assets/brand-colored.png" alt="trendmlm logo">
                     </a>
                     <!-- <div id="navlink" class="header__nav-links" data-mob="hide"> -->
                     <div id="navlink" class="header__nav-links">
@@ -405,9 +405,10 @@ export default {
                         grid-column-start: 1;
 
                         img {
-                            object-fit: cover;
-                            object-position: 0 100%;
-                            width: 40px;
+                            object-fit: contain;
+                            // object-position: 0 100%;
+                            // width: 100px;
+                            // width: 100%;
                             height: 30px;
                         }
                     }
