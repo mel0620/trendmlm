@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Loader from "./components/Loader.vue";
+import Loader from "./components/LoaderV2.vue";
 
 export default {
   name: "app",
