@@ -1,6 +1,6 @@
 @mixin for-size($size) {
     @if $size == phone-only {
-        @media (max-width: 599px) { @content; }
+        @media (max-width: 600px) { @content; }
     }
     @else if $size == tablet-down {
         @media (max-width: 1024px) { @content; }
