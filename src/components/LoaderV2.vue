@@ -47,8 +47,8 @@
 			// color: $primary-color;
 			stroke-dasharray: 1000;
 			stroke-dashoffset: 1000;
-			animation: dash 3s linear alternate infinite;
-			fill: currentColor
+			animation: dash 2s linear alternate infinite;
+			// fill: currentColor
 		}
 		
 		.st1 {
@@ -56,8 +56,8 @@
 			// color: $secondary-color;
 			stroke-dasharray: 1000;
 			stroke-dashoffset: 1000;
-			animation: dash 3s linear alternate infinite;
-			fill: currentColor;
+			animation: dash 2s linear alternate infinite;
+			// fill: currentColor;
 		}
 
 		@keyframes dash {

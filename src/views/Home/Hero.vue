@@ -18,7 +18,9 @@
                     </div>
                     <div class="line-bottom line-bottom--pure-white"></div>
                     <div class="hero-content__button">
-                        <button>INQUIRE NOW</button>
+                        <button class="btn">
+                            <div class="btn-text">INQUIRE NOW</div>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -28,6 +30,7 @@
 
 <script>
 /* eslint-disable */
+import { TimelineLite } from "gsap/TweenMax"
 import Rellax from "rellax"
 
 export default {
@@ -43,6 +46,15 @@ export default {
     },
     mounted() {
         this.myLlax();
+
+        const timeline = new TimelineLite()
+
+        timeline.to(".hero-content__text-1", 2, {scale: 1, opacity: 1, ease: Power4.easeOut})
+                .to(".hero-content__text-2", 1, {scale: 1, opacity: 1}, "-=1")
+                .from(".line-bottom", 2, {width: 0, ease: Elastic.easeOut.config(1, 0.3)}, "-=.2")
+                .to(".btn", .2, {opacity: 1}, "-=1")
+                .to(".hero-content", .2, {scale: 1.1})
+                .to(".hero-content", .2, {scale: 1})
     }
 }
 </script>
@@ -100,12 +112,16 @@ export default {
                 .hero-content__text-1 {
                     font-weight: 700;
                     font-size: 30px;
+                    transform: scale(5);
+                    opacity: 0;
                 }
 
                 .hero-content__text-2 {
                     font-weight: 300;
                     font-size: 1rem;
                     line-height: 2rem;
+                    transform: scale(5);
+                    opacity: 0;
                 }
             }
 
@@ -142,19 +158,30 @@ export default {
             {
                 margin-top: 20px;
                 
-                button
+                .btn
                 {
                     outline: none;
                     color: #fff;
-                    background-color: transparent;
+                    background-color: $primary-color;
                     font-family: 'Montserrat';
                     font-size: 15px;
                     font-weight: 600;
-                    border: solid 1px #fff;
+                    border: solid 1px $primary-color;
                     padding: 15px 0px;
                     width: 200px;
                     border-radius: 2px;
                     cursor: pointer;
+                    transition: .3s all ease-in-out;
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+                    opacity: 0;
+
+                    &:hover {
+                        letter-spacing: 1px;
+                        background-color: transparent;
+                        border-color: #fff;
+                    }
                 }
             }
         }
