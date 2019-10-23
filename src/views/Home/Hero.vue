@@ -1,6 +1,11 @@
 <template>
     <div class="hero-container" id="home">
-        <div class="hero" :style="`background-image: url(${bg_image})`" data-rellax-speed="-7">
+        <!-- <div class="hero" :style="`background-image: url(${bg_image})`" data-rellax-speed="-7"> -->
+        <div class="hero">
+            <video class="video" autoplay muted loop data-rellax-speed="-7">
+                <source src="../../assets/bg-video.mp4" type="video/mp4">  
+            </video>
+            <div class="bg-overlay"></div>
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-content__text">
@@ -33,7 +38,7 @@ export default {
     },
     methods: {
         myLlax() {
-            const rellax = new Rellax('.hero');
+            const rellax = new Rellax('.video');
         }
     },
     mounted() {
@@ -57,6 +62,25 @@ export default {
         background-position: center;
         background-repeat: no-repeat;
 
+        .video {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: 1;
+        }
+
+        .bg-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: linear-gradient(45deg, rgba($secondary-color, .8), rgba($primary-color, .5));
+            z-index: 2;
+        }
+
         .hero-content {
             display: flex;
             justify-content: center;
@@ -64,6 +88,8 @@ export default {
             flex-direction: column;
             margin: auto;
             height: 100vh;
+            position: relative;
+            z-index: 5;
 
             .hero-content__text {
                 color: #fff;

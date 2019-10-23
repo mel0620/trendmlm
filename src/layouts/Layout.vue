@@ -4,7 +4,7 @@
             <div class="container">
                 <nav class="header__nav" data-mob="navigation">
                     <a class="header__nav-brand" href="javascript:">
-                        <img class="img-fluid logo" src="@/assets/brand-colored.png" alt="trendmlm logo">
+                        <img class="img-fluid logo" width="200" src="@/assets/brand-colored.png" alt="trendmlm logo">
                     </a>
                     <!-- <div id="navlink" class="header__nav-links" data-mob="hide"> -->
                     <div id="navlink" class="header__nav-links">
@@ -89,7 +89,7 @@
 </template>
 
 <script>
-import {TweenMax, Power2, TimelineLite} from "gsap/TweenMax";
+import {TimelineLite} from "gsap/TweenMax";
 import ScrollOut from "scroll-out"
 import VanillaScrollspy from 'vanillajs-scrollspy'
 
@@ -138,7 +138,7 @@ export default {
                 .to('.nav-line', .3, { backgroundColor: "#ff6e60" }, "-=.2")
                 .to('.header', .2, { backgroundColor: 'rgba(255,255,255, .8)' })
                 .to('.logo', .2, { filter: 'brightness(1)' })
-                .to('.header', .2, { minHeight: '100%', ease: Back.easeOut.config(1.7) })
+                .to('.header', .2, { minHeight: '100%'})
 
             burger.addEventListener("click", () => {
 				this.toggleTween(tl)
