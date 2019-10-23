@@ -136,7 +136,7 @@ export default {
                     y: -3
                 }, "-=.2")
                 .to('.nav-line', .3, { backgroundColor: "#ff6e60" }, "-=.2")
-                .to('.header', .2, { backgroundColor: 'rgba(255,255,255, .8)' })
+                // .to('.header', .2, { backgroundColor: 'rgba(255,255,255, .8)' })
                 .to('.logo', .2, { filter: 'brightness(1)' })
                 .to('.header', .2, { minHeight: '100%'})
 
@@ -288,7 +288,7 @@ export default {
 
                 [class^="line-"] {
                     height: 3px;
-                    background-color: #fff;
+                    background-color: $primary-color;
                     border-radius: 1rem;
                     margin: 3px 0;
                     display: block;
@@ -365,8 +365,7 @@ export default {
 
     @include for-size(tablet-down) {
         .header {
-            --header-bg: transparent;
-            background-color: var(--header-bg);
+            background-color: rgba(#fff, .8);
             overflow: hidden;
             height: 54px;
 
@@ -410,6 +409,7 @@ export default {
                             // width: 100px;
                             // width: 100%;
                             height: 30px;
+                            filter: brightness(100%)
                         }
                     }
 
@@ -431,7 +431,7 @@ export default {
                         grid-column-start: 3;
 
                         .nav-line {
-                            background-color: #fff !important;
+                            background-color: $primary-color !important;
                         }
                     }
                 }
@@ -450,9 +450,9 @@ export default {
             overflow: hidden;
     
             [data-mob="nav-btn"] {
-                [class^="line-"] {
-                    background-color: $primary-color !important;
-                }
+                // [class^="line-"] {
+                //     background-color: $primary-color !important;
+                // }
                 a {
                     color: $primary-color;
                 }
