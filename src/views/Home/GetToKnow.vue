@@ -28,39 +28,36 @@
 	</div>
 
 	<!-- ANIMATING OBEJECTS -->
-	<img
-		src="../../assets/animated-objects/square-dots.svg" alt=""
-		class="square-dots lax"
-		data-lax-preset="rightToLeft spin"
-	>
-	<img
-		src="../../assets/animated-objects/bubble-warp.svg"
-		class="bubble-warp-bg lax"
-		data-rellax-speed="1"
-		data-lax-preset="spin"
-	>
-	<!-- <img
-		src="../../assets/qoute-objects/bubble-warp.svg"
-		class="bubble-warp-sm lax"
-		data-lax-preset="speedy"
-	> -->
-	<img
-		src="../../assets/animated-objects/stripe-circ.svg"
-		class="stripe-circ"
-		style="transform: rotate(-45deg)"
-		data-rellax-speed="-3"
-	>
-	<img
-		src="../../assets/animated-objects/circle-outline.svg"
-		class="circle-outline1 lax"
-		data-lax-preset="leftToRight"
-	>
-	<img
-		src="../../assets/animated-objects/circle-outline.svg"
-		class="circle-outline2 lax"
-		data-lax-preset="linger"
-		data-rellax-speed="5"
-	>
+	<div>
+		<img
+			:src="objects[0]" alt=""
+			class="square-dots lax"
+			data-lax-preset="rightToLeft spin"
+		>
+		<img
+			:src="objects[1]"
+			class="bubble-warp-bg lax"
+			data-rellax-speed="1"
+			data-lax-preset="spin"
+		>
+		<img
+			:src="objects[2]"
+			class="stripe-circ"
+			style="transform: rotate(-45deg)"
+			data-rellax-speed="-3"
+		>
+		<img
+			:src="objects[3]"
+			class="circle-outline1 lax"
+			data-lax-preset="leftToRight"
+		>
+		<img
+			:src="objects[3]"
+			class="circle-outline2 lax"
+			data-lax-preset="linger"
+			data-rellax-speed="5"
+		>
+	</div>
 </section>
 </template>
 
@@ -78,7 +75,13 @@ export default {
 	},
 	data () {
 		return {
-			illustration: require('../../assets/devices.png')
+			illustration: require('../../assets/devices.png'),
+			objects: [
+				require('../../assets/animated-objects/square-dots.svg'),
+				require('../../assets/animated-objects/bubble-warp.svg'),
+				require('../../assets/animated-objects/stripe-circ.svg'),
+				require('../../assets/animated-objects/circle-outline.svg'),
+			]
 		}
 	},
 	mounted() {
