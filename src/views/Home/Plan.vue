@@ -84,8 +84,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../scss/style.scss";
-
 .plan-wrapper {
     background-color: #fff;
     padding: 100px 0px !important;

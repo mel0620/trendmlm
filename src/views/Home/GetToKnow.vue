@@ -120,8 +120,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../scss/style.scss";
-
 .get-to-know {
 	padding: 100px 0 !important;
 	background-color: $secondary-color;

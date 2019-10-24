@@ -17,7 +17,6 @@
 </template>
 
 <style lang="scss">
-@import "../../scss/style.scss";
 .request-qoute {
     background-color: $primary-color;
     width: 100%;

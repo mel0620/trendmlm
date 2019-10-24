@@ -99,7 +99,6 @@
 </script>
 
 <style lang="scss">
-@import "../../scss/style";
 .clients-wrapper {
 	padding: 100px 0px;
 	background-color: #fff9f8;

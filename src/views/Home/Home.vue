@@ -45,8 +45,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../scss/style.scss";
-
 [data-visibility="hide"] {
   display: none;
 

@@ -87,8 +87,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../scss/style.scss";
-
 .technologies-wrapper {
     padding: 25px 0 !important;
 

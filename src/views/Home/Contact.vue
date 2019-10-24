@@ -91,8 +91,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../scss/style.scss";
-
 .contact-wrapper {
 	background-color: $secondary-color;
 	padding: 100px 0px !important;

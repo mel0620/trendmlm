@@ -112,8 +112,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../scss/style";
-
 .works-wrapper {
     background-color: #007eac;
     padding: 100px 0px !important;
