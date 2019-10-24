@@ -92,7 +92,7 @@ export default {
 			once: true
         });
 
-		// ITO YUNG NSA DOCS PERO BINAGO KO DAHIL SA LOADER KAILAN GUMANA AFTER MALOAD ANG PAGE
+		// OLD CODE;
 		// window.onload = function() {
 		// 	lax.setup() // init
 		// 	const updateLax = () => {

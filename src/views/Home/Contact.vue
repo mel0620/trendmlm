@@ -59,6 +59,7 @@
 
 <script>
 import ScrollOut from "scroll-out"
+import lax from 'lax.js'
 export default {
 	data () {
 		return {
@@ -70,6 +71,17 @@ export default {
 			scope: this.$el,
 			once: true
 		});
+
+		lax.setup({
+			breakpoints: { small: 0, large: 992 }
+		})
+
+		const updateLax = () => {
+			lax.update(window.scrollY)
+			window.requestAnimationFrame(updateLax)
+		}
+
+		window.requestAnimationFrame(updateLax)
 	},
 	destroyed() {
 		this.so.teardown();
