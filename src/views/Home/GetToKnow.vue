@@ -69,7 +69,7 @@
 import ScrollOut from "scroll-out"
 import Rellax from "rellax"
 import lax from 'lax.js'
-import RQoute from "./RQoute";
+const RQoute = () => import(/*webpackChunkname: "rqoute"*/'./RQoute');
 
 export default {
 	name: 'about',
