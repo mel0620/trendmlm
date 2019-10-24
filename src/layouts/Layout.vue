@@ -311,7 +311,7 @@ export default {
 
     .header--sticky[data-scroll="in"] {
         position: fixed;
-        background-color: rgba(#fff, .8) !important;
+        background-color: #fff !important;
         border-bottom: 1px solid rgba(#000, .12);
 
         .header__nav {
@@ -365,7 +365,7 @@ export default {
 
     @include for-size(tablet-down) {
         .header {
-            background-color: rgba(#fff, .8);
+            background-color: #fff;
             overflow: hidden;
             height: 54px;
 
