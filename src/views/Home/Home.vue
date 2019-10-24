@@ -44,7 +44,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 [data-visibility="hide"] {
   display: none;
 

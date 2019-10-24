@@ -100,7 +100,7 @@
 
 <style lang="scss">
 .clients-wrapper {
-	padding: 100px 0px;
+	padding: 100px 0px !important;
 	background-color: #fff9f8;
 
 	[data-scroll] {
