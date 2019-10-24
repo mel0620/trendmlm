@@ -13,8 +13,8 @@
                 </div>
                 <div class="services-offer">
                     <div class="services-offer__item" data-scroll v-for="(item, i) in services" :key="i">
-                        <div class="services-offer__item-icon">
-                            <img class="img-fluid" width="50" :src="item.image" alt="">
+                        <div v-lazyload class="services-offer__item-icon">
+                            <img class="img-fluid" width="50" :data-url="item.image" alt="">
                         </div>
                         <div class="services-offer__item-info">
                             <div class="services-offer__name">{{ item.name }}</div>

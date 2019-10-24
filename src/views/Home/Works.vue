@@ -14,8 +14,8 @@
                 <div class="works-content" data-scroll>
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide" v-for="(item, i) in works" :key="i">
-                                <img class="img-fluid" :src="item.image" alt="">
+                            <div v-lazyload class="swiper-slide" v-for="(item, i) in works" :key="i">
+                                <img class="img-fluid" :data-url="item.image" alt="">
                             </div>
                         </div>
                         <div class="swiper-pagination"></div>

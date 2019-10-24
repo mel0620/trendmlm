@@ -17,8 +17,8 @@
 		</div>
 
 		<div class="get-to-know-content">
-			<div class="illustration" data-scroll>
-				<img class="img-fluid" src="../../assets/devices.png" alt="">
+			<div v-lazyload class="illustration" data-scroll>
+				<img class="img-fluid" :data-url="illustration" alt="">
 			</div>
 			<div class="texts" data-scroll>
 				<label for="">“We drifts your business towards success.”</label>
@@ -78,7 +78,7 @@ export default {
 	},
 	data () {
 		return {
-
+			illustration: require('../../assets/devices.png')
 		}
 	},
 	mounted() {

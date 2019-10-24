@@ -17,8 +17,8 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide" v-for="(item, ind) in testimonials" :key="ind">
                                 <div class="card">
-                                    <div class="card__body">
-                                        <img class="img-fluid" width="50" src="../../assets/testimonials.svg" alt="">
+                                    <div v-lazyload class="card__body">
+                                        <img class="img-fluid" width="50" :data-url="icon" alt="">
                                         <p>{{ item.text }}</p>
                                     </div>
                                     <div class="card__footer">
@@ -29,11 +29,11 @@
                             </div>
                         </div>
                         <!-- Add Arrows -->
-                        <div class="arrow-right">
-                            <img class="img-fluid" width="20" src="../../assets/arrow-right.svg" alt="">
+                        <div class="arrow-right" v-lazyload>
+                            <img class="img-fluid" width="20" :data-url="arrow[1]" alt="">
                         </div>
-                        <div class="arrow-left">
-                            <img class="img-fluid" width="20" src="../../assets/arrow-left.svg" alt="">
+                        <div class="arrow-left" v-lazyload>
+                            <img class="img-fluid" width="20" :data-url="arrow[0]" alt="">
                         </div>
                     </div>
                 </div>
@@ -52,6 +52,11 @@ import "../../../node_modules/swiper/css/swiper.min.css";
 export default {
     data() {
         return {
+            icon: require('../../assets/testimonials.svg'),
+            arrow: [ 
+                require('../../assets/arrow-left.svg'), 
+                require('../../assets/arrow-right.svg')
+            ],
             bg_image: require('../../assets/testimonial-bg.jpg'),
             testimonials: [
                 {

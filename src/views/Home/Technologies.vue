@@ -3,8 +3,8 @@
         <div class="container">
             <div class="tech">
                 <div class="tech__label">
-                    <div class="tech__label-icon">
-                        <img width="80" class="img-fluid" src="../../assets/tools.svg" alt="">
+                    <div v-lazyload class="tech__label-icon">
+                        <img width="80" class="img-fluid" :data-url="icon" alt="">
                     </div>
                     <div class="tech__label-texts">
                         <div>TECHNOLOGIES WE USE</div>
@@ -14,10 +14,10 @@
                 <!-- Swiper -->
                 <div class="tech-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" v-for="(item, i) in techs" :key="i" :style="`background-image: url('${item.icon}')`">
-                            <!-- <div class="tech-icon">
-                                <img class="img-fluid" :src="item.icon" alt="">
-                            </div> -->
+                        <div class="swiper-slide" v-for="(item, i) in techs" :key="i">
+                            <div v-lazyload class="tech-icon">
+                                <img class="img-fluid" width="50" :data-url="item.icon" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -34,6 +34,7 @@ import "../../../node_modules/swiper/css/swiper.min.css";
 export default {
     data () {
         return {
+            icon: require('../../assets/tools.svg'),
             techs: [
                 { icon: require('../../assets/tech/laravel1.svg') },
                 { icon: require('../../assets/tech/vue.svg') },
@@ -124,10 +125,10 @@ export default {
             .swiper-slide {
                 box-shadow: 0 0 8px 2px rgba(#000, .05);
                 border-radius: 5px;
-                background-size: 50px;
-                background-repeat: no-repeat;
-                background-position: center;
-                min-height: 80px;
+                // background-size: 50px;
+                // background-repeat: no-repeat;
+                // background-position: center;
+                // min-height: 80px;
 
                 .tech-icon {
                     border-radius: 5px;

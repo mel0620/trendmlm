@@ -3,8 +3,8 @@
         <header class="header header--sticky" data-mob="header">
             <div class="container">
                 <nav class="header__nav" data-mob="navigation">
-                    <a class="header__nav-brand" href="javascript:">
-                        <img class="img-fluid logo" width="200" src="@/assets/brand-colored.png" alt="trendmlm logo">
+                    <a v-lazyload class="header__nav-brand" href="javascript:">
+                        <img class="img-fluid logo" width="200" :data-url="brand_logo" alt="trendmlm logo">
                     </a>
                     <!-- <div id="navlink" class="header__nav-links" data-mob="hide"> -->
                     <div id="navlink" class="header__nav-links">
@@ -15,8 +15,8 @@
                         <a href="#contact" title="Contact" class="header__nav-link">Contact</a>
                     </div>
                     <div class="header__nav-contact" data-mob="hide">
-                        <div class="header__nav-contact-icon">
-                            <img width="25" class="img-fluid" src="@/assets/call-center.svg" alt="">
+                        <div v-lazyload class="header__nav-contact-icon">
+                            <img width="25" class="img-fluid" :data-url="call_icon" alt="">
                         </div>
                         <div class="header__nav-contact-text">
                             <div>Make a call & let's talk.</div>
@@ -38,8 +38,8 @@
                 <div class="container">
                     <div class="info-wrapper">
                         <div class="info-item" v-for="(item, i) in infos" :key="i">
-                            <div class="info-item__icon">
-                                <img width="50" class="img-fluid" :src="item.icon" alt="">
+                            <div v-lazyload class="info-item__icon">
+                                <img width="50" class="img-fluid" :data-url="item.icon" alt="">
                             </div>
                             <div class="info-item__text">
                                 <div class="info-item__name">{{ item.name }}</div>
@@ -49,8 +49,8 @@
                     </div>
                     <div class="bottom-nav-wrapper">
                         <div class="bottom-nav">
-                            <div class="bottom-nav__brand">
-                                <img width="250" class="img-fluid" src="../assets/brand-bottom.png" alt="">
+                            <div v-lazyload class="bottom-nav__brand">
+                                <img width="250" class="img-fluid" :data-url="brand_bottom" alt="">
                             </div>
                             <div class="bottom-nav__links">
                                 <ul id="navlink">
@@ -96,6 +96,9 @@ import VanillaScrollspy from 'vanillajs-scrollspy'
 export default {
     data () {
         return {
+            brand_bottom: require('@/assets/brand-bottom.png'),
+            brand_logo: require('@/assets/brand-colored.png'),
+            call_icon: require('@/assets/call-center.svg'),
             infos: [
                 {
                     icon: require('../assets/contact-1.svg'),

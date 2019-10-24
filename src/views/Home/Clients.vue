@@ -5,15 +5,15 @@
 				<div class="clients-content" data-scroll>
 					<div class="clients-swiper">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide" v-for="(item, i) in clients" :key="i">
-								<img :src="item.image" alt />
+							<div v-lazyload class="swiper-slide" v-for="(item, i) in clients" :key="i">
+								<img :data-url="item.image" alt />
 							</div>
 						</div>
-						<div class="slider-next">
-							<img class="img-fluid" width="15" src="../../assets/next.svg" alt />
+						<div v-lazyload class="slider-next">
+							<img class="img-fluid" width="15" :data-url="arrow[0]" alt />
 						</div>
-						<div class="slider-prev">
-							<img class="img-fluid" width="15" src="../../assets/prev.svg" alt />
+						<div v-lazyload class="slider-prev">
+							<img class="img-fluid" width="15" :data-url="arrow[1]" alt />
 						</div>
 					</div>
 				</div>
@@ -31,6 +31,10 @@
 	export default {
 		data() {
 			return {
+				arrow: [
+					require('../../assets/next.svg'),
+					require('../../assets/prev.svg')
+				],
 				clients: [
 					{ image: require("../../assets/client-1.png") },
 					{ image: require("../../assets/client-2.png") },

@@ -17,8 +17,8 @@
                             <div class="plan-item__title">{{ item.title }}</div>
                             <div class="plan-item__desc">{{ item.desc }}</div>
                         </div>
-                        <div class="plan-item__illustration">
-                            <img class="img-fluid" :src="item.icon" alt="">
+                        <div v-lazyload class="plan-item__illustration">
+                            <img class="img-fluid" :data-url="item.icon" alt="">
                         </div>
                     </div>
                 </div>

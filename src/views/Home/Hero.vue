@@ -3,7 +3,7 @@
         <!-- <div class="hero" :style="`background-image: url(${bg_image})`" data-rellax-speed="-7"> -->
         <div class="hero">
             <video class="video" autoplay muted loop data-rellax-speed="-7">
-                <source src="../../assets/bg-video.mp4" type="video/mp4">  
+                <source :src="video" type="video/mp4">  
             </video>
             <div class="bg-overlay"></div>
             <div class="container">
@@ -16,7 +16,7 @@
                             We can help you make it to the top. Let’s all grow together.
                         </div>
                     </div>
-                    <div class="line-bottom line-bottom--pure-white"></div>
+                    <div class="line-bottom animate line-bottom--pure-white"></div>
                     <div class="hero-content__button">
                         <button class="btn">
                             <div class="btn-text">INQUIRE NOW</div>
@@ -36,6 +36,7 @@ import Rellax from "rellax"
 export default {
     data () {
         return {
+            video: require('../../assets/bg-video.mp4'),
             bg_image: require('../../assets/hero-bg.jpg'),
         }
     },
@@ -51,7 +52,7 @@ export default {
 
         timeline.to(".hero-content__text-1", 2, {y: 0, opacity: 1, ease: Power4.easeOut})
                 .to(".hero-content__text-2", 1, {y: 0, opacity: 1}, "-=1")
-                .from(".line-bottom", 2, {width: 0, ease: Elastic.easeOut.config(1, 0.3)}, "-=.2")
+                .from(".animate", 2, {width: 0, ease: Elastic.easeOut.config(1, 0.3)}, "-=.2")
                 .to(".btn", .2, {opacity: 1}, "-=1")
                 .to(".hero-content", .2, {scale: 1.1})
                 .to(".hero-content", .2, {scale: 1})
