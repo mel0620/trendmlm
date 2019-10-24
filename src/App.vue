@@ -10,7 +10,8 @@
 </template>
 
 <script>
-import Loader from "./components/LoaderV2.vue";
+const Loader = () => import(/*webpackChunkname: "laoder"*/ './components/LoaderV2.vue');
+// import Loader from "./components/LoaderV2.vue";
 
 export default {
   name: "app",
