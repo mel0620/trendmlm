@@ -91,145 +91,145 @@ export default {
 </script>
 
 <style lang="scss">
-.contact-wrapper {
-	background-color: $secondary-color;
-	padding: 100px 0px !important;
-	position: relative;
-	overflow: hidden;
+	.contact-wrapper {
+		background-color: $secondary-color;
+		padding: 100px 0px !important;
+		position: relative;
+		overflow: hidden;
 
-	.section-title[data-scroll="in"] {
-		transform: scale(1);
-	}
+		.section-title[data-scroll="in"] {
+			transform: scale(1);
+		}
 
-	.section-title[data-scroll="out"] {
-		transform: scale(.8);
-	}
+		.section-title[data-scroll="out"] {
+			transform: scale(.8);
+		}
 
-	[data-scroll] {
-		transition: 1s all ease-in-out;
-	}
+		[data-scroll] {
+			transition: 1s all ease-in-out;
+		}
 
-	[data-scroll="in"] {
-		opacity: 1;
-		transform: translateY(0);
-	}
+		[data-scroll="in"] {
+			opacity: 1;
+			transform: translateY(0);
+		}
 
-	[data-scroll="out"] {
-		opacity: 0;
-		transform: translateY(-10px);
-	}
+		[data-scroll="out"] {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
 
-	.contact {
-		.contact-content {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			grid-gap: 10px;
+		.contact {
+			.contact-content {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-gap: 10px;
 
-			input {
-				color: #fff;
-				background-color: $secondary-color;
-				border: solid 1px #fff;
-				width: 100%;
-				padding: 15px;
-				border-radius: 2px;
-				font-family: $font-secondary;
-				font-weight: 300;
-				outline: none;
-				transition: .3s all ease-in-out;
+				input {
+					color: #fff;
+					background-color: $secondary-color;
+					border: solid 1px #fff;
+					width: 100%;
+					padding: 15px;
+					border-radius: 2px;
+					font-family: $font-secondary;
+					font-weight: 300;
+					outline: none;
+					transition: .3s all ease-in-out;
 
-				&:focus {
-					box-shadow: 0 0 0 1px #fff;
+					&:focus {
+						box-shadow: 0 0 0 1px #fff;
+					}
 				}
-			}
 
-			.contact-content__message
-			{
-				grid-column: 1 / span 2;
-			}
+				.contact-content__message
+				{
+					grid-column: 1 / span 2;
+				}
 
-			::placeholder {
-				color: #fff;
-			}
-
-			button {
-				outline: none;
-				background-color: #fff;
-				color: $secondary-color;
-				font-family: $font-secondary;
-				font-weight: 600;
-				font-size: 1rem;
-				padding: 1rem 0px;
-				min-width: 250px;
-				border:none;
-				border-radius: 2px;
-				cursor: pointer;
-			}
-
-			@include for-size(phone-only) {
-				grid-template-columns: 1fr;
-
-				.contact-content__message {
-					grid-column: 1 / span 1;
+				::placeholder {
+					color: #fff;
 				}
 
 				button {
-					width: 100%;
+					outline: none;
+					background-color: #fff;
+					color: $secondary-color;
+					font-family: $font-secondary;
+					font-weight: 600;
+					font-size: 1rem;
+					padding: 1rem 0px;
+					min-width: 250px;
+					border:none;
+					border-radius: 2px;
+					cursor: pointer;
+				}
+
+				@include for-size(phone-only) {
+					grid-template-columns: 1fr;
+
+					.contact-content__message {
+						grid-column: 1 / span 1;
+					}
+
+					button {
+						width: 100%;
+					}
 				}
 			}
 		}
-	}
 
-	.stripe-circle {
-		position: absolute;
-		top: -80px;
-		left: 0px;
-		opacity: .2;
-		z-index: 1;
-		width: 14%;
+		.stripe-circle {
+			position: absolute;
+			top: -80px;
+			left: 0px;
+			opacity: .2;
+			z-index: 1;
+			width: 14%;
+		}
+		.multiple-circ {
+			position: absolute;
+			top: -20px;
+			left: 200px;
+			opacity: .2;
+			z-index: 1;
+			width: 6%;
+		}
+		.same-circ {
+			position: absolute;
+			bottom: 68px;
+			left: 8px;
+			opacity: .2;
+			z-index: 1;
+			width: 10%;
+		}
+		.circle-outline2{
+			position: absolute;
+			bottom: 30%;
+			right: 40%;
+			opacity: .2;
+			z-index: 1;
+			-webkit-filter: brightness(0) invert(1);
+			filter: brightness(0) invert(1);
+			width: 4%;
+		}
+		.different-circ
+		{
+			position: absolute;
+			top: -125px;
+			right: -38px;
+			opacity: .2;
+			z-index: 1;
+			width: 12%;
+		}
+		.single-circ
+		{
+			position: absolute;
+			bottom: 25%;
+			right: 3%;
+			opacity: .2;
+			z-index: 1;
+			width: 4%;
+		}
 	}
-	.multiple-circ {
-		position: absolute;
-		top: -20px;
-		left: 200px;
-		opacity: .2;
-		z-index: 1;
-		width: 6%;
-	}
-	.same-circ {
-		position: absolute;
-		bottom: 68px;
-		left: 8px;
-		opacity: .2;
-		z-index: 1;
-		width: 10%;
-	}
-	.circle-outline2{
-		position: absolute;
-		bottom: 30%;
-		right: 40%;
-		opacity: .2;
-		z-index: 1;
-		-webkit-filter: brightness(0) invert(1);
-		filter: brightness(0) invert(1);
-		width: 4%;
-	}
-	.different-circ
-	{
-		position: absolute;
-		top: -125px;
-		right: -38px;
-		opacity: .2;
-		z-index: 1;
-		width: 12%;
-	}
-	.single-circ
-	{
-		position: absolute;
-		bottom: 25%;
-		right: 3%;
-		opacity: .2;
-		z-index: 1;
-		width: 4%;
-	}
-}
 </style>
