@@ -10,7 +10,7 @@
 </template>
 
 <script>
-const Loader = () => import(/*webpackChunkname: "laoder"*/ './components/LoaderV2.vue');
+const Loader = () => import(/*webpackChunkname: "loader"*/ './components/LoaderV2.vue');
 // import Loader from "./components/LoaderV2.vue";
 
 export default {
@@ -21,7 +21,7 @@ export default {
   data: () => ({
     loading: true
   }),
-  mounted() {
+  created() {
     window.addEventListener("load", () => {
       setTimeout(() => {
         this.loading = false;
@@ -35,7 +35,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-@import "scss/style.scss";
-</style>

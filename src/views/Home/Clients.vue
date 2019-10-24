@@ -98,7 +98,7 @@
 	};
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../scss/style";
 .clients-wrapper {
 	padding: 100px 0px;

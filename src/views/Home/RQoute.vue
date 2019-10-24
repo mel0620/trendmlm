@@ -16,7 +16,7 @@
     </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../scss/style.scss";
 .request-qoute {
     background-color: $primary-color;

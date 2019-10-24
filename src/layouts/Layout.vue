@@ -123,25 +123,19 @@ export default {
         },
         onNavmobile() {
             const burger = document.querySelector('#burger-cta');
-            const tl = new TimelineLite({paused: true, reversed: true});
+            const timeline = new TimelineLite({paused: true, reversed: true});
 
-            tl.to('.line-2', .2, { opacity: 0, })
-                .to('.line-3', .2, { width: 25 })
-                .to('.line-2', .2, { height: 0 })
-                .to('.line-1', .2, {
-                    rotation: -45,
-                    y: 3
-                }).to('.line-3', .2, {
-                    rotation: 45,
-                    y: -3
-                }, "-=.2")
-                .to('.nav-line', .3, { backgroundColor: "#ff6e60" }, "-=.2")
-                // .to('.header', .2, { backgroundColor: 'rgba(255,255,255, .8)' })
-                .to('.logo', .2, { filter: 'brightness(1)' })
-                .to('.header', .2, { minHeight: '100%'})
+            timeline.to('.line-2', .2, { opacity: 0, })
+                    .to('.line-3', .2, { width: 25 })
+                    .to('.line-2', .2, { height: 0 })
+                    .to('.line-1', .2, { rotation: -45, y: 3 })
+                    .to('.line-3', .2, { rotation: 45, y: -3 }, "-=.2")
+                    .to('.nav-line', .3, { backgroundColor: "#ff6e60" }, "-=.2")
+                    .to('.logo', .2, { filter: 'brightness(1)' })
+                    .to('.header', .2, { minHeight: '100%'})
 
             burger.addEventListener("click", () => {
-				this.toggleTween(tl)
+				this.toggleTween(timeline)
 			})
         },
         toggleTween(tween) {
